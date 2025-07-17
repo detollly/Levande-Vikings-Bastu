@@ -18,9 +18,7 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
-        }
-        
-
+        }      
         
         .hero-content {
             position: relative;
@@ -63,23 +61,40 @@
             opacity: 1;
             visibility: visible;
         }
-        
-        .floating-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .glow-effect {
-            box-shadow: 0 0 40px rgba(102, 126, 234, 0.3);
-        }
-        
+                
         .parallax-slow {
             transform: translateY(var(--scroll-y, 0));
         }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #111827 0%, #374151 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        <!-- .feature-item {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        } -->
+        
+        <!-- .icon-circle {
+            background: #111827;
+        }
+        
+        .icon-circle:hover {
+            background: #374151;
+        } -->
     </style>
 </head>
-<body class="bg-slate-900 text-white overflow-x-hidden">
+<body class="gradient-bg overflow-x-hidden">
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-fit py-2 transition-all duration-500 ease-out">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,10 +109,10 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="/" class="menu-item text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="/about" class="menu-item text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">About</a>
-                        <a href="/services" class="menu-item text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="/contact" class="menu-item text-white hover:text-blue-300 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="/" class="menu-item text-slate-900 hover:text-blue-300 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="/about" class="menu-item text-slate-900 hover:text-blue-300 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="/services" class="menu-item text-slate-900 hover:text-blue-300 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="/contact" class="menu-item text-slate-900 hover:text-blue-300 px-3 py-2 text-sm font-medium">Contact</a>
                     </div>
                 </div>
                 
@@ -149,48 +164,48 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-slate-800">
+    <section id="about" class="py-20 gradient-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    <span class="text-gradient">
                         About Levande Vikings Bastu
                     </span>
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     We're pioneering the next generation of digital experiences with cutting-edge technology and innovative design
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="floating-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="feature-item text-center">
+                    <div class="w-20 h-20 icon-circle rounded-full flex items-center justify-center mb-8 mx-auto transition-all duration-300">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Lightning Fast</h3>
-                    <p class="text-gray-300">Optimized performance that delivers exceptional speed and reliability for all your needs</p>
+                    <h3 class="text-3xl font-bold mb-6 text-gray-900">Lightning Fast</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">Optimized performance that delivers exceptional speed and reliability for all your needs</p>
                 </div>
-                
-                <div class="floating-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               
+                <div class="feature-item text-center">
+                    <div class="w-20 h-20 icon-circle rounded-full flex items-center justify-center mb-8 mx-auto transition-all duration-300">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Secure</h3>
-                    <p class="text-gray-300">Enterprise-grade security measures to protect your data and ensure complete privacy</p>
+                    <h3 class="text-3xl font-bold mb-6 text-gray-900">Secure</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">Enterprise-grade security measures to protect your data and ensure complete privacy</p>
                 </div>
-                
-                <div class="floating-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               
+                <div class="feature-item text-center">
+                    <div class="w-20 h-20 icon-circle rounded-full flex items-center justify-center mb-8 mx-auto transition-all duration-300">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">User-Centric</h3>
-                    <p class="text-gray-300">Designed with your experience in mind, creating intuitive and delightful interactions</p>
+                    <h3 class="text-3xl font-bold mb-6 text-gray-900">User-Centric</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">Designed with your experience in mind, creating intuitive and delightful interactions</p>
                 </div>
             </div>
         </div>
@@ -292,17 +307,6 @@
                         <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">Services</a></li>
                         <li><a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">About Us</a></li>
                         <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Services -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-white">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">Web Design</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">Development</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">Consulting</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block">Support</a></li>
                     </ul>
                 </div>
                 
