@@ -2,19 +2,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.hero-bg {
-    background-image: url('/asset/photorealistic-timber-house-interior-with-wooden-decor-furnishings.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
 .navbar-scroll {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.1);
@@ -52,17 +39,9 @@ body {
     visibility: visible;
 }
 
-.parallax-slow {
-    transform: translateY(var(--scroll-y, 0));
-}
-
 .gradient-bg {
-    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-}
-
-.text-gradient {
-    background: linear-gradient(135deg, #111827 0%, #374151 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    /* background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); */
+    background: none;
+    position: relative; 
+    overflow-x: hidden;
 }
