@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +15,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="gradient-bg overflow-x-hidden">
+    <video
+        class="fixed inset-0 w-full h-full object-cover -z-10"
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source src="/asset/steam1.webm" type="video/webm">
+        <source src="/asset/steam1.mp4" type="video/mp4">
+    </video>
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-fit py-2 transition-all duration-500 ease-out">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +100,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20">
+    <section class="bg-blue-200/60 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">
@@ -142,8 +150,7 @@
     <!-- Footer -->
     <footer class="bg-slate-900 text-white pt-16 pb-6 border-t border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-                
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
                 <!-- Company Info -->
                 <div class="sm:col-span-2 lg:col-span-1">
                 <a href="/">

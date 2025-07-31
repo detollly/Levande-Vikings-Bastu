@@ -1,13 +1,5 @@
-body {
-    margin: 0;
-    padding: 0;
-    background: url('/asset/steam1.webm') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Inter', sans-serif;
-}
-
 .hero-bg {
-    background-image: url('/asset/photorealistic-timber-house-interior-with-wooden-decor-furnishings.jpg');
+    background-image: url('/asset/sauna.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
