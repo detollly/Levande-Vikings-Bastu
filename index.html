@@ -10,44 +10,17 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
+  <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="/css/main.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .hero-bg {
-      background-image: url('/asset/photorealistic-timber-house-interior-with-wooden-decor-furnishings.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-    }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .parallax-slow {
-      transform: translateY(var(--scroll-y, 0));
-    }
   </style>
 </head>
 </body>
 </html>
 </head>
-<body class="gradient-bg">
-    <video
-        class="absolute inset-0 w-auto h-full min-w-full object-cover z-[-1] hidden sm:block"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        poster="/asset/steam1.jpg"
-        decode="async" 
-    >
-    <source src="/asset/Steam1.webm" type="video/mp4" />
-  </video>
-
+<body>
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-fit py-2 transition-all duration-500 ease-out">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,8 +77,8 @@
         </div>
     </nav>
 
-    <!-- Hero/Banner Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Hero/ -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
             <div class="parallax-slow">
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
@@ -123,7 +96,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 gradient-bg">
+    <section id="about" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">

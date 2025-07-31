@@ -1,4 +1,8 @@
 body {
+    margin: 0;
+    padding: 0;
+    background: url('/asset/steam1.webm') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Inter', sans-serif;
 }
 
@@ -37,11 +41,4 @@ body {
 .mobile-menu-overlay.active {
     opacity: 1;
     visibility: visible;
-}
-
-.gradient-bg {
-    /* background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); */
-    background: none;
-    position: relative; 
-    overflow-x: hidden;
 }

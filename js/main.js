@@ -1,6 +1,6 @@
 // Navbar scroll effect
         const navbar = document.getElementById('navbar');
-        const heroSection = document.getElementById('home');
+        const heroSection = document.getElementById('hero');
         
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
