@@ -40,8 +40,6 @@ body {
 }
 
 .gradient-bg {
-    /* background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%); */
-    background: none;
-    position: relative; 
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
     overflow-x: hidden;
 }
