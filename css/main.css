@@ -45,3 +45,29 @@
 .parallax-slow {
     transform: translateY(var(--scroll-y, 0));
 }
+
+@keyframes fade-in {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+    
+    .animate-slide-up {
+      animation: slide-up 1s ease-out 0.3s both;
+    }
+    
+    .hover:shadow-3xl:hover {
+      box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    * {
+      scroll-behavior: smooth;
+    }
