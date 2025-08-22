@@ -4,11 +4,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary:#1487be
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+p, span, li, a, blockquote {
+  font-family: 'Geist', sans-serif;
+} */
+
 
 .navbar-scroll {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-scroll .menu-item {
+    color: #000000;
 }
 
 .menu-item {

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levande Vikings Bastu - Nordic Minimalism</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-black: #0A0A0A;
+            --warm-white: #FEFEFE;
+            --sage-green: #9CAF88;
+            --soft-beige: #F5F1EB;
+            --accent-copper: #B87333;
+            --light-gray: #F8F8F8;
+            --medium-gray: #666666;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            color: var(--primary-black);
+            background: var(--warm-white);
+        }
+
+        /* Typography */
+        .display-text {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 100;
+            letter-spacing: -0.05em;
+            line-height: 0.85;
+        }
+
+        .body-large {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        /* Hero Section - Full Screen Minimal */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--soft-beige);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 1000px;
+            padding: 0 2rem;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: var(--primary-black);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 0.5s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--medium-gray);
+            margin-bottom: 4rem;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 1s forwards;
+        }
+
+        /* Geometric Background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60vw;
+            height: 60vw;
+            max-width: 800px;
+            max-height: 800px;
+            border: 1px solid rgba(156, 175, 136, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 60s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+        }
+
+        /* Sections with breathing space */
+        .section {
+            padding: 8rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section:nth-child(even) {
+            background: var(--light-gray);
+            margin-left: 0;
+            margin-right: 0;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .section:nth-child(even) .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 200;
+            margin-bottom: 3rem;
+            color: var(--primary-black);
+            line-height: 1.1;
+        }
+
+        .section-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--medium-gray);
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+
+        .highlight {
+            color: var(--accent-copper);
+            font-weight: 400;
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* Cards - Ultra Minimal */
+        .card {
+            padding: 2rem 0;
+            border-top: 1px solid rgba(156, 175, 136, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            padding-left: 1rem;
+            border-top-color: var(--accent-copper);
+        }
+
+        .card-number {
+            font-size: 3rem;
+            font-weight: 100;
+            color: var(--sage-green);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--primary-black);
+        }
+
+        .card-text {
+            color: var(--medium-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Process Timeline */
+        .timeline {
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--sage-green);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 2rem;
+            background: var(--warm-white);
+            border: 1px solid rgba(156, 175, 136, 0.2);
+            position: relative;
+        }
+
+        .timeline-number {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: var(--sage-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        /* Video Section - Minimal */
+        .video-minimal {
+            background: var(--primary-black);
+            color: var(--warm-white);
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0;
+        }
+
+        .video-item {
+            text-align: left;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-item:hover {
+            border-color: var(--accent-copper);
+            transform: translateY(-5px);
+        }
+
+        .video-play {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--accent-copper);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--accent-copper);
+            font-size: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .timeline-number {
+                left: 30px;
+                top: 0;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="display-text">Levande<br>Vikings<br>Bastu</h1>
+            <p class="hero-subtitle">Искусство жить медленно</p>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="section">
+        <div class="reveal">
+            <h2 class="section-title">Парение — это искусство жить медленно</h2>
+            <p class="section-text">
+                В мире, где всё быстро, баня учит нас замедляться. Вспомнить, как чувствовать. 
+                Вспомнить, как быть. Потому что парение — это не просто жара. 
+                <span class="highlight">Это древний язык заботы.</span>
+            </p>
+            <p class="section-text">
+                Настоящее парение — это внимание. К себе, к дыханию, к ощущениям. 
+                Это возвращение к телу, к моменту. Здесь нет спешки, нет суеты. 
+                Всё делается с уважением, теплом и знанием.
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section" style="background: var(--light-gray); margin: 0; max-width: 100%; padding-left: 0; padding-right: 0;">
+        <div class="section-inner">
+            <div class="reveal">
+                <h2 class="section-title">Вены, дыхание, энергия</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card-number">01</div>
+                        <h3 class="card-title">Кровообращение</h3>
+                        <p class="card-text">Улучшает кровообращение, раскрывает капилляры и сосуды</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">02</div>
+                        <h3 class="card-title">Очищение</h3>
+                        <p class="card-text">Очищает кожу и лёгкие, снижает стресс</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">03</div>
+                        <h3 class="card-title">Лимфосистема</h3>
+                        <p class="card-text"><strong>Активно очищает лимфатическую систему</strong> — естественная детоксикация</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-number">04</div>
+                        <h3 class="card-title">Детоксикация</h3>
+                        <p class="card-text">Естественным образом разгоняет лимфу, выводит токсины через пот</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steam Science -->
+    <section class="section">
+        <div class="reveal">
+            <h2 class="section-title">В бане важен не жар,<br>а правильный пар</h2>
+            <p class="section-text">
+                Когда говорят "жарко", часто имеют в виду температуру. Но в настоящем паре 
+                главную роль играет <span class="highlight">соотношение температуры и влажности</span>.
+            </p>
+            <div class="grid grid-2">
+                <div>
+                    <h3 style="color: var(--accent-copper); margin-bottom: 1rem;">55–65°C</h3>
+                    <p>Идеальная температура для глубокого прогрева</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent-copper); margin-bottom: 1rem;">40–60%</h3>
+                    <p>Оптимальная влажность для "живого" пара</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="section" style="background: var(--light-gray); margin: 0; max-width: 100%; padding-left: 0; padding-right: 0;">
+        <div class="section-inner">
+            <div class="reveal">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Традиционный процесс</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="card-title">Прогревание</h3>
+                            <p class="card-text">Тело привыкает к жару парилки, мышцы расслабляются</p>
+                        </div>
+                        <div class="timeline-number">1</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="card-title">Парение с вениками</h3>
+                            <p class="card-text">Легкие похлопывания и растирания веником для улучшения кровообращения</p>
+                        </div>
+                        <div class="timeline-number">2</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="card-title">Охлаждение</h3>
+                            <p class="card-text">Окунание в холодную воду или снег для укрепления иммунитета</p>
+                        </div>
+                        <div class="timeline-number">3</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="card-title">Отдых и чай</h3>
+                            <p class="card-text">Травяной чай и отдых для восстановления водного баланса</p>
+                        </div>
+                        <div class="timeline-number">4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Section -->
+    <section class="section">
+        <div class="reveal">
+            <h2 class="section-title">Мастер — не банщик,<br>а проводник</h2>
+            <p class="section-text">
+                Проводник пара не просто машет веником. Он <span class="highlight">чувствует человека</span> — 
+                его дыхание, его ритм, его потребность в тепле или прохладе. 
+                Это, по сути, искусство соприкосновения — тонкое, заботливое, глубокое.
+            </p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-minimal">
+        <div class="video-container">
+            <div class="reveal">
+                <h2 class="section-title" style="color: var(--warm-white);">Обучение</h2>
+                <p class="section-text" style="color: rgba(255,255,255,0.8);">
+                    Форматы: Живые онлайн мастер-классы • Видеоуроки • Индивидуальные уроки
+                </p>
+                
+                <div class="video-grid">
+                    <div class="video-item" onclick="openVideo('https://youtu.be/O7jMUJ8fxgw?si=ZEPiiuzXLj--6IvM')">
+                        <div class="video-play">▶</div>
+                        <h3 class="card-title" style="color: var(--warm-white);">Основы парения</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Полное руководство по технике</p>
+                    </div>
+                    
+                    <div class="video-item" onclick="openVideo('https://youtube.com/shorts/QJJKlDq3nF0')">
+                        <div class="video-play">▶</div>
+                        <h3 class="card-title" style="color: var(--warm-white);">Работа с веником</h3>
+                        <p style="color: rgba(255,255,255,0.7);">Техника и приемы</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal(); // Initial check
+
+        function openVideo(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
