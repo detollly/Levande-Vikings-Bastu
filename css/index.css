@@ -1,0 +1,3 @@
+.parallax-slow {
+    transform: translateY(var(--scroll-y, 0));
+}
