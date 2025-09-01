@@ -86,34 +86,42 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-<!-- Hero Section -->
-<section id="hero" class="relative min-h-screen overflow-hidden">
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen overflow-hidden">
+    
+        <!-- Video background -->
+        <div class="absolute inset-0 -z-10">
+            <video class="w-full h-full !object-cover" autoplay muted loop playsinline>
+                <source src="/asset/steam1.webm" type="video/webm">
+                <source src="/asset/steam1.mp4" type="video/mp4">
+            </video>
+        </div>
 
-    <!-- Video background -->
-    <div class="absolute inset-0 -z-10">
-        <video class="w-full h-full !object-cover" autoplay muted loop playsinline>
-            <source src="/asset/steam1.webm" type="video/webm">
-            <source src="/asset/steam1.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Image overlay -->
-    <div
-        class="absolute inset-0 bg-[url('/asset/banya_viktor_banner.jpg')] bg-center bg-no-repeat bg-cover opacity-50 z-10">
-    </div>
-
-    <!-- Text layer -->
-    <div class="absolute inset-0 z-20 flex items-center justify-center px-4">
-        <h1 class="text-gray-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg text-center">
-            Levande Vikings Bastu
-        </h1>
-    </div>
-
-
-</section>
+        <div
+            class="absolute inset-0 bg-[url('/asset/banya_viktor_banner.jpg')] bg-center bg-no-repeat bg-cover opacity-50 z-10">
+        </div>
+    
+        <!-- Text layer -->
+        <div class="absolute inset-0 z-20 flex flex-col items-center justify-center gap-16 px-4">
+            <h1 class="text-gray-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg text-center">
+                Levande Vikings Bastu
+            </h1>
+            <p class="text-gray-100 text-3xl lg:text-5xl font-bold drop-shadow-lg text-center">
+                Бани под заказ
+            </p>
+            <a href="https://example.com/apply" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center 
+                                                             w-40 h-10 
+                                                             w-56 sm:h-15 
+                                                             lg:w-80 lg:h-15 
+                                                            bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center">
+                Подать заявку
+            </a>
+        </div>
+    </section>
 
     <!-- Opening Section -->
-    <section class="mt-20 lg:mt-32">
+    <section class="mt-20 lg:mt-32 px-4">
         <div class="max-w-6xl mx-auto">
             <div class="py-20">
                 <div class="max-w-4xl mx-auto text-center">
@@ -130,15 +138,15 @@
     </section>
     
     <!-- Ritual Section -->
-    <section class="mt-20 lg:mt-28">
+    <section class="mt-24 lg:mt-28 md:px-4">
         <div class="max-w-6xl mx-auto">
             <div class="bg-slate-300 relative border border-gray-200 rounded-xl shadow-xl">
-                <div class="relative rounded-xl overflow-hidden min-h-[12rem] md:h-[full] flex items-center justify-center md:px-8 md:py-8">
-                    <!-- Background image -->
+                <div class="relative rounded-xl overflow-hidden min-h-[16rem] md:h-[full] flex items-center justify-center md:px-8 md:py-8">
+
                     <img src="/asset/relaxation.png" alt="Relaxation" class="w-full h-full object-cover rounded-xl" />
     
                     <!-- Glassmorphic text overlay -->
-                    <div class="absolute inset-0 flex items-center justify-center px-3 sm:px-6 py-8 sm:py-14 lg:py-20 z-20">
+                    <div class="absolute inset-0 flex items-center justify-center px-3 sm:px-6 py-8 lg:py-20 z-20">
                         <div class="w-full max-w-md lg:max-w-5xl text-center 
                                   bg-white/10 backdrop-blur-sm rounded-2xl 
                                   p-4 sm:p-6 md:p-8 lg:p-10 
@@ -178,11 +186,11 @@
     </section>
     
     <!-- Oven Section -->    
-    <section class="mt-20 lg:mt-32">
+    <section class="mt-24 lg:mt-32 md:px-4">
         <div class="max-w-6xl mx-auto">
             <a href="oven.html" class="block group">
                 <div
-                    class="bg-gray-100 relative overflow-hidden group-hover:-translate-y-2 transition-transform duration-300 border border-gray-200 rounded-xl shadow-xl py-8">
+                    class="bg-gray-100 relative overflow-hidden group-hover:-translate-y-2 transition-transform duration-300 border border-gray-200 rounded-xl shadow-xl px-4 py-4">
     
                     <div
                         class="absolute inset-x-0 top-20 md:top-40 z-20 text-3xl md:text-5xl lg:text-6xl font-bold text-center text-gray-100 drop-shadow-lg px-4">
@@ -221,7 +229,7 @@
     </section>
     
     <!-- Project Section -->
-    <section class="mt-20 lg:mt-32">
+    <section class="mt-24 lg:mt-32 md:px-4">
         <div class="max-w-6xl mx-auto">
             <div class="bg-slate-300 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch rounded-xl shadow-xl py-8 px-8">
     
@@ -230,9 +238,14 @@
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
                         Vora Projekt
                     </h1>
-                    <a href="project.html"
-                        class="inline-block bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center">
-                        Ознакомиться
+                    <a href="project.html" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-end text-blue-600 font-boldhover:underline">
+                        <span>Узнать больше</span>
+                        <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                        </svg>
                     </a>
                 </div>   
     
@@ -252,7 +265,7 @@
     </section>
     
     <!-- Individual Project Section -->
-    <section class="mt-20 lg:mt-32">
+    <section class="mt-24 lg:mt-32 md:px-4">
         <div class="max-w-6xl mx-auto">
             <div class="bg-slate-300 rounded-xl shadow-xl p-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -261,9 +274,14 @@
                         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
                             Построй свою баню
                         </h1>
-                        <a href="individual.html"
-                            class="inline-block bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center">
-                            Ознакомиться
+                        <a href="individual.html" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-end text-blue-600 font-boldhover:underline">
+                            <span>Узнать больше</span>
+                            <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                            </svg>
                         </a>
                     </div>
     
@@ -275,13 +293,12 @@
                 </div>
     
                 <!-- Order Button -->
-                <div class="flex items-center justify-center mt-8 sm:mt-20 lg:mt-32">
+                <div class="flex items-center justify-center mt-8 lg:mt-32 mb-12">
                     <a href="https://example.com/apply" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center justify-center 
                                                  w-40 h-10 
-                                                 sm:w-48 sm:h-11 
-                                                 md:w-56 md:h-12 
-                                                 lg:w-72 lg:h-14 
+                                                 w-56 sm:h-15 
+                                                 lg:w-80 lg:h-15 
                                                 bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center">
                         Подать заявку
                     </a>
@@ -291,8 +308,8 @@
     </section>
 
     <!-- Master Section -->
-    <section class="mt-20 lg:mt-32">
-        <div class="container mx-auto px-6">
+    <section class="mt-24 lg:mt-32 mb-32 md:px-4">
+        <div class="container mx-auto">
             <div class="max-w-6xl mx-auto text-center">
                 <div class="bg-gray-100 border border-gray-00 shadow-xl p-8 rounded-2xl mb-12">
                     <h3 class="text-2xl font-bold mb-6">Мы обучаем правильному парению</h3>
@@ -316,7 +333,7 @@
                 </div>
     
                 <!-- YouTube Links -->
-                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto my-24">
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-24 px-4">
     
                     <a href="https://youtu.be/O7jMUJ8fxgw?si=ZEPiiuzXLj--6IvM" target="_blank"
                         class="bg-[var(--color-primary)] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden">

@@ -109,3 +109,30 @@
             arrows    : false,
             }).mount();
         });
+
+        // Scroll animations for sections
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const elements = entry.target.querySelectorAll(".scroll-animate");
+                    elements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add("visible");
+                    }, index * 150);
+                    });
+                    observer.unobserve(entry.target);
+                }
+                });
+            }, { threshold: 0.15 });
+
+            sections.forEach((section) => {
+                section.querySelectorAll("*:not(script)").forEach((el) => {
+                el.classList.add("scroll-animate");
+                });
+                observer.observe(section);
+            });
+        });
+
