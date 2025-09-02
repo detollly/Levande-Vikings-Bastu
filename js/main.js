@@ -136,3 +136,8 @@
             });
         });
 
+        // Valid footer date
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        
+
