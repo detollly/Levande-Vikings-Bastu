@@ -1,14 +1,3 @@
 .parallax-slow {
     transform: translateY(var(--scroll-y, 0));
 }
-
-/* Initial hidden state */
-.scroll-animate {
-    transform: translateY(30px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* Visible state */
-.scroll-animate.visible {
-    transform: translateY(0);
-}

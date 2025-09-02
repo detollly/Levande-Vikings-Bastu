@@ -1,1 +1,0 @@
-scroll‑triggered animation

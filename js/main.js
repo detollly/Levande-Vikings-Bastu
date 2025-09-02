@@ -121,7 +121,7 @@
                     elements.forEach((el, index) => {
                     setTimeout(() => {
                         el.classList.add("visible");
-                    }, index * 150);
+                    }, index * 120);
                     });
                     observer.unobserve(entry.target);
                 }
