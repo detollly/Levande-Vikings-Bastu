@@ -119,133 +119,168 @@
              <div class="space-y-24 mt-24">
 
                 <!-- Grundpaket -->
-                <section class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-4 py-8">
+                <section class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-4 py-8" data-products='[
+                           {"name":"Ugn «Iskander 18 M»","price":"12 900,- SEK","description":""},
+                           {"name":"Jadesten","price":"4 999,- SEK","description":""},
+                           {"name":"Kvartssten","price":"2 900,- SEK","description":""},
+                           {"name":"Bastupanel","price":"","description":""},
+                           {"name":"Bänkmodul Formula 19","price":"","description":""},
+                           {"name":"Ångrum med mått 2 x 2,4m ingår:","price":"Pris från 25 910,- SEK",
+                            "description":["isolering 45mm stenull av väggar och tak","folie","bärläkt","bastupanel för väggar och tak","lavar","LED belysning","tillbehör material"]}
+                         ]'>
+                
                     <h2 class="text-3xl font-bold mb-8">Grundpaket</h2>
-
+                
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                        <div id="image-section">
+                        <div class="image-section">
                             <!-- Main Carousel -->
-                            <div id="main-carousel" class="splide mb-4">
+                            <div class="splide main-carousel mb-4">
                                 <div class="splide__track">
                                     <ul class="splide__list">
-                                        <li data-reference="https://gefeststoves.com/pechi-uragan-v-setke/iskander-v-setke/gefest-iskander-18-p2/"
-                                        class="splide__slide"><img src="/asset/iskander_18.png" alt="iskander_18" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="0"
+                                            data-reference="https://gefeststoves.com/pechi-uragan-v-setke/iskander-v-setke/gefest-iskander-18-p2/">
+                                            <img src="/asset/iskander_18.png" alt="iskander_18" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://gefeststoves.com/zaryad-dlya-pechej/zhadeit-shlifovannyj/"
-                                         class="splide__slide"><img src="/asset/jadesten.png" alt="Oven Model 2" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="1"
+                                            data-reference="https://gefeststoves.com/zaryad-dlya-pechej/zhadeit-shlifovannyj/">
+                                            <img src="/asset/jadesten.png" alt="jadesten" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://gefeststoves.com/zaryad-dlya-pechej/" class="splide__slide"><img src="/asset/kvartssten.png" alt="Oven Model 3" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="2"
+                                            data-reference="https://gefeststoves.com/zaryad-dlya-pechej/">
+                                            <img src="/asset/kvartssten.png" alt="kvartssten" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://www.byggmax.se/bastupanel-gran-obehandlad-p08412070"
-                                        class="splide__slide"><img src="/asset/doska.png" alt="Oven Model 1" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="3"
+                                            data-reference="https://www.byggmax.se/bastupanel-gran-obehandlad-p08412070">
+                                            <img src="/asset/doska.png" alt="doska" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://www.byggmax.se/bankmodul-bastu-set-formula-19-harvia-p68721337#1238=100137"
-                                        class="splide__slide"><img src="/asset/skamejka.png" alt="Oven Model 2" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="4"
+                                            data-reference="https://www.byggmax.se/bankmodul-bastu-set-formula-19-harvia-p68721337#1238=100137">
+                                            <img src="/asset/skamejka.png" alt="skamejka" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://www.bastubutiken.se/collections/standardpanel"
-                                        class="splide__slide"><img src="/asset/standardpanel.jpg" alt="Oven Model 3" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="5"
+                                            data-reference="https://www.bastubutiken.se/collections/standardpanel">
+                                            <img src="/asset/standardpanel.jpg" alt="standardpanel" class="w-full h-auto rounded-xl">
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            
+                
                             <!-- Thumbnail Carousel -->
-                            <div id="thumb-carousel" class="splide">
+                            <div class="splide thumb-carousel">
                                 <div class="splide__track">
                                     <ul class="splide__list">
-                                        <li class="splide__slide"><img src="/asset/iskander_18.png" alt="" class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/jadesten.png" alt="" class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/kvartssten.png" alt="" class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/doska.png" alt="" class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/skamejka.png" alt="" class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/standardpanel.jpg" alt="" class="h-16 w-24 object-cover rounded"></li>
+                                        <li class="splide__slide"><img src="/asset/iskander_18.png"
+                                                class="h-full w-full object-cover rounded"></li>
+                                        <li class="splide__slide"><img src="/asset/jadesten.png" class="h-16 w-24 object-cover rounded">
+                                        </li>
+                                        <li class="splide__slide"><img src="/asset/kvartssten.png"
+                                                class="h-full w-full object-cover rounded"></li>
+                                        <li class="splide__slide"><img src="/asset/doska.png" class="h-full w-full object-cover rounded">
+                                        </li>
+                                        <li class="splide__slide"><img src="/asset/skamejka.png" class="h-full w-full object-cover rounded">
+                                        </li>
+                                        <li class="splide__slide"><img src="/asset/standardpanel.jpg"
+                                                class="h-full w-full object-cover object-cover rounded"></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
+                
                         <!-- Info container -->
-                        <div id="product-info" class="px-6 py-12">
-                            <h2 class="text-2xl font-semibold mb-2" id="product-name"></h2>
-                            <p class="text-gray-600" id="product-description"></p>
-                            <p class="text-xl font-semibold text-cyan-500 mt-4" id="product-price"></p>
+                        <div class="product-info px-6 py-2">
+                            <h2 class="text-2xl font-semibold mb-2 product-name"></h2>
+                            <p class="text-gray-600 product-description"></p>
+                            <p class="text-xl font-semibold text-cyan-500 mt-4 product-price"></p>
                         </div>
                 
                     </div>
                 </section>
+
 
                 <!-- Standart -->
-                <section class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-4 py-8">
-                    <h2 class="text-3xl font-bold mb-8">Grundpaket</h2>
+                <section class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-4 py-8" data-products='[
+                                           {"name":"Ugn Gefest Avangard ZK Uragan»","price":"27 000,- SEK","description":""},
+                                           {"name":"Jadesten","price":"4 999,- SEK","description":""},
+                                           {"name":"Kvartssten","price":"2 900,- SEK","description":""},
+                                           {"name":"Bastupanel","price":"","description":""},
+                                           {"name":"Bänkmodul Harvia 19","price":"","description":""},
+                                           {"name":"Ångrum med mått 2 x 2,4m ingår:","price":"Pris från 61 649,- SEK",
+                                            "description":["isolering 45mm stenull av väggar och tak","folie","bärläkt","bastupanel för väggar och tak","lavar","LED belysning","tillbehör material"]}
+                                         ]'>
+                
+                    <h2 class="text-3xl font-bold mb-8">Standart</h2>
                 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                        <div id="image-section">
+                        <div class="image-section">
                             <!-- Main Carousel -->
-                            <div id="main-carousel" class="splide mb-4">
+                            <div class="splide main-carousel mb-4">
                                 <div class="splide__track">
                                     <ul class="splide__list">
-                                        <li data-reference="https://gefeststoves.com/pechi-uragan-v-setke/avangard-uragan/gefest-avangard-zk-uragan-v-krugloj-setke-25-p2/"
-                                            class="splide__slide"><img src="/asset/avangard_zk_25.png" alt="Ugn Gefest Avangard ZK Uragan"
-                                                class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="0"
+                                            data-reference="https://gefeststoves.com/pechi-uragan-v-setke/avangard-uragan/gefest-avangard-zk-uragan-v-krugloj-setke-25-p2/">
+                                            <img src="/asset/avangard_zk_25.png" alt="Ugn Gefest Avangard ZK Uragan" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://gefeststoves.com/zaryad-dlya-pechej/zhadeit-shlifovannyj/"
-                                            class="splide__slide"><img src="/asset/jadesten.png" alt="jadesten"
-                                                class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="1"
+                                            data-reference="https://gefeststoves.com/zaryad-dlya-pechej/zhadeit-shlifovannyj/">
+                                            <img src="/asset/jadesten.png" alt="jadesten" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://gefeststoves.com/zaryad-dlya-pechej/" class="splide__slide"><img
-                                                src="/asset/kvartssten.png" alt="kvartssten" class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="2"
+                                            data-reference="https://gefeststoves.com/zaryad-dlya-pechej/">
+                                            <img src="/asset/kvartssten.png" alt="kvartssten" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://www.byggmax.se/bastupanel-v%C3%A4rmebehandlad-asp-sauna-sweden-p67409"
-                                            class="splide__slide"><img src="/asset/doska2.png" alt="doska2"
-                                                class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="3"
+                                            data-reference="https://www.byggmax.se/bastupanel-v%C3%A4rmebehandlad-asp-sauna-sweden-p67409">
+                                            <img src="/asset/doska2.png" alt="doska2" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://www.byggmax.se/bankmodul-bastu-set-formula-19-harvia-p68721337#1238=100165"
-                                            class="splide__slide"><img src="/asset/skamejka2.png" alt="skamejka2"
-                                                class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="4"
+                                            data-reference="https://www.byggmax.se/bankmodul-bastu-set-formula-19-harvia-p68721337#1238=100165">
+                                            <img src="/asset/skamejka2.png" alt="skamejka2" class="w-full h-auto rounded-xl">
                                         </li>
-                                        <li data-reference="https://www.bastubutiken.se/collections/standardpanel"
-                                            class="splide__slide"><img src="/asset/standardpanel.jpg" alt="Oven Model 3"
-                                                class="w-full h-auto rounded-xl">
+                                        <li class="splide__slide" data-product-index="5"
+                                            data-reference="https://www.bastubutiken.se/collections/standardpanel">
+                                            <img src="/asset/standardpanel.jpg" alt="standardpanel" class="w-full h-auto rounded-xl">
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                 
                             <!-- Thumbnail Carousel -->
-                            <div id="thumb-carousel" class="splide">
+                            <div class="splide thumb-carousel">
                                 <div class="splide__track">
                                     <ul class="splide__list">
-                                        <li class="splide__slide"><img src="/asset/avangard_zk_25.png" alt=""
-                                                class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/jadesten.png" alt="jadesten"
-                                                class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/kvartssten.png" alt="kvartssten"
-                                                class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/doska.png" alt="doska2"
-                                                class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/skamejka2.png" alt="skamejka2"
-                                                class="h-16 w-24 object-cover rounded"></li>
-                                        <li class="splide__slide"><img src="/asset/standardpanel.jpg" alt=""
-                                                class="h-16 w-24 object-cover rounded"></li>
+                                        <li class="splide__slide"><img src="/asset/iskander_18.png"
+                                                class="h-full w-full object-cover rounded"></li>
+                                        <li class="splide__slide"><img src="/asset/jadesten.png" class="h-16 w-24 object-cover rounded">
+                                        </li>
+                                        <li class="splide__slide"><img src="/asset/kvartssten.png"
+                                                class="h-full w-full object-cover rounded"></li>
+                                        <li class="splide__slide"><img src="/asset/doska.png"
+                                                class="h-full w-full object-cover rounded">
+                                        </li>
+                                        <li class="splide__slide"><img src="/asset/skamejka.png"
+                                                class="h-full w-full object-cover rounded">
+                                        </li>
+                                        <li class="splide__slide"><img src="/asset/standardpanel.jpg"
+                                                class="h-full w-full object-cover object-cover rounded"></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                 
                         <!-- Info container -->
-                        <div id="product-info" class="px-6 py-12">
-                            <h2 class="text-2xl font-semibold mb-2" id="product-name"></h2>
-                            <p class="text-gray-600" id="product-description"></p>
-                            <p class="text-xl font-semibold text-cyan-500 mt-4" id="product-price"></p>
+                        <div class="product-info px-6 py-2">
+                            <h2 class="text-2xl font-semibold mb-2 product-name"></h2>
+                            <p class="text-gray-600 product-description"></p>
+                            <p class="text-xl font-semibold text-cyan-500 mt-4 product-price"></p>
                         </div>
                 
                     </div>
                 </section>
-             </div>
 
-            
+             </div>
+          
         </div>
     </div>
 
@@ -381,7 +416,7 @@
         </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="/js/products.js"></script>
+    
     <script src="/js/bygg-din-bastu.js"></script>
         
     <!-- <script src="/js/main.js"></script> -->

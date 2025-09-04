@@ -1,47 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const productName        = document.getElementById('product-name');
-  const productPrice       = document.getElementById('product-price');
-  const productDescription = document.getElementById('product-description');
+  document.querySelectorAll('section[data-products]').forEach(section => {
+    const products = JSON.parse(section.dataset.products);
 
-  function updateProductInfo(index) {
-    const p = products[index];
-    if (!p) return;
-    productName.textContent  = p.name || '';
-    productPrice.textContent = p.price || '';
-    productDescription.innerHTML = Array.isArray(p.description)
-      ? `<ul class="list-disc pl-5 marker:text-cyan-500">${p.description.map(i => `<li>${i}</li>`).join('')}</ul>`
-      : (p.description || '');
-  }
+    const nameEl  = section.querySelector('.product-name');
+    const priceEl = section.querySelector('.product-price');
+    const descEl  = section.querySelector('.product-description');
 
-  const main = new Splide('#main-carousel', {
-    type      : 'fade',
-    rewind    : true,
-    pagination: false,
-    arrows    : false,
-    drag      : true,
-  });
+    function updateProductInfoByIndex(productIndex) {
+      const p = products[productIndex];
+      if (!p) return;
+      nameEl.textContent  = p.name || '';
+      priceEl.textContent = p.price || '';
+      descEl.innerHTML = Array.isArray(p.description)
+        ? `<ul class="list-disc pl-5 marker:text-cyan-500">${p.description.map(i => `<li>${i}</li>`).join('')}</ul>`
+        : (p.description || '');
+    }
 
-  const thumbs = new Splide('#thumb-carousel', {
-    fixedWidth  : 100,
-    fixedHeight : 60,
-    gap         : 10,
-    rewind      : true,
-    pagination  : false,
-    isNavigation: true,
-    focus       : 'center',
-    arrows      : false,
-    breakpoints : {
-      640: { fixedWidth: 66, fixedHeight: 40 },
-    },
-  });
+    const main = new Splide(section.querySelector('.main-carousel'), {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : false,
+      drag      : true,
+    });
 
-  main.sync(thumbs);
-  main.mount();
-  thumbs.mount();
+    const thumbs = new Splide(section.querySelector('.thumb-carousel'), {
+      fixedWidth  : 100,
+      fixedHeight : 90,
+      gap         : 10,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      focus       : 'center',
+      arrows      : false,
+      breakpoints : {
+        640: { fixedWidth: 66, fixedHeight: 40 },
+      },
+    });
 
-  updateProductInfo(0);
+    main.sync(thumbs);
+    main.mount();
+    thumbs.mount();
 
-  main.on('move', function (newIndex) {
-    updateProductInfo(newIndex);
+    // Initialise with first slide's product index
+    const firstSlide = section.querySelector('.main-carousel .splide__slide');
+    updateProductInfoByIndex(parseInt(firstSlide.dataset.productIndex, 10));
+
+    // Update on slide change
+    main.on('move', function (newIndex) {
+      const slide = main.Components.Slides.getAt(newIndex).slide;
+      const productIndex = parseInt(slide.dataset.productIndex, 10);
+      updateProductInfoByIndex(productIndex);
+    });
   });
 });
