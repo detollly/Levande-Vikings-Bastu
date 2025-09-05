@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       pagination  : false,
       isNavigation: true,
       focus       : 'center',
-      arrows      : false,
+      arrows      : true,
       breakpoints : {
         640: { fixedWidth: 66, fixedHeight: 40 },
       },
@@ -54,3 +54,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+//Image enlargement function
+const modal    = document.getElementById('imgModal');
+const modalImg = document.getElementById('imgModalContent');
+const gallery  = document.querySelector('.gallery');
+
+if (gallery && modal && modalImg) {
+  // Open modal when clicking an image inside the gallery
+  gallery.addEventListener('click', e => {
+    if (e.target.tagName === 'IMG') {
+      modalImg.src = e.target.src;
+      modal.classList.remove('hidden');
+    }
+  });
+
+  // Close modal when clicking the backdrop
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      modalImg.src = '';
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      modal.classList.add('hidden');
+      modalImg.src = '';
+    }
+  });
+}
+
