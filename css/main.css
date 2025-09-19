@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  --color-primary:#1487be
-  -[var(--color-primary)]
-} */
-
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Instrument Sans', sans-serif;
 }
@@ -66,7 +60,7 @@ p, span, li, a, blockquote {
 
 /* Initial hidden state */
 .scroll-animate {
-    transform: translateY(30px);
+    transform: translateY(130px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
