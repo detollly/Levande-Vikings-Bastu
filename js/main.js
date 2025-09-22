@@ -134,3 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Valid footer date
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Submit form alert message
+document.getElementById('contactForm').addEventListener('submit', function() {
+    document.getElementById('successMessage').classList.remove('hidden');
+  });
