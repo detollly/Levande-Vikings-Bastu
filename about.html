@@ -11,7 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/main.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,8 +18,8 @@
 
 <body class="bg-gradient-to-br from-white to-gray-100 min-h-screen overflow-x-hidden text-slate-900">
     <!-- Navigation -->
-    <nav class="navbar-scroll" id="navbar"
-        class="fixed top-0 left-0 right-0 z-50 h-fit py-2 transition-all duration-500 ease-out">
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 h-fit py-2 transition-all duration-500 ease-out backdrop-blur-[20px] bg-white/10 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
 
@@ -36,17 +35,17 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block text-center">
                     <div class="ml-10 flex items-baseline">
-                        <a href="/" class="menu-item font-semibold text-md text-sky-100 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
+                        <a href="/" class="menu-item font-semibold text-md text-slate-900 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
                         hover:text-cyan-500 px-3 py-2">Hem</a>
-                        <a href="/bygg-din-bastu.html" class="menu-item font-semibold text-md text-sky-100 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
+                        <a href="/bygg-din-bastu.html" class="menu-item font-semibold text-md text-slate-900 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
                         hover:text-cyan-500 px-3 py-2">Bygg din bastu</a>
-                        <a href="/reviews.html" class="menu-item font-semibold text-md text-sky-100 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
+                        <a href="/reviews.html" class="menu-item font-semibold text-md text-slate-900 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
                         hover:text-cyan-500 px-3 py-2">Omdömen</a>
-                        <a href="/utbildning.html" class="menu-item font-semibold text-md text-sky-100 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
+                        <a href="/utbildning.html" class="menu-item font-semibold text-md text-slate-900 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
                         hover:text-cyan-500 px-3 py-2">Utbildning</a>
-                        <a href="/about.html" class="menu-item font-semibold text-md text-sky-100 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
+                        <a href="/about.html" class="menu-item font-semibold text-md text-slate-900 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
                         hover:text-cyan-500 px-3 py-2">Om oss</a>
-                        <a href="/contact.html" class="menu-item font-semibold text-md text-sky-100 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
+                        <a href="/contact.html" class="menu-item font-semibold text-md text-slate-900 [text-shadow:0px_2px_4px_rgba(0,0,0,0.5)]
                         hover:text-cyan-500 px-3 py-2">Kontakt</a>
                     </div>
                 </div>
@@ -95,6 +94,156 @@
         </div>
         </div>
     </nav>
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-32 md:my-64 text-justify">
+        <section class="text-center mb-12">
+            <h2 class="text-4xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">
+                Om Oss
+            </h2>
+        </section>
+    
+        <section class="space-y-6 text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-20">
+            <p>
+                <span class="font-semibold text-cyan-600">Levande Vikings Bastu</span> — это живая традиция, где соединяются
+                тепло, здоровье и древняя мудрость.
+                Мы создаём пространство, в котором очищаются тело, разум и дух. Наша цель — возродить северную культуру бани
+                и вернуть её истинное значение:
+                место силы, очищения и единения.
+            </p>
+            <p>
+                Мы строим не просто помещения, а целые миры с атмосферой, в которой рождаются здоровье и новые силы.
+                Баня — это больше, чем пар и жара: здесь обновляются сразу несколько уровней человека — физический,
+                энергетический и духовный.
+                В древности баня служила не только для омовения. В ней лечили болезни, принимали роды, проводили обряды
+                очищения и возрождения.
+                И мы возвращаем этим традициям новую жизнь.
+            </p>
+        </section>
+    
+        <section class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg p-6 sm:p-10 mb-20">
+            <h3 class="text-2xl sm:text-3xl font-bold text-cyan-500 mb-6">Почему о шведской бане сегодня знают так мало?
+            </h3>
+            <div class="space-y-6 md:text-lg lg:text-xl">
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">В 1725 году бани в Швеции были запрещены под влиянием врачей и
+                        моралистов. Их обвиняли в распространении болезней и чрезмерном расходе дров.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">На севере и в деревнях баня сохранилась, но постепенно утратила
+                        культурное значение и почти исчезла из памяти.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">В Лапландии и Финляндии традиция живёт до сих пор, и мы
+                        стремимся оживить её в Швеции.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg p-6 sm:p-10 mb-20">
+            <h3 class="text-2xl sm:text-3xl font-bold text-cyan-500 mb-6">Что мы предлагаем:</h3>
+            <div class="space-y-6 md:text-lg lg:text-xl">
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">Бани под ключ — от проекта и дизайна до готовой постройки.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">Отделка и интерьер — дерево, камень и детали с душой.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">Живые знания — обучение культуре парения, ритуалам и силе
+                        природы.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-20">
+            <div class="mb-20">
+                <p>
+                    С нами вы получаете не просто баню, а философию. Каждый проект мы создаём так, словно строим для себя и
+                    своей семьи.
+                </p>
+                <p>
+            </div>
+
+            <div class="space-y-6 md:text-lg lg:text-xl mt-6 mb-20">
+                <h3>
+                    Мы хотим, чтобы ваша баня стала:
+                </h3>
+                
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">Местом очищения тела</p>
+                </div>
+            
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">Островом спокойствия ума</p>
+                </div>
+            
+                <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">Источником силы и укрепления здоровья</p>
+                </div>
+            </div>
+            
+            <div class="space-y-6 md:text-lg lg:text-xl">
+                <p>
+                    Мы стремимся быть ведущей силой в Скандинавии, объединяя традиции предков и современное качество.
+                </p>
+                <p>
+                    Если вы выбираете <span class="font-semibold text-cyan-600">Levande Vikings Bastu</span>, знайте: для нас
+                    это не просто работа.
+                    Это честь и радость — создавать пространство, где рождаются новые силы и крепнут семьи.
+                </p>
+                <p>
+                    Ваша баня станет вашим островом покоя, силы и здоровья. Добро пожаловать в мир, где живут традиции наших
+                    Предков.
+                </p>
+            </div>
+        </section>
+    
+        <div class="mt-12 text-right">
+            <p class="text-base sm:text-lg lg:text-xl text-gray-700">Med vänligen hälsningar</p>
+            <p class="text-lg sm:text-xl lg:text-2xl font-semibold text-cyan-600">Viktor Gricius</p>
+        </div>
+    </div>
+
 
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
