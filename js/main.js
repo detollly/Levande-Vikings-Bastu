@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
     main.mount();
     thumbs.mount();
 
+    // =========================
     // Initialise with first slide
+    // =========================
     const firstSlide = section.querySelector('.main-carousel .splide__slide');
     if (firstSlide) {
       updateProductInfoByIndex(parseInt(firstSlide.dataset.productIndex, 10));
