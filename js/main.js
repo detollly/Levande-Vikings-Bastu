@@ -139,4 +139,3 @@ document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('contactForm').addEventListener('submit', function() {
     document.getElementById('successMessage').classList.remove('hidden');
   });
-
