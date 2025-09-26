@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body class="bg-gradient-to-br from-white to-gray-100 min-h-screen overflow-x-hidden text-slate-900">
@@ -99,13 +100,68 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-    <section id="reviews" class="flex items-center justify-center min-h-[60vh] bg-gray-100">
-        <div class="text-center space-y-10">
-            <h2 class="text-6xl font-bold text-gray-900">Omdömen</h2>
-            <p class="text-2xl text-gray-500">Den här sektionen kommer snart. Håll utkik!</p>
-            <div class="text-2xl animate-pulse text-cyan-500 font-semibold">⭐⭐⭐⭐⭐ Samlar in feedback…</div>
-        </div>
-    </section>
+    <div class="min-h-screen flex flex-col items-center justify-center my-32 md:my-64 px-4 lg:px-8 bg-gray-50">
+    
+        <section class="w-full max-w-6xl text-justify">
+            <!-- Heading -->
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+                    What Our Guests Say
+                </h2>
+            </div>
+    
+            <!-- Reviews List -->
+            <div id="reviewsList" class="grid gap-6 md:grid-cols-2 mb-16">
+                <!-- Cards will be injected here by JS -->
+            </div>
+        </section>
+    
+        <!-- Review Form Section -->
+        <section class="w-full max-w-xl bg-gradient-to-r from-white via-gray-50 to-gray-100 rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-cyan-600 mb-6 text-center">Leave Your Review</h3>
+    
+            <form id="reviewForm" class="space-y-6">
+                <!-- Name -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                    <input type="text" id="name" required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500" />
+                </div>
+    
+                <!-- Review -->
+                <div>
+                    <label for="text" class="block text-sm font-medium text-gray-700">Your Review</label>
+                    <textarea id="text" required rows="4"
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500"></textarea>
+                </div>
+    
+                <!-- Star Rating -->
+                <div>
+                    <span class="block text-sm font-medium text-gray-700 mb-1">Rating</span>
+                    <div id="starRating" class="flex space-x-2 text-4xl text-gray-300 cursor-pointer">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                    <input type="hidden" name="rating" id="rating" required />
+                </div>
+    
+                <!-- Submit -->
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="w-full sm:w-56 lg:w-80 h-12 bg-cyan-500 text-white font-semibold rounded-lg shadow-lg 
+                                   hover:bg-cyan-700 hover:shadow-xl transition-colors duration-200 focus:outline-none 
+                                   focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                        Submit review
+                    </button>
+                </div>
+    
+                <p id="status" class="text-center text-sm text-gray-600 mt-2"></p>
+            </form>
+        </section>
+    </div>
+
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -239,5 +295,6 @@
             </div>
         </div>
     </footer>
-    <script src="/js/main.js"></script>
+    <script src="/js/reviews.js"></script>    
+    
 </body>
