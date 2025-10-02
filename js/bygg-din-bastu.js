@@ -72,7 +72,7 @@ if (gallery && modal && modalImg && closeBtn) {
     if (e.target.tagName === 'IMG') {
       modalImg.src = e.target.src;
       modal.classList.remove('hidden');
-      closeBtn.focus(); // accessibility
+      closeBtn.focus();
     }
   });
 
