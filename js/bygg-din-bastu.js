@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
 // Image enlargement / lightbox
 const modal     = document.getElementById('imgModal');
 const modalImg  = document.getElementById('imgModalContent');
