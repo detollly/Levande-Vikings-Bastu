@@ -1,7 +1,34 @@
-// --- Supabase Setup ---
-const SUPABASE_URL = "https://rlgkuiadmjfyylibigwn.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJsZ2t1aWFkbWpmeXlsaWJpZ3duIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg5MTQyNDgsImV4cCI6MjA3NDQ5MDI0OH0.odfeURUQ03oTPyYk8fS9LQDJq4Ysfr68R9P-j0YsAvM";
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+// --- Firebase Imports ---
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy,
+  limit,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+import {
+  getAuth,
+  signInAnonymously
+} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+// --- Firebase Config ---
+const firebaseConfig = {
+  apiKey: "AIzaSyBTli0EY0Y4yvDsUSRPRsaCAPsAxtiGhfM",
+  authDomain: "levande-vikings-bastu-2908c.firebaseapp.com",
+  projectId: "levande-vikings-bastu-2908c",
+  storageBucket: "levande-vikings-bastu-2908c.firebasestorage.app",
+  messagingSenderId: "924601170755",
+  appId: "1:924601170755:web:f35ff5c0660f7239084df6"
+};
+
+// --- Init Firebase ---
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
 
 // --- DOM Elements ---
 const stars = document.querySelectorAll("#starRating span");
@@ -10,6 +37,27 @@ const reviewsList = document.getElementById("reviewsList");
 const statusEl = document.getElementById("status");
 const reviewForm = document.getElementById("reviewForm");
 
+// --- Helpers ---
+function showStatus(message, color = "gray") {
+  statusEl.textContent = message;
+  statusEl.className = `text-center text-sm text-${color}-600 mt-2`;
+}
+
+function resetStars() {
+  ratingInput.value = "";
+  stars.forEach((s) => {
+    s.classList.remove("text-yellow-400");
+    s.classList.add("text-gray-300");
+  });
+}
+
+// --- Ensure Auth ---
+async function ensureAuth() {
+  if (!auth.currentUser) {
+    await signInAnonymously(auth);
+  }
+}
+
 // --- Star Rating Selection ---
 function setupStarRating() {
   stars.forEach((star) => {
@@ -17,9 +65,10 @@ function setupStarRating() {
       const rating = Number(star.dataset.value);
       ratingInput.value = rating;
 
-      stars.forEach((s, i) => {
-        s.classList.toggle("text-yellow-400", i < rating);
-        s.classList.toggle("text-gray-300", i >= rating);
+      stars.forEach((s) => {
+        const starValue = Number(s.dataset.value);
+        s.classList.toggle("text-yellow-400", starValue <= rating);
+        s.classList.toggle("text-gray-300", starValue > rating);
       });
     });
   });
@@ -33,36 +82,48 @@ function renderReviews(reviews = []) {
   }
 
   reviewsList.innerHTML = reviews
-    .map(
-      (r) => `
-      <div class="bg-gradient-to-r from-white via-gray-50 to-gray-100 rounded-xl shadow-md p-6">
-        <p class="font-semibold text-slate-800 mb-1">${r.name}</p>
-        <p class="text-sm text-gray-500 mb-3">
-          ${r.created_at ? new Date(r.created_at).toLocaleDateString() : ""}
-        </p>
-        <div class="flex items-center mb-6">
-          <div class="flex text-yellow-500 text-2xl">
-            ${"★".repeat(r.rating || 0)}${"☆".repeat(5 - (r.rating || 0))}
+    .map((r) => {
+      let dateStr = "";
+      if (r.created_at) {
+        if (typeof r.created_at.toDate === "function") {
+          dateStr = r.created_at.toDate().toLocaleDateString();
+        } else if (r.created_at instanceof Date) {
+          dateStr = r.created_at.toLocaleDateString();
+        }
+      }
+
+      return `
+        <div class="bg-gradient-to-r from-white via-gray-50 to-gray-100 rounded-xl shadow-md p-6">
+          <p class="font-semibold text-slate-800 mb-1">${r.name}</p>
+          <p class="text-sm text-gray-500 mb-3">${dateStr}</p>
+          <div class="flex items-center mb-6">
+            <div class="flex text-yellow-500 text-2xl">
+              ${"★".repeat(r.rating || 0)}${"☆".repeat(5 - (r.rating || 0))}
+            </div>
           </div>
+          <p class="text-gray-700 italic">"${r.text}"</p>
         </div>
-        <p class="text-gray-700 italic">"${r.text}"</p>
-      </div>
-    `
-    )
+      `;
+    })
     .join("");
 }
 
-// --- Load Reviews from Supabase ---
+// --- Load Reviews from Firestore ---
 async function loadReviews() {
   try {
-    const { data, error } = await supabaseClient
-      .from("reviews")
-      .select("*")
-      .order("created_at", { ascending: false })
-      .limit(6);
+    const q = query(
+      collection(db, "reviews"),
+      orderBy("created_at", "desc"),
+      limit(6)
+    );
+    const snapshot = await getDocs(q);
 
-    if (error) throw error;
-    renderReviews(data);
+    const reviews = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    renderReviews(reviews);
   } catch (err) {
     console.error("Error loading reviews:", err.message);
     reviewsList.innerHTML = `<p class="text-red-600">Could not load reviews. Please try again later.</p>`;
@@ -83,11 +144,14 @@ async function handleSubmit(e) {
   }
 
   try {
-    const { error } = await supabaseClient
-      .from("reviews")
-      .insert([{ name, text, rating }]);
+    await ensureAuth(); // ✅ make sure we’re signed in
 
-    if (error) throw error;
+    await addDoc(collection(db, "reviews"), {
+      name,
+      text,
+      rating,
+      created_at: serverTimestamp(), // ✅ server-side timestamp
+    });
 
     showStatus("Thank you for your review!", "green");
     reviewForm.reset();
@@ -97,20 +161,6 @@ async function handleSubmit(e) {
     console.error("Error submitting review:", err.message);
     showStatus("Error submitting review.", "red");
   }
-}
-
-// --- Helpers ---
-function showStatus(message, color = "gray") {
-  statusEl.textContent = message;
-  statusEl.className = `text-center text-sm text-${color}-600 mt-2`;
-}
-
-function resetStars() {
-  ratingInput.value = "";
-  stars.forEach((s) => {
-    s.classList.remove("text-yellow-400");
-    s.classList.add("text-gray-300");
-  });
 }
 
 // --- Init ---
