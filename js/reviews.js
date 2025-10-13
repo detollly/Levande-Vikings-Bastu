@@ -144,13 +144,13 @@ async function handleSubmit(e) {
   }
 
   try {
-    await ensureAuth(); // ✅ make sure we’re signed in
+    await ensureAuth(); // Ensure user is authenticated
 
     await addDoc(collection(db, "reviews"), {
       name,
       text,
       rating,
-      created_at: serverTimestamp(), // ✅ server-side timestamp
+      created_at: serverTimestamp(), // Use server timestamp
     });
 
     showStatus("Thank you for your review!", "green");
