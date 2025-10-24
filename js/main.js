@@ -104,26 +104,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
 });
 
-// Scroll animations for sections
+// Scroll-triggered animations
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll("section");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add("visible");
-                }, index * 120);
-
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    sections.forEach((section) => {
-        section.classList.add("scroll-animate");
-        observer.observe(section);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // animate once
+      }
     });
+  }, { threshold: 0.2 }); // trigger when 20% is visible
+
+  sections.forEach(section => {
+    section.classList.add("scroll-animate");
+    observer.observe(section);
+  });
 });
 
 // Valid footer date
