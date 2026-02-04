@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Instrument Sans', sans-serif;
+h1, h2, h3, .serif {
+    font-family: "Source Serif Pro", serif;
 }
 
 p, span, li, a, blockquote {
-  font-family: 'Geist', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 
