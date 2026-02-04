@@ -12,8 +12,7 @@ p, span, li, a, blockquote {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-
-.navbar-scroll {
+/* .navbar-scroll {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -21,7 +20,7 @@ p, span, li, a, blockquote {
 
 .navbar-scroll .menu-item {
     color: #000000;
-}
+} */
 
 .menu-item {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

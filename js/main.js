@@ -1,18 +1,7 @@
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-const heroSection = document.getElementById('hero');
-
+// Parallax effect
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const heroHeight = heroSection.offsetHeight;
 
-    if (scrolled > heroHeight - 100) {
-        navbar.classList.add('navbar-scroll');
-    } else {
-        navbar.classList.remove('navbar-scroll');
-    }
-
-    // Parallax effect
     const parallaxElements = document.querySelectorAll('.parallax-slow');
     parallaxElements.forEach(el => {
         const speed = 0.5;
