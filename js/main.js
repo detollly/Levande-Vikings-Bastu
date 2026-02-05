@@ -115,6 +115,21 @@ document.addEventListener("DOMContentLoaded", () => {
 // Valid footer date
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Scroll up button
+const btn = document.getElementById('scrollUpBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 900) {
+      btn.classList.remove('hidden');
+    } else {
+      btn.classList.add('hidden');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
 // Submit form alert message
 document.getElementById('contactForm').addEventListener('submit', function() {
     document.getElementById('successMessage').classList.remove('hidden');
