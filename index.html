@@ -23,7 +23,11 @@
   </head>
 
   <body class="min-h-screen overflow-x-hidden text-slate-900">
-    <!-- Header -->
+
+    <!-- ===========================
+     HEADER
+    =========================== -->
+
     <nav
       id="navbar"
       class="flex items-center fixed top-4 left-0 right-0 z-50 h-fit py-2 transition-all duration-500 ease-out"
@@ -44,37 +48,37 @@
             </a>
           </div>
 
-          <!-- Desktop Nav Menu -->
-          <div class="hidden md:block text-center">
+          <!-- ====== Desktop Nav Menu ====== -->
+          <div
+            class="hidden md:block text-center text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
+          >
             <div class="ml-10 flex items-center">
-              <a
-                href="/"
-                class="menu-item text-base text-white hover:text-[#5A7543] px-3"
+              <a href="/" class="menu-item text-base hover:text-blue-400 px-3"
                 >Hem</a
               >
               <a
                 href="/bygg-din-bastu.html"
-                class="menu-item text-base text-white hover:text-[#5A7543] px-3"
+                class="menu-item text-base text-white hover:text-blue-400 px-3"
                 >Bygg din bastu</a
               >
               <a
                 href="/reviews.html"
-                class="menu-item text-base text-white hover:text-[#5A7543] px-3"
+                class="menu-item text-base text-white hover:text-blue-400 px-3"
                 >Omdömen</a
               >
               <a
                 href="/utbildning.html"
-                class="menu-item text-base text-white hover:text-[#5A7543] px-3"
+                class="menu-item text-base text-white hover:text-blue-400 px-3"
                 >Utbildning</a
               >
               <a
                 href="/about.html"
-                class="menu-item text-base text-white hover:text-[#5A7543] px-3"
+                class="menu-item text-base text-white hover:text-blue-400 px-3"
                 >Om oss</a
               >
               <a
                 href="/contact.html"
-                class="menu-item text-base text-white hover:text-[#5A7543] px-3"
+                class="menu-item text-base text-white hover:text-blue-400 px-3"
                 >Kontakt</a
               >
             </div>
@@ -141,14 +145,14 @@
 
         <!-- Social media & Contacts -->
         <div
-          class="hidden md:flex justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full p-6 border border-[#7d6e59] gap-2"
+          class="hidden md:flex justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full p-6 border border-[#7d6e59] gap-2 text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
         >
           <div class="flex items-center">
             <!-- Instagram -->
             <a
               href="#"
               aria-label="Instagram"
-              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-[#5A7543] hover:scale-110"
+              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -161,7 +165,7 @@
             <a
               href="#"
               aria-label="Facebook"
-              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-[#5A7543] hover:scale-110"
+              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -174,7 +178,7 @@
             <a
               href="https://www.youtube.com/@LEVVIKBASTU"
               aria-label="YouTube"
-              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover: hover:text-[#5A7543] hover:scale-110"
+              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover: hover:text-blue-400 hover:scale-110"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -188,7 +192,7 @@
             <div>
               <a
                 href="tel:+46739782962"
-                class="text-white hover:text-[#5A7543] hover:translate-x-1 transition-colors duration-300 inline-block text-xs"
+                class="text-white hover:text-blue-400 hover:translate-x-1 transition-colors duration-300 inline-block text-xs"
               >
                 +46 7397 82962
               </a>
@@ -201,7 +205,7 @@
           </div>
         </div>
 
-        <!-- Mobile menu -->
+        <!-- ====== Mobile menu ====== -->
         <div id="mobile-menu" class="md:hidden hidden">
           <div
             class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700"
@@ -244,7 +248,10 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-    <!-- Hero Section -->
+    <!-- ===========================
+     HERO SECTION
+    =========================== -->
+
     <div id="hero" class="relative min-h-screen overflow-hidden">
       <!-- Video background -->
       <div class="absolute inset-0 -z-10">
@@ -266,8 +273,8 @@
 
       <!-- Text layer -->
       <div
-        class="absolute inset-0 md:pl-24 z-20 flex flex-col items-center justify-center md:items-start gap-16 px-4 parallax-slow"
-      >
+  class="absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-40 px-4 parallax-slow"
+>
         <h1
           class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-center"
         >
@@ -302,84 +309,188 @@
       </div>
     </div>
 
-    <!-- Opening Section -->
-    <section class="mt-20 lg:mt-32 px-4">
+    <!-- ===========================
+     OPENING SECTION
+    =========================== -->
+
+    <section class="py-20 md:py-32 px-4 bg-[#F3EAE1]">
       <div class="max-w-6xl mx-auto">
-        <div class="py-20">
-          <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight mb-6">
-              Парение — это искусство жить медленно
-            </h1>
-            <p class="text-xl md:text-2xl leading-relaxed animate-slide-up">
-              В мире, где всё быстро, баня учит нас замедляться. Вспомнить, как
-              чувствовать. Вспомнить, как быть. Потому что парение — это не
-              просто жара. Это древний язык заботы.
-            </p>
-          </div>
+        <div
+          class="flex flex-col items-center md:items-start 2xl:items-center max-w-3xl justify-center text-[#191919] mx-auto px-16 gap-6"
+        >
+          <h1 class="text-2xl md:text-5xl mb-6">
+            Открой для себя <span class="text-[#5A7543]">парение в Levande Vikings Bastu</span> — ритуал для тела и души
+          </h1>
+          <p class="text-base md:text-2xl">
+            В мире, где всё быстро, баня учит нас замедляться. Вспомнить, как
+            чувствовать. Вспомнить, как быть. Потому что парение — это не просто
+            жара. Это древний язык заботы.&nbsp&nbsp&nbsp
+            <a
+              href="bastu.html"
+              rel="noopener noreferrer"
+              class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300"
+            >
+              <span class="underline">Узнать больше</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Ritual Section -->
-    <section class="mt-24 lg:mt-28 md:px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-slate-300 relative rounded-2xl shadow-xl">
-          <div
-            class="relative rounded-2xl overflow-hidden min-h-[16rem] md:h-[full] flex items-center justify-center md:px-8 md:py-8"
-          >
-            <img
-              src="/asset/relaxation.webp"
-              alt="Relaxation"
-              class="w-full h-full object-cover rounded-md"
-            />
+    <!-- ===========================
+     CONTENT TEASERS
+    =========================== -->
+    <section class="py-20 md:py-32 px-4 bg-[#E5D3C0]">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <!-- Glassmorphic text overlay -->
-            <div
-              class="absolute inset-0 flex items-center justify-center px-3 sm:px-6 py-8 lg:py-20 z-20"
+        <!-- ====== Card Ovens ====== -->
+        <a
+          href="oven.html"
+          class="group flex flex-col bg-[#F3EAE1] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+        >
+          <h2 class="text-2xl">Печь — это сердце бани</h2>
+
+          <p class="text-base">
+            Ugnen är bastuns hjärta – den som gör varje uppvärmning till en sann
+            basturitual. Kraftfull värme, tät ånga och känslan av levande hetta
+            ger den där speciella stämningen som bastuälskare uppskattar mest.
+          </p>
+
+          <!-- CTA -->
+          <div class="mt-auto flex items-end justify-between">
+            <span
+              class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300"
             >
-              <div
-                class="w-full md:max-w-5xl text-center bg-white/10 backdrop-blur-sm rounded-md p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.01]"
+              <span class="underline">Узнать больше</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 ml-1"
               >
-                <h1
-                  class="md:h-16 text-2xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-sky-100 via-sky-200 to-sky-300 bg-clip-text text-transparent drop-shadow-lg mb-3 sm:mb-6 animate-fade-in leading-tight"
-                >
-                  Парение — это ритуал для тела и души
-                </h1>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </span>
 
-                <p
-                  class="bg-gradient-to-r from-white via-sky-50 to-sky-100 bg-clip-text text-transparent text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed animate-slide-up px-1 sm:px-4"
-                >
-                  Настоящее парение — это <strong>внимание</strong> к себе, к
-                  дыханию, к ощущениям. Это возвращение к телу, к моменту. Здесь
-                  нет спешки, нет суеты. Всё делается с уважением, теплом и
-                  знанием.
-                  <a
-                    href="bastu.html"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center text-blue-600 hover:underline"
-                  >
-                    <span><strong>Узнать больше</strong></span>
-                    <svg
-                      class="w-4 h-4 ml-1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                      />
-                    </svg>
-                  </a>
-                </p>
-              </div>
+            <!-- Image -->
+            <div class="w-40 h-40 overflow-hidden rounded-full">
+              <img
+                src="/asset/oven2.webp"
+                alt="Ovens"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
-        </div>
+        </a>
+
+        <!-- ====== Våra projekt ====== -->
+        <a
+          href="project.html"
+          class="group flex flex-col bg-[#F3EAE1] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+        >
+          <h2 class="text-2xl">Våra projekt</h2>
+
+          <p class="text-base">
+            Våra projekt är idéer som blivit verklighet – där trä, sten, värme och ånga tillsammans skapar känslan av en äkta bastu. Genomtänkt design, praktiska lösningar och känsla för detaljer gör varje projekt levande i vardagen. Vi skapar platser som man gärna återvänder till, igen och igen.
+          </p>
+
+          <!-- CTA -->
+          <div class="mt-auto flex items-end justify-between">
+            <span
+              class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300"
+            >
+              <span class="underline">Узнать больше</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 ml-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </span>
+
+            <!-- Image -->
+            <div class="w-40 h-40 overflow-hidden rounded-full">
+              <img
+                src="/asset/11.webp"
+                alt="Ovens"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </a>
+
+        <!-- ====== Bygg din bastu ====== -->
+        <a
+          href="bygg-din-bastu.html"
+          class="group flex flex-col bg-[#5A7543] p-8 rounded-xl text-white gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+        >
+          <h2 class="text-2xl">Bygg din bastu</h2>
+
+          <p class="text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab pariatur quos molestiae explicabo id voluptatum, iusto necessitatibus esse, reiciendis, fugiat quia quaerat totam repellat? Quae vitae laudantium ut ipsam illum.
+          </p>
+
+          <!-- CTA -->
+          <div class="mt-auto flex items-end justify-between">
+            <span
+              class="inline-flex items-center text-white hover:translate-x-1 duration-300"
+            >
+              <span class="underline">Узнать больше</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 ml-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </span>
+
+            <!-- Image -->
+            <div class="w-40 h-40 overflow-hidden rounded-full">
+              <img
+                src="/asset/10.webp"
+                alt="Ovens"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </a>
       </div>
     </section>
 

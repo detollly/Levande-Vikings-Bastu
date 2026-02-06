@@ -47,7 +47,7 @@ function closeMobileMenu() {
     mobileMenuButton.setAttribute('aria-expanded', 'false');
 }
 
-// Event listeners
+// Event listener for mobile menu
 mobileMenuButton.addEventListener('click', toggleMobileMenu);
 
 // Close menu when clicking on mobile menu links
@@ -119,7 +119,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const btn = document.getElementById('scrollUpBtn');
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 900) {
+    if (window.scrollY > 2000) {
       btn.classList.remove('hidden');
     } else {
       btn.classList.add('hidden');
