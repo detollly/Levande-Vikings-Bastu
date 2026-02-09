@@ -22,8 +22,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="min-h-screen overflow-x-hidden text-slate-900">
-
+  <body class="min-h-screen overflow-x-hidden">
     <!-- ===========================
      HEADER
     =========================== -->
@@ -50,7 +49,7 @@
 
           <!-- ====== Desktop Nav Menu ====== -->
           <div
-            class="hidden md:block max-[926px]:landscape:!hidden text-center text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
+            class="hidden md:block text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
           >
             <div class="ml-10 flex items-center">
               <a href="/" class="menu-item text-base hover:text-blue-400 px-3"
@@ -58,34 +57,34 @@
               >
               <a
                 href="/bygg-din-bastu.html"
-                class="menu-item text-base text-white hover:text-blue-400 px-3"
+                class="menu-item text-base hover:text-blue-400 px-3"
                 >Bygg din bastu</a
               >
               <a
                 href="/reviews.html"
-                class="menu-item text-base text-white hover:text-blue-400 px-3"
+                class="menu-item text-base hover:text-blue-400 px-3"
                 >Omdömen</a
               >
               <a
                 href="/utbildning.html"
-                class="menu-item text-base text-white hover:text-blue-400 px-3"
+                class="menu-item text-base hover:text-blue-400 px-3"
                 >Utbildning</a
               >
               <a
                 href="/about.html"
-                class="menu-item text-base text-white hover:text-blue-400 px-3"
+                class="menu-item text-base hover:text-blue-400 px-3"
                 >Om oss</a
               >
               <a
                 href="/contact.html"
-                class="menu-item text-base text-white hover:text-blue-400 px-3"
+                class="menu-item text-base hover:text-blue-400 px-3"
                 >Kontakt</a
               >
             </div>
           </div>
 
           <!-- Phone & Mobile menu buttons -->
-          <div class="flex items-center gap-3 max-[926px]:!flex md:hidden">
+          <div class="flex items-center gap-3 md:hidden">
             <!-- Phone button -->
             <a
               href="tel:+46739782962"
@@ -145,12 +144,12 @@
 
         <!-- Social media & Contacts -->
         <div
-          class="hidden md:flex max-[926px]:landscape:!hidden justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full p-6 border border-[#7d6e59] gap-2 text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
+          class="hidden md:flex max-[926px]:landscape:hidden justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full p-6 border border-[#7d6e59] gap-2 text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
         >
           <div class="flex items-center">
             <!-- Instagram -->
             <a
-              href="#"
+              href="https://www.instagram.com/levande.vikings.bastu/"
               aria-label="Instagram"
               class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
             >
@@ -178,7 +177,7 @@
             <a
               href="https://www.youtube.com/@LEVVIKBASTU"
               aria-label="YouTube"
-              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover: hover:text-blue-400 hover:scale-110"
+              class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -204,43 +203,45 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- ====== Mobile menu ====== -->
-        <div id="mobile-menu" class="md:hidden hidden">
-          <div
-            class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700"
+      <!-- ====== Mobile menu dropdown ====== -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden absolute left-0 right-0 z-40 bg-[#5A7543]"
+        style="top: 100%"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="/"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
+            >Hem</a
           >
-            <a
-              href="/"
-              class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 hover:bg-slate-700 transition-colors duration-200"
-              >Hem</a
-            >
-            <a
-              href="/bygg-din-bastu.html"
-              class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 hover:bg-slate-700 transition-colors duration-200"
-              >Bygg din bastu</a
-            >
-            <a
-              href="/reviews.html"
-              class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 hover:bg-slate-700 transition-colors duration-200"
-              >Omdömen</a
-            >
-            <a
-              href="/utbildning.html"
-              class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 hover:bg-slate-700 transition-colors duration-200"
-              >Utbildning</a
-            >
-            <a
-              href="/about.html"
-              class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 hover:bg-slate-700 transition-colors duration-200"
-              >Om oss</a
-            >
-            <a
-              href="/contact.html"
-              class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 hover:bg-slate-700 transition-colors duration-200"
-              >Kontakt</a
-            >
-          </div>
+          <a
+            href="/bygg-din-bastu.html"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
+            >Bygg din bastu</a
+          >
+          <a
+            href="/reviews.html"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
+            >Omdömen</a
+          >
+          <a
+            href="/utbildning.html"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
+            >Utbildning</a
+          >
+          <a
+            href="/about.html"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
+            >Om oss</a
+          >
+          <a
+            href="/contact.html"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
+            >Kontakt</a
+          >
         </div>
       </div>
     </nav>
@@ -273,17 +274,20 @@
 
       <!-- Text layer -->
       <div
-  class="absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-40 px-4 parallax-slow"
->
+        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-40 px-6 parallax-slow pt-32"
+      >
         <h1
-          class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-center"
+          class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
         >
           Levande Vikings Bastu
         </h1>
         <p
-          class="text-[#E8E8E8] text-base md:text-2xl font-light drop-shadow-lg text-center"
+          class="max-w-4xl text-[#E8E8E8] text-base md:text-2xl font-light drop-shadow-lg text-center md:text-start"
         >
-          Бани под заказ
+          Specialister på vedeldade bastur och traditionell bastuvärme. Vi
+          skapar äkta bastukänsla med djup ånga och kraftfulla vedugnar.
+          Naturliga material, genomtänkt konstruktion och hållbara
+          bastulösningar för hem och verksamheter.
         </p>
         <a
           href="/contact.html"
@@ -313,13 +317,15 @@
      OPENING SECTION
     =========================== -->
 
-    <section class="py-20 md:py-32 px-4 bg-[#F3EAE1]">
+    <section class="py-16 md:py-24 px-4 bg-[#F3EAE1]">
       <div class="max-w-6xl mx-auto">
         <div
           class="flex flex-col items-center md:items-start 2xl:items-center max-w-3xl justify-center text-[#191919] mx-auto px-16 gap-6"
         >
           <h1 class="text-2xl md:text-5xl mb-6">
-            Открой для себя <span class="text-[#5A7543]">парение в Levande Vikings Bastu</span> — ритуал для тела и души
+            Открой для себя
+            <span class="text-[#5A7543]">парение в Levande Vikings Bastu</span>
+            — ритуал для тела и души
           </h1>
           <p class="text-base md:text-2xl">
             В мире, где всё быстро, баня учит нас замедляться. Вспомнить, как
@@ -357,7 +363,6 @@
     =========================== -->
     <section class="py-20 md:py-32 px-4 bg-[#E5D3C0]">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-
         <!-- ====== Card Ovens ====== -->
         <a
           href="oven.html"
@@ -412,7 +417,11 @@
           <h2 class="text-2xl">Våra projekt</h2>
 
           <p class="text-base">
-            Våra projekt är idéer som blivit verklighet – där trä, sten, värme och ånga tillsammans skapar känslan av en äkta bastu. Genomtänkt design, praktiska lösningar och känsla för detaljer gör varje projekt levande i vardagen. Vi skapar platser som man gärna återvänder till, igen och igen.
+            Våra projekt är idéer som blivit verklighet – där trä, sten, värme
+            och ånga tillsammans skapar känslan av en äkta bastu. Genomtänkt
+            design, praktiska lösningar och känsla för detaljer gör varje
+            projekt levande i vardagen. Vi skapar platser som man gärna
+            återvänder till, igen och igen.
           </p>
 
           <!-- CTA -->
@@ -455,8 +464,11 @@
         >
           <h2 class="text-2xl">Bygg din bastu</h2>
 
-          <p class="text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab pariatur quos molestiae explicabo id voluptatum, iusto necessitatibus esse, reiciendis, fugiat quia quaerat totam repellat? Quae vitae laudantium ut ipsam illum.
+          <p class="text-base text-red-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab pariatur
+            quos molestiae explicabo id voluptatum, iusto necessitatibus esse,
+            reiciendis, fugiat quia quaerat totam repellat? Quae vitae
+            laudantium ut ipsam illum.
           </p>
 
           <!-- CTA -->
@@ -494,211 +506,40 @@
       </div>
     </section>
 
-    <!-- Oven Section -->
-    <section class="mt-24 lg:mt-32 md:px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-slate-300 rounded-2xl shadow-xl p-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div
-              class="bg-gradient-to-r from-white via-gray-100 to-gray-200 flex flex-col justify-between rounded-md shadow-xl p-6"
-            >
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Печь — это сердце бани
-              </h1>
-              <a
-                href="oven.html"
-                rel="noopener noreferrer"
-                class="inline-flex items-center justify-end text-blue-600 font-bold hover:underline"
-              >
-                <span>Узнать больше</span>
-                <svg
-                  class="w-4 h-4 ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div
-              class="transition-transform duration-300 hover:-translate-y-2 rounded-md shadow-xl overflow-hidden"
-            >
-              <div
-                id="oven-carousel"
-                class="splide relative max-w-4xl mx-auto aspect-[5/6]"
-                aria-label="Oven models slideshow"
-              >
-                <div class="splide__track h-full">
-                  <ul class="splide__list h-full">
-                    <li class="splide__slide flex items-center justify-center">
-                      <img
-                        src="/asset/oven1.webp"
-                        alt="Oven model 1"
-                        class="w-full h-full object-cover rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide flex items-center justify-center">
-                      <img
-                        src="/asset/oven2.webp"
-                        alt="Oven model 2"
-                        class="w-full h-full object-cover rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide flex items-center justify-center">
-                      <img
-                        src="/asset/oven3.webp"
-                        alt="Oven model 3"
-                        class="w-full h-full object-cover rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide flex items-center justify-center">
-                      <img
-                        src="/asset/oven4.webp"
-                        alt="Oven model 4"
-                        class="w-full h-full object-cover rounded-xl"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Section -->
-    <section class="mt-24 lg:mt-32 md:px-4">
+    <!-- ===========================
+     OUR MISSION - Unplanned section
+    =========================== -->
+    <section class="py-16 md:py-24 px-4 bg-[#F3EAE1]">
       <div class="max-w-6xl mx-auto">
         <div
-          class="bg-slate-300 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch rounded-2xl shadow-xl py-8 px-8"
+          class="flex flex-col items-center md:items-start 2xl:items-center max-w-3xl justify-center text-[#191919] mx-auto px-16 gap-6"
         >
-          <div
-            class="bg-gradient-to-r from-white via-gray-100 to-gray-200 flex flex-col justify-between shadow-xl rounded-md p-6"
-          >
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Vora Projekt
-            </h1>
-            <a
-              href="project.html"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-end text-blue-600 font-bold hover:underline"
-            >
-              <span>Узнать больше</span>
-              <svg
-                class="w-4 h-4 ml-1"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4">
-            <img
-              src="/asset/project3.webp"
-              alt="Project 1"
-              class="w-full h-full object-cover shadow-xl rounded-md transition-transform duration-300 hover:-translate-y-2"
-            />
-            <img
-              src="/asset/project1.webp"
-              alt="Project 2"
-              class="w-full h-full object-cover shadow-xl rounded-md transition-transform duration-300 hover:-translate-y-2"
-            />
-            <img
-              src="/asset/project2.webp"
-              alt="Project 3"
-              class="w-full h-full object-cover shadow-xl rounded-md transition-transform duration-300 hover:-translate-y-2"
-            />
-            <img
-              src="/asset/project4.webp"
-              alt="Project 4"
-              class="w-full h-full object-cover shadow-xl rounded-md transition-transform duration-300 hover:-translate-y-2"
-            />
-          </div>
+          <h1 class="text-2xl md:text-5xl mb-6 text-red-900">
+            Lorem ipsum dolor
+            <span class="text-[#5A7543]">sit amet consectetur</span>
+            adipisicing elit. Magni sapiente molestias reprehenderit nostrum?
+          </h1>
+          <p class="text-base md:text-2xl text-red-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+            deserunt dolorum impedit quis quos rerum alias ducimus porro illo.
+            Temporibus libero laboriosam consectetur veniam aliquam distinctio
+            magnam quam reprehenderit amet!
+          </p>
         </div>
+
+        
       </div>
     </section>
 
-    <!-- Individual Project Section -->
-    <section class="mt-24 lg:mt-32 md:px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-slate-300 rounded-2xl shadow-xl p-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div
-              class="bg-gradient-to-r from-white via-gray-100 to-gray-200 flex flex-col justify-between rounded-md shadow-xl p-6"
-            >
-              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Построй свою баню
-              </h1>
-              <a
-                href="bygg-din-bastu.html"
-                rel="noopener noreferrer"
-                class="inline-flex items-center justify-end text-blue-600 font-bold hover:underline"
-              >
-                <span>Узнать больше</span>
-                <svg
-                  class="w-4 h-4 ml-1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
-                  />
-                </svg>
-              </a>
-            </div>
+    <div class="w-full aspect-[4/5] sm:aspect-[16/7] overflow-hidden">
+          <img
+            src="/asset/premium-viking-var-1.webp"
+            alt="Premium Viking sauna interior"
+            class="w-full h-full object-cover object-top parallax-image"
+          />
+    </div>
 
-            <div
-              class="transition-transform duration-300 hover:-translate-y-2 rounded-md shadow-xl overflow-hidden"
-            >
-              <img
-                src="/asset/individual.webp"
-                alt="Individual building a sauna"
-                class="w-full h-full object-cover shadow-xl rounded-md"
-              />
-            </div>
-          </div>
-
-          <!-- Order Button -->
-          <div class="flex items-center justify-center mt-8 lg:mt-32 mb-12">
-            <a
-              href="/contact.html"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center w-40 h-10 w-56 sm:h-15 lg:w-80 lg:h-15 bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center"
-            >
-              Подать заявку
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Master Section -->
+    <!-- Education Section -->
     <section class="mt-24 lg:mt-32 mb-32 md:px-4">
       <div class="container mx-auto">
         <div class="max-w-6xl mx-auto text-center">
@@ -958,7 +799,7 @@
               <div class="flex space-x-4">
                 <!-- Instagram -->
                 <a
-                  href="#"
+                  href="https://www.instagram.com/levande.vikings.bastu/"
                   aria-label="Instagram"
                   class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
                 >

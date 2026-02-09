@@ -1,11 +1,14 @@
-// Parallax effect
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
 
-    const parallaxElements = document.querySelectorAll('.parallax-slow');
-    parallaxElements.forEach(el => {
-        const speed = 0.5;
-        el.style.setProperty('--scroll-y', `${scrolled * speed}px`);
+    // Hero parallax
+    document.querySelectorAll('.parallax-slow').forEach(el => {
+        el.style.setProperty('--scroll-y', `${scrolled * 0.5}px`);
+    });
+
+    // Image parallax (move upward)
+    document.querySelectorAll('.parallax-image').forEach(el => {
+        el.style.setProperty('--scroll-y', `${scrolled * -0.07}px`);
     });
 });
 

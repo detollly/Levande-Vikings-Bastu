@@ -54,7 +54,11 @@ p, span, li, a, blockquote {
 }
 
 .parallax-slow {
-    transform: translateY(var(--scroll-y, 0));
+  transform: translateY(var(--scroll-y, 0));
+}
+
+.parallax-image {
+  transform: translateY(var(--scroll-y, 0));
 }
 
 section.scroll-animate {
