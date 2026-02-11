@@ -23,21 +23,27 @@
   </head>
 
   <body class="min-h-screen overflow-x-hidden">
-
-
     <!-- Modal for expanded image -->
-    <div id="imgModal" class="fixed inset-0 bg-black/80 hidden z-[9999] flex items-center justify-center p-4">
-    
-        <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl font-bold focus:outline-none"
-            aria-label="Close modal">
-            &times;
-        </button>
-    
-        <img id="imgModalContent" src="" alt="Expanded view"
-            class="max-w-[90%] max-h-[90%] object-contain rounded-xl shadow-2xl">
+    <div
+      id="imgModal"
+      class="fixed inset-0 bg-black/80 hidden z-[9999] flex items-center justify-center p-4"
+    >
+      <button
+        id="closeModal"
+        class="absolute top-4 right-4 text-white text-3xl font-bold focus:outline-none"
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+
+      <img
+        id="imgModalContent"
+        src=""
+        alt="Expanded view"
+        class="max-w-[90%] max-h-[90%] object-contain rounded-xl shadow-2xl"
+      />
     </div>
 
-    
     <!-- ===========================
      HEADER
     =========================== -->
@@ -740,10 +746,14 @@
     =========================== -->
     <section class="py-20 md:py-24 px-4 bg-[#E9D4BE]">
       <div class="max-w-7xl mx-auto">
-        <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+        <div
+          class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6"
+        >
           <!-- Item 1 -->
           <div class="flex flex-col">
-            <div class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+            <div
+              class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
               <img
                 src="/asset/relaxation1.webp"
                 alt="Sauna ritual"
@@ -758,7 +768,9 @@
 
           <!-- Item 2 -->
           <div class="flex flex-col">
-            <div class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+            <div
+              class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
               <img
                 src="/asset/relaxation2.webp"
                 alt="Sauna whisking"
@@ -773,7 +785,9 @@
 
           <!-- Item 3 -->
           <div class="flex flex-col">
-            <div class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+            <div
+              class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
               <img
                 src="/asset/relaxation3.webp"
                 alt="Traditional steam massage"
@@ -789,12 +803,115 @@
     </section>
 
     <!-- ===========================
-     BOTTOM PHOTO GRID
+     CONTACT FORM
     =========================== -->
-    <section class="py-20 md:py-24 px-4 bg-[#F3EAE1]">
-      <div class="max-w-6xl mx-auto flex flex-col">
+    <section
+      class="py-20 md:py-24 px-4 bg-cover bg-center bg-no-repeat"
+      style="background-image: url(&quot;/asset/15.webp&quot;)"
+    >
+      <div class="max-w-4xl mx-auto flex flex-col">
+        <!-- Heading -->
+        <div class="max-w-lg text-center text-[#E8E8E8]">
+          <h1 class="text-2xl md:text-5xl font-normal mb-6">
+            Остались вопросы?
+          </h1>
+
+          <p
+            class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
+          >
+            Мы всегда на связи. Подскажем, разъясним и поможем выбрать лучшее
+            решение
+          </p>
+        </div>
+
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xzzjbwoz"
+          method="POST"
+          class="w-full max-w-sm p-6 space-y-6"
+          >
+          <!-- Success message placeholder -->
+          <p
+            id="successMessage"
+            class="text-cyan-500 text-4xl font-semibold text-center hidden mb-8"
+          >
+            Vi återkommer till dig så snart som möjligt!
+          </p>
+
+          <!-- Name input -->
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="peer w-full h-12 px-4 pt-4 rounded-full bg-white border border-gray-300 text-sm md:text-lg focus:ring-2 focus:ring-[#5A7543] focus:outline-none"
+            />
+
+            <label
+              for="name"
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 text-sm md:text-base transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-300 peer-valid:top-2 peer-valid:text-xs"
+            >
+              Namn
+            </label>
+          </div>
+
+          <!-- Email input -->
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="peer w-full h-12 px-4 pt-4 rounded-full bg-white border border-gray-300 text-sm md:text-lg focus:ring-2 focus:ring-[#5A7543] focus:outline-none"
+            />
+
+            <label
+              for="name"
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 text-sm md:text-base transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-300 peer-valid:top-2 peer-valid:text-xs"
+            >
+              Email
+            </label>
+          </div>
+
+          <div class="relative w-full">
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              required
+              class="peer mt-1 block w-full h-24 px-4 pt-6 pb-2 rounded-md text-sm md:text-lg focus:border-cyan-500 focus:ring-2 focus:ring-2 focus:ring-[#5A7543] focus:outline-none resize-none"
+            ></textarea>
+
+            <label
+              for="message"
+              class="absolute left-4 top-2 text-gray-300 text-sm md:text-base transition-all pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-300 peer-valid:top-2 peer-valid:text-xs"
+            >
+              Meddelande
+            </label>
+          </div>
+
+          <!-- Honeypot -->
+          <input
+            type="text"
+            name="_gotcha"
+            class="hidden"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <!-- Submit Button -->
+          <div class="flex items-center justify-center pt-12">
+            <button
+              type="submit"
+              class="w-full w-60 lg:w-82 h-12 text-white bg-[#5A7543] hover:bg-[#414C38] text-white rounded-full hover:shadow-xl transition-colors duration-200"
+            >
+              Skicka
+            </button>
+          </div>
+        </form>
       </div>
-    </section>  
+    </section>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
