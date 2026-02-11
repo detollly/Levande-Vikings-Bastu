@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400&family=IBM+Plex+Sans:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -23,6 +23,21 @@
   </head>
 
   <body class="min-h-screen overflow-x-hidden">
+
+
+    <!-- Modal for expanded image -->
+    <div id="imgModal" class="fixed inset-0 bg-black/80 hidden z-[9999] flex items-center justify-center p-4">
+    
+        <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl font-bold focus:outline-none"
+            aria-label="Close modal">
+            &times;
+        </button>
+    
+        <img id="imgModalContent" src="" alt="Expanded view"
+            class="max-w-[90%] max-h-[90%] object-contain rounded-xl shadow-2xl">
+    </div>
+
+    
     <!-- ===========================
      HEADER
     =========================== -->
@@ -34,7 +49,7 @@
       <div class="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-8">
         <!-- Left container logo & navigation -->
         <div
-          class="flex justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full px-6 border border-[#7d6e59]"
+          class="flex justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full px-6 border border-[#7d6e59] flex-nowrap whitespace-nowrap"
         >
           <!-- Logo -->
           <div class="flex-shrink-0 mr-16 md:mr-8">
@@ -192,11 +207,11 @@
           <div class="flex flex-col items-start justify-center p-4">
             <a
               href="tel:+46739782962"
-              class="text-white hover:text-blue-400 hover:translate-x-1 transition-colors duration-300 text-sm"
+              class="text-white hover:text-blue-400 hover:translate-x-1 transition-colors duration-300 text-xs"
             >
               +46 7397 82962
             </a>
-            <p class="text-white text-sm">Huddinge<br />Stockholm, Sverige</p>
+            <p class="text-white text-xs">Huddinge<br />Stockholm, Sverige</p>
           </div>
         </div>
       </div>
@@ -270,7 +285,7 @@
 
       <!-- Text layer -->
       <div
-        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-40 px-6 pt-32 parallax-slow"
+        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-40 px-8 pt-32 parallax-slow"
       >
         <h1
           class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
@@ -278,7 +293,7 @@
           Levande Vikings Bastu
         </h1>
         <p
-          class="max-w-4xl text-[#E8E8E8] text-base md:text-2xl font-light drop-shadow-lg text-center md:text-start"
+          class="max-w-4xl text-[#E8E8E8] text-base md:text-2xl font-extralight drop-shadow-lg text-center md:text-start"
         >
           Specialister på vedeldade bastur och traditionell bastuvärme. Vi
           skapar äkta bastukänsla med djup ånga och kraftfulla vedugnar.
@@ -313,19 +328,19 @@
      OPENING SECTION
     =========================== -->
     <section class="py-16 md:py-24 px-4 bg-[#F3EAE1]">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-5xl mx-auto">
         <div
           class="flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-16 px-6 gap-6"
         >
           <h1
-            class="text-2xl md:text-5xl mb-6 text-center md:text-start 2xl:text-center"
+            class="text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 2xl:text-center"
           >
             Открой для себя
             <span class="text-[#5A7543]">парение в Levande Vikings Bastu</span>
             — ритуал для тела и души
           </h1>
           <p
-            class="max-w-4xl text-base md:text-2xl text-center md:text-start 2xl:text-center"
+            class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
           >
             В мире, где всё быстро, баня учит нас замедляться. Вспомнить, как
             чувствовать. Вспомнить, как быть. Потому что парение — это не просто
@@ -361,7 +376,7 @@
      CONTENT TEASERS
     =========================== -->
     <section class="py-20 md:py-32 px-4 bg-[#E5D3C0]">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         <!-- ====== Card Ovens ====== -->
         <a
           href="oven.html"
@@ -408,7 +423,7 @@
           </div>
         </a>
 
-        <!-- ====== Våra projekt ====== -->
+        <!-- ====== Card Våra projekt ====== -->
         <a
           href="project.html"
           class="group flex flex-col bg-[#F3EAE1] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
@@ -456,7 +471,7 @@
           </div>
         </a>
 
-        <!-- ====== Bygg din bastu ====== -->
+        <!-- ====== Card Bygg din bastu ====== -->
         <a
           href="bygg-din-bastu.html"
           class="group flex flex-col bg-[#5A7543] p-8 rounded-xl text-white gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
@@ -509,136 +524,284 @@
      OUR MISSION - Unplanned section
     =========================== -->
     <section class="py-16 md:py-24 px-4 bg-[#F3EAE1]">
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-6xl mx-auto flex flex-col gap-6">
+        <!-- Text container -->
         <div
-          class="flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-16 px-6 gap-6"
+          class="max-w-5xl flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-16 px-6 gap-6"
         >
           <h1
-            class="text-2xl md:text-5xl mb-6 text-center md:text-start 2xl:text-center"
+            class="text-2xl md:text-5xl font-normal text-center md:text-start 2xl:text-center"
           >
             Мы стремимся быть ведущей силой в Скандинавии,
             <span class="text-[#5A7543]">возрождая традиции</span>
             предков с современным качеством.
           </h1>
           <p
-            class="max-w-4xl text-base md:text-2xl text-center md:text-start 2xl:text-center"
+            class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
           >
-            Levande Vikings Bastu — это живая традиция, где соединяются тепло, здоровье и древняя мудрость. Мы создаём пространство, в котором очищаются тело, разум и дух. Наша цель — возродить северную культуру бани и вернуть её истинное значение: место силы, очищения и единения.
+            Levande Vikings Bastu — это живая традиция, где соединяются тепло,
+            здоровье и древняя мудрость. Мы создаём пространство, в котором
+            очищаются тело, разум и дух. Наша цель — возродить северную культуру
+            бани и вернуть её истинное значение: место силы, очищения и
+            единения.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Parallax Image -->
     <div class="w-full aspect-[4/5] sm:aspect-[16/7] overflow-hidden">
       <img
         src="/asset/premium-viking-var-1.webp"
         alt="Premium Viking sauna interior"
-        class="w-full h-full object-cover object-top parallax-image"
+        class="w-full h-full object-cover object-top"
       />
     </div>
 
-    <!-- Education Section -->
-    <section class="mt-24 lg:mt-32 mb-32 md:px-4">
-      <div class="container mx-auto">
-        <div class="max-w-6xl mx-auto text-center">
-          <div class="bg-gray-100 shadow-xl p-8 rounded-2xl mb-12">
-            <h3 class="text-2xl font-bold mb-6">
-              Мы обучаем правильному парению
-            </h3>
-            <div class="grid md:grid-cols-3 gap-6 text-center">
-              <div
-                class="bg-gradient-to-r from-white via-gray-100 to-gray-200 backdrop-blur-sm p-8 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
+    <!-- ===========================
+     EDUCATION SECTION
+    =========================== -->
+    <section class="py-20 md:py-24 px-4 bg-[#F3EAE1]">
+      <div class="max-w-6xl mx-auto flex flex-col">
+        <!-- Education Text container -->
+        <div class="max-w-5xl mx-auto mb-16">
+          <div
+            class="flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-16 px-6 gap-6"
+          >
+            <h1
+              class="text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 2xl:text-center"
+            >
+              Обучаем здоровому парению
+            </h1>
+            <p
+              class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
+            >
+              Осваивайте традиции скандинавского парения — от техники прогрева
+              до искусства управления жаром — вместе с нашими мастерами
+            </p>
+          </div>
+        </div>
+
+        <!-- Education containers -->
+        <div
+          class="max-w-6xl mx-auto mb-16 md:mb-20 grid grid-cols-1 md:grid-cols-3 gap-4"
+        >
+          <!-- ====== Card Individual classes ====== -->
+          <a
+            href="https://www.youtube.com/watch?v=cjyXmH5PrbM&"
+            class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-6 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+          >
+            <h2 class="text-2xl">Индивидуальные уроки</h2>
+
+            <p class="text-base">
+              Персональные разборы и рекомендации под ваш проект бани
+            </p>
+
+            <!-- CTA -->
+            <div class="mt-auto flex items-end justify-between">
+              <span
+                class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
               >
-                <div class="text-3xl mb-2">🎓</div>
-                <h4 class="font-bold mb-2">Живые и онлайн мастер-классы</h4>
-              </div>
-              <div
-                class="bg-gradient-to-r from-white via-gray-100 to-gray-200 backdrop-blur-sm p-8 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
-              >
-                <div class="text-3xl mb-2">📹</div>
-                <h4 class="font-bold mb-2">Видеоуроки</h4>
-              </div>
-              <div
-                class="bg-gradient-to-r from-white via-gray-100 to-gray-200 backdrop-blur-sm p-8 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
-              >
-                <div class="text-3xl mb-2">👨‍🏫</div>
-                <h4 class="font-bold mb-2">Индивидуальные уроки</h4>
+                <span class="underline">Узнать больше</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 ml-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </span>
+
+              <!-- Image -->
+              <div class="w-40 h-40 overflow-hidden rounded-full">
+                <img
+                  src="/asset/whisk.webp"
+                  alt="Ovens"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </div>
+          </a>
+
+          <!-- ====== Card Live & Online Classes ====== -->
+          <a
+            href="https://www.youtube.com/shorts/QJJKlDq3nF0"
+            class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+          >
+            <h2 class="text-2xl">Живые и онлайн мастер-классы</h2>
+
+            <p class="text-base">
+              Практические занятия, где вы увидите процесс строительства
+              скандинавской бани вживую
+            </p>
+
+            <!-- CTA -->
+            <div class="mt-auto flex items-end justify-between">
+              <span
+                class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
+              >
+                <span class="underline">Узнать больше</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 ml-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </span>
+
+              <!-- Image -->
+              <div class="w-40 h-40 overflow-hidden rounded-full">
+                <img
+                  src="/asset/tutor.webp"
+                  alt="Ovens"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </a>
+
+          <!-- ====== Card Video Classes ====== -->
+          <a
+            href="https://www.youtube.com/watch?v=Se5X8kY_OLs&"
+            class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+          >
+            <h2 class="text-2xl">Видеоуроки</h2>
+
+            <p class="text-base">
+              Короткие и понятные видео о техниках и этапах строительства бань
+            </p>
+
+            <!-- CTA -->
+            <div class="mt-auto flex items-end justify-between">
+              <span
+                class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
+              >
+                <span class="underline">Узнать больше</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 ml-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </span>
+
+              <!-- Image -->
+              <div class="w-40 h-40 overflow-hidden rounded-full">
+                <img
+                  src="/asset/shield.webp"
+                  alt="Ovens"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Education Text container #2-->
+        <div
+          class="max-w-5xl flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-16 px-6 gap-6"
+        >
+          <h1
+            class="text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 2xl:text-center"
+          >
+            Ваша баня станет вашим
+            <span class="text-[#5A7543]">островом покоя, силы и здоровья</span>.
+            Добро пожаловать в мир, где живут традиции наших Предков.
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+     BOTTOM PHOTO GRID
+    =========================== -->
+    <section class="py-20 md:py-24 px-4 bg-[#E9D4BE]">
+      <div class="max-w-7xl mx-auto">
+        <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+          <!-- Item 1 -->
+          <div class="flex flex-col">
+            <div class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+              <img
+                src="/asset/relaxation1.webp"
+                alt="Sauna ritual"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="mt-4 text-xs text-start">
+              Друзья, тепло и уют: создавайте незабываемые моменты с Levande
+              Vikings Bastu
+            </p>
           </div>
 
-          <!-- YouTube Links -->
-          <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-24 px-4">
-            <a
-              href="https://youtu.be/O7jMUJ8fxgw?si=ZEPiiuzXLj--6IvM"
-              target="_blank"
-              class="bg-cyan-500 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden"
-            >
-              <!-- Preview image -->
-              <div class="overflow-hidden">
-                <img
-                  src="https://img.youtube.com/vi/O7jMUJ8fxgw/maxresdefault.jpg"
-                  alt="Мастер-класс парения"
-                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+          <!-- Item 2 -->
+          <div class="flex flex-col">
+            <div class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+              <img
+                src="/asset/relaxation2.webp"
+                alt="Sauna whisking"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="mt-4 text-xs text-start">
+              Откройте для себя традиции оздоровления с Levande Vikings Bastu:
+              банные процедуры — это просто и эффективно!
+            </p>
+          </div>
 
-              <!-- Text content -->
-              <div class="p-6 flex items-center space-x-4">
-                <div
-                  class="bg-red-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                    />
-                  </svg>
-                </div>
-                <div class="text-left">
-                  <h4 class="font-bold text-lg mb-1">Ångprocess "Doft"</h4>
-                </div>
-              </div>
-            </a>
-
-            <a
-              href="https://youtube.com/shorts/QJJKlDq3nF0"
-              target="_blank"
-              class="group bg-cyan-500 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden"
-            >
-              <!-- Preview image -->
-              <div class="overflow-hidden">
-                <img
-                  src="https://img.youtube.com/vi/QJJKlDq3nF0/maxresdefault.jpg"
-                  alt="Короткий урок"
-                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-
-              <!-- Text content -->
-              <div class="p-6 flex items-center space-x-4">
-                <div
-                  class="bg-red-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300"
-                >
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                    />
-                  </svg>
-                </div>
-                <div class="text-left">
-                  <h4 class="font-bold text-lg mb-1">Ångprocess i en Bastu</h4>
-                </div>
-              </div>
-            </a>
+          <!-- Item 3 -->
+          <div class="flex flex-col">
+            <div class="w-full aspect-[8/5] overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
+              <img
+                src="/asset/relaxation3.webp"
+                alt="Traditional steam massage"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="mt-4 text-xs text-start">
+              Парение от Levande Vikings Bastu — как повод для душевных встреч
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ===========================
+     BOTTOM PHOTO GRID
+    =========================== -->
+    <section class="py-20 md:py-24 px-4 bg-[#F3EAE1]">
+      <div class="max-w-6xl mx-auto flex flex-col">
+      </div>
+    </section>  
+
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-    <!-- Footer -->
+    <!-- ===========================
+     FOOTER
+    =========================== -->
     <footer class="bg-[#414C38] text-white pt-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
@@ -879,6 +1042,7 @@
       </button>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="/js/bygg-din-bastu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
   </body>
 </html>
