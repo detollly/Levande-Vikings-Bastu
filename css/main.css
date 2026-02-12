@@ -43,23 +43,13 @@ p, span, li, a, blockquote {
     visibility: visible;
 }
 
-.parallax-slow {
-  transform: translateY(var(--scroll-y, 0));
-}
-
-.parallax-image {
-  transform: translateY(var(--scroll-y, 0));
-}
-
-section.scroll-animate {
+section.scroll-animate-fade {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 1.2s ease;
 }
 
-section.scroll-animate.visible {
+section.scroll-animate-fade.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 @keyframes fade-in {

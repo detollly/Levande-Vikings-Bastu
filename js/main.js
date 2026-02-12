@@ -1,16 +1,26 @@
+// Parallax effect
+
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
 
-    // Hero parallax
-    document.querySelectorAll('.parallax-slow').forEach(el => {
-        el.style.setProperty('--scroll-y', `${scrolled * 0.5}px`);
+    document.querySelectorAll('.parallax-image').forEach(el => {
+        const section = el.closest('section');
+        const rect = section.getBoundingClientRect();
+        const sectionTop = section.offsetTop;
+        
+        // Only animate when section is visible
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            const offset = (scrolled - sectionTop) * 0.3;
+            el.style.transform = `translateY(${offset}px)`;
+        }
     });
 
-    // Image parallax (move upward)
-    document.querySelectorAll('.parallax-image').forEach(el => {
-        el.style.setProperty('--scroll-y', `${scrolled * -0.07}px`);
+    // Keep your existing hero parallax if you use it
+    document.querySelectorAll('.parallax-slow').forEach(el => {
+        el.style.transform = `translateY(${scrolled * 0.3}px)`;
     });
 });
+
 
 // Mobile menu functionality
 const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -110,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.2 }); // trigger when 20% is visible
 
   sections.forEach(section => {
-    section.classList.add("scroll-animate");
+    section.classList.add("scroll-animate-fade");
     observer.observe(section);
   });
 });

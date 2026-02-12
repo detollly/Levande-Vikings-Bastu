@@ -22,7 +22,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="min-h-screen overflow-x-hidden">
+  <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
     <!-- Modal for expanded image -->
     <div
       id="imgModal"
@@ -184,7 +184,7 @@
 
             <!-- Facebook -->
             <a
-              href="#"
+              href="https://www.facebook.com/"
               aria-label="Facebook"
               class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
             >
@@ -556,20 +556,19 @@
     </section>
 
     <!-- Parallax Image -->
-    <div class="w-full aspect-[4/5] sm:aspect-[16/7] overflow-hidden">
-      <img
-        src="/asset/premium-viking-var-1.webp"
-        alt="Premium Viking sauna interior"
-        class="w-full h-full object-cover object-top"
+    <section class="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden">
+      <img 
+          src="/asset/premium-viking-var-1.webp" 
+          alt="Parallax Background"
+          class="parallax-image absolute inset-0 w-full h-full object-cover object-top"
       />
-    </div>
+    </section>
 
     <!-- ===========================
      EDUCATION SECTION
     =========================== -->
     <section class="py-20 md:py-24 px-4 bg-[#F3EAE1]">
       <div class="flex flex-col">
-
         <!-- Education Text container -->
         <div class="max-w-5xl 2xl:mx-auto mb-16">
           <div
@@ -830,7 +829,7 @@
           action="https://formspree.io/f/xzzjbwoz"
           method="POST"
           class="w-full max-w-sm p-6 space-y-6"
-          >
+        >
           <!-- Success message placeholder -->
           <p
             id="successMessage"
@@ -1091,7 +1090,7 @@
 
                 <!-- Facebook -->
                 <a
-                  href="#"
+                  href="https://www.facebook.com/"
                   aria-label="Facebook"
                   class="w-8 h-8 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:text-blue-400 hover:scale-110"
                 >
