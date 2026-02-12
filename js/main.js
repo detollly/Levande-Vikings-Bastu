@@ -1,5 +1,4 @@
 // Parallax effect
-
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
 
