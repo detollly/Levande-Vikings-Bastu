@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('section[data-products]').forEach(section => {
     const products = JSON.parse(section.dataset.products);
 
+    // product data
     const nameEl  = section.querySelector('.product-name');
     const priceEl = section.querySelector('.product-price');
     const descEl  = section.querySelector('.product-description');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       nameEl.textContent  = p.name || '';
       priceEl.textContent = p.price || '';
       descEl.innerHTML = Array.isArray(p.description)
-        ? `<ul class="list-disc pl-5 marker:text-cyan-500">${p.description.map(i => `<li>${i}</li>`).join('')}</ul>`
+        ? `<ul class="list-none pl-5">${p.description.map(i => `<li>${i}</li>`).join('')}</ul>`
         : (p.description || '');
     }
 
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
       type      : 'fade',
       rewind    : true,
       pagination: false,
-      arrows    : false,
+      arrows    : true,
       drag      : true,
     });
 
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
       pagination  : false,
       isNavigation: true,
       focus       : 'center',
-      arrows      : true,
+      arrows      : false,
       breakpoints : {
         640: { fixedWidth: 66, fixedHeight: 40 },
       },
@@ -90,5 +91,3 @@ if (gallery && modal && modalImg && closeBtn) {
     }
   });
 }
-
-
