@@ -11,18 +11,12 @@
       rel="stylesheet"
     />
 
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/themes/splide-default.min.css"
-/>
-
     <link rel="stylesheet" href="/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
-    
     <!-- Modal for expanded image -->
     <div
       id="imgModal"
@@ -55,7 +49,7 @@
       <div class="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 gap-8">
         <!-- Left container logo & navigation -->
         <div
-          class="flex justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full px-6 border border-[#7d6e59] flex-nowrap whitespace-nowrap"
+          class="flex justify-between items-center h-16 bg-[#6A6A6A00] backdrop-blur-[63.5px] shadow-xl shadow-black/10 rounded-full px-6 border border-[#7d6e59] flex-nowrap"
         >
           <!-- Logo -->
           <div class="flex-shrink-0 mr-16 md:mr-8">
@@ -322,975 +316,1143 @@
     =========================== -->
 
     <div class="mx-auto px-4 py-24 md:px-8 bg-[#E9D4BE]">
-      <!-- Packages -->
-      <div class="max-w-6xl space-y-24 pt-24 flex flex-col">
-
-        <!-- Grundpaket -->
-<section
-  class="max-w-2xl w-full bg-[#F3EAE1] rounded-xl shadow-lg px-8 py-16 flex flex-col min-h-[1100px]"
-  data-products='[
-    {"name":"Ugn Iskander 18 M","price":"12 900,- SEK","description":""},
-    {"name":"Jadesten","price":"4 999,- SEK","description":""},
-    {"name":"Kvartssten","price":"2 900,- SEK","description":""},
-    {"name":"Takpanel av termoasp","price":"","description":""},
-    {"name":"Bänkmodul Formula 19","price":"","description":""},
-    {
-      "name":"Ångrum med mått 2 x 2,4m ingår:",
-      "price":"Pris från 25 910,- SEK",
-      "description":[
-        "isolering 45mm stenull av väggar och tak",
-        "folie",
-        "bärläkt",
-        "bastupanel för väggar och tak",
-        "lavar",
-        "LED belysning",
-        "tillbehör material"
-      ]
-    },
-    {"name":"Certifikat","price":"","description":""}
-  ]'
->
-  <div class="flex flex-col gap-8 flex-grow">
-
-    <!-- Image section -->
-    <div class="flex flex-col gap-4 w-full">
-
-      <!-- Main Carousel -->
-<div class="splide main-carousel mx-auto max-w-lg w-full mb-6">
-  <div class="splide__track">
-    <ul class="splide__list">
-
-      <!-- Slide -->
-      <li class="splide__slide" data-product-index="0">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/iskander_18.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-      <li class="splide__slide" data-product-index="1">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/jadesten.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-      <li class="splide__slide" data-product-index="2">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/kvartssten.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-      <li class="splide__slide" data-product-index="3">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/doska.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-      <li class="splide__slide" data-product-index="4">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/skamejka.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-      <li class="splide__slide" data-product-index="5">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/grundpaket.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-      <li class="splide__slide" data-product-index="6">
-        <div class="w-full h-80 md:h-[26rem] flex items-center justify-center">
-          <img src="/asset/certificate.webp"
-               class="max-h-full max-w-full object-contain rounded-xl" />
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</div>
-
-      <!-- Thumbnail Carousel -->
-      <div class="splide thumb-carousel w-full">
-        <div class="splide__track">
-          <ul class="splide__list">
-
-            <li class="splide__slide">
-              <img src="/asset/iskander_18.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-            <li class="splide__slide">
-              <img src="/asset/jadesten.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-            <li class="splide__slide">
-              <img src="/asset/kvartssten.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-            <li class="splide__slide">
-              <img src="/asset/doska.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-            <li class="splide__slide">
-              <img src="/asset/skamejka.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-            <li class="splide__slide">
-              <img src="/asset/grundpaket.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-            <li class="splide__slide">
-              <img src="/asset/certificate.webp"
-                   class="h-full object-cover rounded mx-auto" />
-            </li>
-
-          </ul>
-        </div>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-base text-start uppercase">Готовые комплекты</h2>
       </div>
 
-    </div>
+      <!-- Packages -->
+      <div
+        class="max-w-6xl mx-auto pt-6 grid grid-cols-1 md:grid-cols-2 gap-4 space-y-24 md:space-y-0"
+      >
+        <!-- Grundpaket -->
+        <section
+          class="max-w-2xl w-full bg-[#F3EAE1] rounded-xl shadow-lg px-8 py-16 flex flex-col min-h-[1100px]"
+          data-products='[
+            {"name":"Ugn Iskander 18 M","price":"12 900,- SEK","description":""},
+            {"name":"Jadesten","price":"4 999,- SEK","description":""},
+            {"name":"Kvartssten","price":"2 900,- SEK","description":""},
+            {"name":"Takpanel av termoasp","price":"","description":""},
+            {"name":"Bänkmodul Formula 19","price":"","description":""},
+            {
+              "name":"Ångrum med mått 2 x 2,4m ingår:",
+              "price":"Pris från 25 910,- SEK",
+              "description":[
+                "isolering 45mm stenull av väggar och tak",
+                "folie",
+                "bärläkt",
+                "bastupanel för väggar och tak",
+                "lavar",
+                "LED belysning",
+                "tillbehör material"
+              ]
+            },
+            {"name":"Certifikat","price":"","description":""}
+          ]'
+        >
+          <div class="flex flex-col gap-8 flex-grow">
+            <!-- Image section -->
+            <div class="flex flex-col gap-4 w-full">
+              <!-- Main Carousel -->
+              <div
+                class="embla mainEmbla mx-auto max-w-lg w-full mb-8 relative"
+              >
+                <div class="embla__viewport overflow-hidden">
+                  <div class="embla__container flex">
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="0"
+                    >
+                      <img
+                        src="/asset/iskander_18.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
 
-    <!-- Package name -->
-    <div class="w-full flex items-center justify-center">
-      <h2 class="uppercase text-2xl text-[#191919CC]">Grundpaket</h2>
-    </div>
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="1"
+                    >
+                      <img
+                        src="/asset/jadesten.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
 
-    <!-- Product info -->
-    <div class="w-full flex items-baseline justify-around gap-2">
-      <p class="text-xl product-name"></p>
-      <p class="text-xl font-semibold text-[#5A7543] product-price"></p>
-    </div>
-      <p class="text-lg product-description"></p>
-    </div>
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="2"
+                    >
+                      <img
+                        src="/asset/kvartssten.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
 
-  </div>
-</section>
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="3"
+                    >
+                      <img
+                        src="/asset/doska.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="4"
+                    >
+                      <img
+                        src="/asset/skamejka.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="5"
+                    >
+                      <img
+                        src="/asset/grundpaket.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="6"
+                    >
+                      <img
+                        src="/asset/certificate.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Arrows -->
+                <button
+                  class="arrow-left absolute top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[-135deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <button
+                  class="arrow-right absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[45deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <!-- Thumbnail Carousel -->
+                <div class="embla thumbEmbla w-full mt-4">
+                  <div class="embla__viewport overflow-hidden px-2 py-2">
+                    <div class="embla__container flex">
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/iskander_18.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/jadesten.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/kvartssten.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/doska.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/skamejka.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/grundpaket.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/certificate.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package name -->
+              <div class="w-full flex items-center justify-center">
+                <h2 class="uppercase text-2xl text-[#191919CC]">Grundpaket</h2>
+              </div>
+
+              <!-- Product info -->
+              <div
+                class="w-full flex items-baseline justify-around gap-2 pt-4 px-4"
+              >
+                <p class="text-xl product-name"></p>
+                <p
+                  class="text-xl font-semibold text-[#5A7543] product-price"
+                ></p>
+              </div>
+              <p class="text-lg product-description pl-8"></p>
+            </div>
+          </div>
+        </section>
 
         <!-- Standart -->
         <section
-          class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-8 py-8"
+          class="max-w-2xl w-full bg-[#F3EAE1] rounded-xl shadow-lg px-8 py-16 flex flex-col min-h-[1100px]"
           data-products='[
-                                           {"name":"Ugn Gefest Avangard ZK Uragan","price":"27 000,- SEK","description":""},
-                                           {"name":"Jadesten","price":"4 999,- SEK","description":""},
-                                           {"name":"Kvartssten","price":"2 900,- SEK","description":""},
-                                           {"name":"Takpanel av termoasp","price":"","description":""},
-                                           {"name":"Bänkmodul Harvia 19","price":"","description":""},
-                                           {"name":"Ångrum med mått 2 x 2,4m ingår:","price":"Pris från 61 649,- SEK",
-                                            "description":["isolering 45mm stenull av väggar och tak","folie","bärläkt","bastupanel för väggar och tak","lavar","LED belysning","tillbehör material"]},
-                                            {"name":"Certifikat","price":"","description":""}
-                                         ]'
+          {"name":"Ugn Gefest Avangard ZK Uragan","price":"27 000,- SEK","description":""},
+          {"name":"Jadesten","price":"4 999,- SEK","description":""},
+          {"name":"Kvartssten","price":"2 900,- SEK","description":""},
+          {"name":"Takpanel av termoasp","price":"","description":""},
+          {"name":"Bänkmodul Harvia 19","price":"","description":""},
+          {
+            "name":"Ångrum med mått 2 x 2,4m ingår:",
+            "price":"Pris från 61 649,- SEK",
+            "description":[
+              "isolering 45mm stenull av väggar och tak",
+              "folie",
+              "bärläkt",
+              "bastupanel för väggar och tak",
+              "lavar",
+              "LED belysning",
+              "tillbehör material"
+            ]
+          },
+          {"name":"Certifikat","price":"","description":""}
+        ]'
         >
-          <h2 class="text-3xl font-bold mb-8">Standart</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="image-section">
+          <div class="flex flex-col gap-8 flex-grow">
+            <!-- Image section -->
+            <div class="flex flex-col gap-4 w-full">
               <!-- Main Carousel -->
-              <div class="splide main-carousel mb-4">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li
-                      class="splide__slide"
+              <div
+                class="embla mainEmbla mx-auto max-w-lg w-full mb-8 relative"
+              >
+                <div class="embla__viewport overflow-hidden">
+                  <div class="embla__container flex">
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="0"
-                      data-reference="https://gefeststoves.com/pechi-uragan-v-setke/avangard-uragan/gefest-avangard-zk-uragan-v-krugloj-setke-25-p2/"
                     >
                       <img
                         src="/asset/avangard_zk_25.webp"
-                        alt="Ugn Gefest Avangard ZK Uragan"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                    <li
-                      class="splide__slide"
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="1"
-                      data-reference="https://gefeststoves.com/zaryad-dlya-pechej/zhadeit-shlifovannyj/"
                     >
                       <img
                         src="/asset/jadesten.webp"
-                        alt="jadesten"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                    <li
-                      class="splide__slide"
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="2"
-                      data-reference="https://gefeststoves.com/zaryad-dlya-pechej/"
                     >
                       <img
                         src="/asset/kvartssten.webp"
-                        alt="kvartssten"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                    <li
-                      class="splide__slide"
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="3"
-                      data-reference="https://www.byggmax.se/bastupanel-v%C3%A4rmebehandlad-asp-sauna-sweden-p67409"
                     >
                       <img
                         src="/asset/doska2.webp"
-                        alt="doska2"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                    <li
-                      class="splide__slide"
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="4"
-                      data-reference="https://www.byggmax.se/bankmodul-bastu-set-formula-19-harvia-p68721337#1238=100165"
                     >
                       <img
                         src="/asset/skamejka2.webp"
-                        alt="skamejka2"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                    <li
-                      class="splide__slide"
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="5"
-                      data-reference="https://www.bastubutiken.se/collections/standardpanel"
                     >
                       <img
                         src="/asset/standartpaket.webp"
-                        alt="standartpaket"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                    <li
-                      class="splide__slide"
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
                       data-product-index="6"
-                      data-reference="https://gefeststoves.com/images/pechi/cats/gfs_zk_186_srednii_razmer.webp"
                     >
                       <img
                         src="/asset/certificate.webp"
-                        alt="standartpaket"
-                        class="w-full h-auto rounded-xl"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
                       />
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Thumbnail Carousel -->
-              <div class="splide thumb-carousel">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/iskander_18.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/jadesten.webp"
-                        class="h-16 w-24 object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/kvartssten.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/doska2.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/skamejka2.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/standartpaket.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/certificate.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Info container -->
-            <div class="product-info px-6 py-2">
-              <h2 class="text-2xl font-semibold mb-2 product-name"></h2>
-              <p class="md:text-lg text-gray-600 product-description"></p>
-              <p
-                class="text-xl font-semibold text-cyan-500 mt-4 product-price"
-              ></p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Premium Viking variant 1-->
-        <section
-          class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-8 py-8"
-          data-products='[
-                        {"name":"Exklusiv bastuugn Grom 30 P2 med beklädnad av talkmagnesit natursten","price":"61 900,- SEK","description":""},
-                        {"name":"Bastuugn stenlock 540mm av talkmagnesit","price":"4800,- SEK","description":""},
-                        {"name":"Bastuugn portal av talkmagnesit","price":"16600,- SEK","description":"Высота 960 мм, ширина 960 мм, глубина 150 мм, Толщина плиты 40 мм"},
-                        {"name":"Massiva rundvirke lavar av EK o ASP","price":"","description":""},
-                        {"name":"Flytande sits av massiv Ek och ASP","price":"","description":""},
-                        {"name":"Special Design undertak av termoasp och Panno","price":"","description":""},
-                        {"name":"Takpanel av termoasp","price":"","description":""},
-                        {"name":"Värmeväxlare","price":"","description":"bastuugn tillbehör"},
-                        {"name":"Varmeberedare","price":"","description":"bastuugn tillbehör"},
-                        {"name":"Kal dusch erbjudande","price":"Pris efter begäran","description":""},
-                        {"name":"Ångrum med mått 2 x 2,4m ingår:","price":"Pris från  214 446,- SEK",
-                            "description":["isolering 45mm stenull av väggar och tak","folie","bärläkt","bastupanel för väggar och tak","lavar Premium Viking","LED belysning","tillbehör material"]},
-                        {"name":"Certifikat","price":"","description":""}
-                    ]'
-        >
-          <h2 class="text-3xl font-bold mb-8">Premium Viking variant 1</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="image-section">
-              <!-- Main Carousel -->
-              <div class="splide main-carousel mb-4">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li
-                      class="splide__slide"
-                      data-product-index="0"
-                      data-reference="https://gefeststoves.com/pechi-v-oblicovke/grom/komplekt-grom-30-p2-prezident-1020-60-verh-tal-komagnezit/"
-                    >
-                      <img
-                        src="/asset/grom30.webp"
-                        alt="Exklusiv bastuugn med beklädnad av natursten"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="1"
-                      data-reference="https://gefeststoves.com/oblicovki-na-trubu/talkomagnezit/tal-komagnezit-vysota-540-mm/"
-                    >
-                      <img
-                        src="/asset/chimney-talkomagnezit.webp"
-                        alt="chimney talkomagnezit"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="2"
-                      data-reference="https://gefeststoves.com/portaly-dlya-pechej/talkomagnezit/portal-iz-kamnya-talkomagnezit/"
-                    >
-                      <img
-                        src="/asset/facing-talkomagnesit.webp"
-                        alt="facing talkomagnesit"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide" data-product-index="3">
-                      <img
-                        src="/asset/massiva-rundvirke.webp"
-                        alt="Massiva rundvirke lavar av EK o ASP"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide" data-product-index="4">
-                      <img
-                        src="/asset/flytande-sits.webp"
-                        alt="flytande sits"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide" data-product-index="5">
-                      <img
-                        src="/asset/panno.webp"
-                        alt="panno"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="6"
-                      data-reference="https://online.depo.lv/product/469389"
-                    >
-                      <img
-                        src="/asset/doska3.webp"
-                        alt="bastupanel"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="7"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/teploobmennik-vstroennyj-grom-30-gfs-18/"
-                    >
-                      <img
-                        src="/asset/värmeväxlare.webp"
-                        alt="värmeväxlare"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="8"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/bak-vynosnoj-gorizontalnyj-80l/"
-                    >
-                      <img
-                        src="/asset/värmeberedare.webp"
-                        alt="värmeberedare"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="9"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/teploobmennik-vstroennyj-grom-30-gfs-18/"
-                    >
-                      <img
-                        src="/asset/dusch.webp"
-                        alt="dusch"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="10"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/teploobmennik-vstroennyj-grom-30-gfs-18/"
-                    >
-                      <img
-                        src="/asset/premium-viking-var-1.webp"
-                        alt="premium-viking-var-1"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="12"
-                      data-reference="https://gefeststoves.com/images/pechi/cats/gfs_zk_186_srednii_razmer.webp"
-                    >
-                      <img
-                        src="/asset/certificate.webp"
-                        alt="premium-viking-var-1"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Thumbnail Carousel -->
-              <div class="splide thumb-carousel">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/grom30.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/chimney-talkomagnezit.webp"
-                        class="h-16 w-24 object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/facing-talkomagnesit.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/massiva-rundvirke.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/flytande-sits.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/panno.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/doska3.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/värmeväxlare.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/värmeberedare.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/dusch.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/premium-viking-var-1.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/certificate.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Info container -->
-            <div class="product-info px-6 py-2">
-              <h2 class="text-2xl font-semibold mb-2 product-name"></h2>
-              <p class="md:text-lg text-gray-600 product-description"></p>
-              <p
-                class="text-xl font-semibold text-cyan-500 mt-4 product-price"
-              ></p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Premium Viking variant 2-->
-        <section
-          class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-8 py-8"
-          data-products='[
-                                        {"name":"Exklusiv bastuugn Grom 30 P2 med beklädnad av serpentine natursten","price":"68 500,- SEK","description":""},
-                                        {"name":"Bastuugn stenlock 540mm av serpentine","price":"4800,- SEK","description":""},
-                                        {"name":"Bastuugn portal av serpentine","price":"20399,- SEK","description":"Высота 960 мм, ширина 960 мм, глубина 150 мм, Толщина плиты 40 мм"},
-                                        {"name":"Massiva rundvirke lavar av EK o ASP","price":"","description":""},
-                                        {"name":"Flytande sits av massiv Ek och ASP","price":"","description":""},
-                                        {"name":"Special Design undertak av termoasp och Panno","price":"Pris från 61 649,- SEK","description":""},
-                                        {"name":"Takpanel av termoasp","price":"","description":""},
-                                        {"name":"Värmeväxlare","price":"","description":""},
-                                        {"name":"Värmeberedare","price":"","description":""},
-                                        {"name":"Kal dusch erbjudande","price":"Pris efter begäran","description":""},
-                                        {"name":"Ångrum med mått 2 x 2,4m ingår:","price":"Pris från  214 446,- SEK",
-                                            "description":["isolering 45mm stenull av väggar och tak","folie","bärläkt","bastupanel för väggar och tak","lavar Premium Viking","LED belysning","tillbehör material"]},
-                                        {"name":"Certifikat","price":"","description":""}
-                                    ]'
-        >
-          <h2 class="text-3xl font-bold mb-8">Premium Viking variant 2</h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="image-section">
-              <!-- Main Carousel -->
-              <div class="splide main-carousel mb-4">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li
-                      class="splide__slide"
-                      data-product-index="0"
-                      data-reference="https://gefeststoves.com/pechi-v-oblicovke/grom/komplekt-grom-30-p-prezident-980-40-zmeevik/"
-                    >
-                      <img
-                        src="/asset/grom-30-serpentine.webp"
-                        alt="grom-30-p-prezident"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="1"
-                      data-reference="https://gefeststoves.com/oblicovki-na-trubu/zmeevik/zmeevik-vysota-540-mm/"
-                    >
-                      <img
-                        src="/asset/chimney-serpentine.webp"
-                        alt="chimney-serpentine"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="2"
-                      data-reference="https://gefeststoves.com/portaly-dlya-pechej/zmeevik/portal-iz-kamnya-zmeevik/"
-                    >
-                      <img
-                        src="/asset/facing-serpentine.webp"
-                        alt="facing-serpentine"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide" data-product-index="3">
-                      <img
-                        src="/asset/massiva-rundvirke.webp"
-                        alt="Massiva rundvirke lavar av EK o ASP"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide" data-product-index="4">
-                      <img
-                        src="/asset/flytande-sits.webp"
-                        alt="flytande sits"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li class="splide__slide" data-product-index="5">
-                      <img
-                        src="/asset/panno.webp"
-                        alt="panno"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="6"
-                      data-reference="https://online.depo.lv/product/469389"
-                    >
-                      <img
-                        src="/asset/doska3.webp"
-                        alt="bastupanel"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="7"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/teploobmennik-vstroennyj-grom-30-gfs-18/"
-                    >
-                      <img
-                        src="/asset/värmeväxlare.webp"
-                        alt="värmeväxlare"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="8"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/bak-vynosnoj-gorizontalnyj-80l/"
-                    >
-                      <img
-                        src="/asset/värmeberedare.webp"
-                        alt="värmeberedare"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="9"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/teploobmennik-vstroennyj-grom-30-gfs-18/"
-                    >
-                      <img
-                        src="/asset/dusch.webp"
-                        alt="dusch"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="10"
-                      data-reference="https://gefeststoves.com/moduli-dlya-avangard/teploobmenniki/teploobmennik-vstroennyj-grom-30-gfs-18/"
-                    >
-                      <img
-                        src="/asset/premium-viking-var-2.webp"
-                        alt="premium-viking-var-2"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                    <li
-                      class="splide__slide"
-                      data-product-index="10"
-                      data-reference="https://gefeststoves.com/images/pechi/cats/gfs_zk_186_srednii_razmer.webp"
-                    >
-                      <img
-                        src="/asset/certificate.webp"
-                        alt="premium-viking-var-1"
-                        class="w-full h-auto rounded-xl"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Thumbnail Carousel -->
-              <div class="splide thumb-carousel">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/grom-30-serpentine.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/chimney-serpentine.webp"
-                        class="h-16 w-24 object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/facing-serpentine.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/massiva-rundvirke.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/flytande-sits.webp"
-                        class="h-full w-full object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/panno.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/doska3.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/värmeväxlare.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/värmeberedare.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/dusch.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/premium-viking-var-2.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="/asset/certificate.webp"
-                        class="h-full w-full object-cover object-cover rounded"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Info container -->
-            <div class="product-info px-6 py-2">
-              <h2 class="text-2xl font-semibold mb-2 product-name"></h2>
-              <p class="md:text-lg text-gray-600 product-description"></p>
-              <p
-                class="text-xl font-semibold text-cyan-500 mt-4 product-price"
-              ></p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Order Button -->
-        <div class="flex items-center justify-center mt-8 lg:mt-32 mb-12">
-          <a
-            href="/contact.html"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center w-40 h-10 w-56 sm:h-15 lg:w-80 lg:h-15 bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center"
-          >
-            Подать заявку
-          </a>
-        </div>
-
-        <!-- Individual solutions -->
-        <section
-          class="bg-gradient-to-r from-white via-gray-100 to-gray-200 rounded-xl shadow-lg px-8 py-8"
-        >
-          <h2 class="text-3xl font-bold mb-8">
-            Skräddarsydda lösningar för din Levande bastu
-          </h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-8 space-y-6">
-              <h2 class="text-xl md:text-2xl font-bold text-gray-800 md:my-20">
-                Мы не ограничиваемся только готовыми комплектами
-              </h2>
-              <p class="text-gray-700 md:text-lg leading-relaxed">
-                Команда
-                <span class="font-semibold text-cyan-600"
-                  >Levande Vikings Bastu</span
+                <!-- Arrows -->
+                <button
+                  class="arrow-left absolute top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full"
                 >
-                разрабатывает уникальные решения для каждой парной:
-              </p>
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[-135deg] rounded-sm"
+                  ></span>
+                </button>
 
-              <div class="space-y-4 md:text-lg py-12">
-                <div class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-cyan-500 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <p class="text-gray-700">
-                    Создаём подробные эскизы дизайна с учётом ваших пожеланий
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-cyan-500 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <p class="text-gray-700">
-                    Выполняем точные расчёты материалов и стоимости
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-cyan-500 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <p class="text-gray-700">
-                    Подбираем оптимальные варианты отделки и печей
-                  </p>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg
-                    class="w-6 h-6 text-cyan-500 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <p class="text-gray-700">
-                    Проектируем парные так, чтобы они были удобными,
-                    долговечными и стильными
-                  </p>
+                <button
+                  class="arrow-right absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[45deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <!-- Thumbnail Carousel -->
+                <div class="embla thumbEmbla w-full mt-4">
+                  <div class="embla__viewport overflow-hidden px-2 py-2">
+                    <div class="embla__container flex">
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/avangard_zk_25.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/jadesten.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/kvartssten.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/doska2.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/skamejka2.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/standartpaket.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/certificate.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <p class="text-gray-800 md:text-lg">
-                С нами вы получите не просто баню, а личное пространство для
-                отдыха и силы.
-              </p>
-            </div>
-
-            <!-- Gallery -->
-            <div>
-              <div class="gallery grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <img
-                  src="/asset/project2.webp"
-                  alt=""
-                  class="w-full h-64 sm:h-72 rounded-xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                />
-                <img
-                  src="/asset/10.webp"
-                  alt=""
-                  class="w-full h-64 sm:h-72 rounded-xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                />
-                <img
-                  src="/asset/11.webp"
-                  alt=""
-                  class="w-full h-64 sm:h-72 rounded-xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                />
-                <img
-                  src="/asset/14.webp"
-                  alt=""
-                  class="w-full h-64 sm:h-72 rounded-xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                />
-                <img
-                  src="/asset/15.webp"
-                  alt=""
-                  class="w-full h-64 sm:h-72 rounded-xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                />
-                <img
-                  src="/asset/16.webp"
-                  alt=""
-                  class="w-full h-64 sm:h-72 rounded-xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                />
+              <!-- Package name -->
+              <div class="w-full flex items-center justify-center">
+                <h2 class="uppercase text-2xl text-[#191919CC]">Standart</h2>
               </div>
+
+              <!-- Product info -->
+              <div
+                class="w-full flex items-baseline justify-around gap-2 pt-4 px-4"
+              >
+                <p class="text-xl product-name"></p>
+                <p
+                  class="text-xl font-semibold text-[#5A7543] product-price"
+                ></p>
+              </div>
+              <p class="text-lg product-description pl-8"></p>
             </div>
           </div>
         </section>
 
-        <!-- Order Button -->
-        <div class="flex items-center justify-center mt-8 lg:mt-32 mb-12">
+        <!-- Premium Viking variant 1 -->
+        <section
+          class="max-w-2xl w-full bg-[#F3EAE1] rounded-xl shadow-lg px-8 py-16 flex flex-col min-h-[1100px]"
+          data-products='[
+            {"name":"Exklusiv bastuugn Grom 30 P2 med beklädnad av talkmagnesit natursten","price":"61 900,- SEK","description":""},
+            {"name":"Bastuugn stenlock 540mm av talkmagnesit","price":"4800,- SEK","description":""},
+            {"name":"Bastuugn portal av talkmagnesit","price":"16600,- SEK","description":"Высота 960 мм, ширина 960 мм, глубина 150 мм, Толщина плиты 40 мм"},
+            {"name":"Massiva rundvirke lavar av EK o ASP","price":"","description":""},
+            {"name":"Flytande sits av massiv Ek och ASP","price":"","description":""},
+            {"name":"Special Design undertak av termoasp och Panno","price":"","description":""},
+            {"name":"Takpanel av termoasp","price":"","description":""},
+            {"name":"Värmeväxlare","price":"","description":"bastuugn tillbehör"},
+            {"name":"Varmeberedare","price":"","description":"bastuugn tillbehör"},
+            {"name":"Kal dusch erbjudande","price":"Pris efter begäran","description":""},
+            {
+              "name":"Ångrum med mått 2 x 2,4m ingår:",
+              "price":"Pris från 214 446,- SEK",
+              "description":[
+                "isolering 45mm stenull av väggar och tak",
+                "folie",
+                "bärläkt",
+                "bastupanel för väggar och tak",
+                "lavar Premium Viking",
+                "LED belysning",
+                "tillbehör material"
+              ]
+            },
+            {"name":"Certifikat","price":"","description":""}
+          ]'
+        >
+          <div class="flex flex-col gap-8 flex-grow">
+            <!-- Image section -->
+            <div class="flex flex-col gap-4 w-full">
+              <!-- Main Carousel -->
+              <div
+                class="embla mainEmbla mx-auto max-w-lg w-full mb-8 relative"
+              >
+                <div class="embla__viewport overflow-hidden">
+                  <div class="embla__container flex">
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="0"
+                    >
+                      <img
+                        src="/asset/grom30.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="1"
+                    >
+                      <img
+                        src="/asset/chimney-talkomagnezit.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="2"
+                    >
+                      <img
+                        src="/asset/facing-talkomagnesit.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="3"
+                    >
+                      <img
+                        src="/asset/massiva-rundvirke.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="4"
+                    >
+                      <img
+                        src="/asset/flytande-sits.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="5"
+                    >
+                      <img
+                        src="/asset/panno.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="6"
+                    >
+                      <img
+                        src="/asset/doska3.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="7"
+                    >
+                      <img
+                        src="/asset/värmeväxlare.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="8"
+                    >
+                      <img
+                        src="/asset/värmeberedare.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="9"
+                    >
+                      <img
+                        src="/asset/dusch.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="10"
+                    >
+                      <img
+                        src="/asset/premium-viking-var-1.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="11"
+                    >
+                      <img
+                        src="/asset/certificate.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Arrows -->
+                <button
+                  class="arrow-left absolute top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[-135deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <button
+                  class="arrow-right absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[45deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <!-- Thumbnail Carousel -->
+                <div class="embla thumbEmbla w-full mt-4">
+                  <div class="embla__viewport overflow-hidden px-2 py-2">
+                    <div class="embla__container flex">
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/grom30.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/chimney-talkomagnezit.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/facing-talkomagnesit.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/massiva-rundvirke.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/flytande-sits.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/panno.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/doska3.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/värmeväxlare.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/värmeberedare.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/dusch.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/premium-viking-var-1.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/certificate.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package name -->
+              <div class="w-full flex items-center justify-center">
+                <h2 class="uppercase text-2xl text-[#191919CC]">
+                  Premium Viking variant 1
+                </h2>
+              </div>
+
+              <!-- Product info -->
+              <div
+                class="w-full flex items-baseline justify-around gap-2 pt-4 px-4"
+              >
+                <p class="text-xl product-name"></p>
+                <p
+                  class="text-xl font-semibold text-[#5A7543] product-price"
+                ></p>
+              </div>
+              <p class="text-lg product-description pl-8"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Premium Viking variant 2 -->
+        <section
+          class="max-w-2xl w-full bg-[#F3EAE1] rounded-xl shadow-lg px-8 py-16 flex flex-col min-h-[1100px]"
+          data-products='[
+            {"name":"Exklusiv bastuugn Grom 30 P2 med beklädnad av serpentine natursten","price":"68 500,- SEK","description":""},
+            {"name":"Bastuugn stenlock 540mm av serpentine","price":"4800,- SEK","description":""},
+            {"name":"Bastuugn portal av serpentine","price":"20399,- SEK","description":"Высота 960 мм, ширина 960 мм, глубина 150 мм, Толщина плиты 40 мм"},
+            {"name":"Massiva rundvirke lavar av EK o ASP","price":"","description":""},
+            {"name":"Flytande sits av massiv Ek och ASP","price":"","description":""},
+            {"name":"Special Design undertak av termoasp och Panno","price":"Pris från 61 649,- SEK","description":""},
+            {"name":"Takpanel av termoasp","price":"","description":""},
+            {"name":"Värmeväxlare","price":"","description":""},
+            {"name":"Värmeberedare","price":"","description":""},
+            {"name":"Kal dusch erbjudande","price":"Pris efter begäran","description":""},
+            {
+              "name":"Ångrum med mått 2 x 2,4m ingår:",
+              "price":"Pris från 214 446,- SEK",
+              "description":[
+                "isolering 45mm stenull av väggar och tak",
+                "folie",
+                "bärläkt",
+                "bastupanel för väggar och tak",
+                "lavar Premium Viking",
+                "LED belysning",
+                "tillbehör material"
+              ]
+            },
+            {"name":"Certifikat","price":"","description":""}
+          ]'
+        >
+          <div class="flex flex-col gap-8 flex-grow">
+            <!-- Image section -->
+            <div class="flex flex-col gap-4 w-full">
+              <!-- Main Carousel -->
+              <div
+                class="embla mainEmbla mx-auto max-w-lg w-full mb-8 relative"
+              >
+                <div class="embla__viewport overflow-hidden">
+                  <div class="embla__container flex">
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="0"
+                    >
+                      <img
+                        src="/asset/grom-30-serpentine.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="1"
+                    >
+                      <img
+                        src="/asset/chimney-serpentine.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="2"
+                    >
+                      <img
+                        src="/asset/facing-serpentine.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="3"
+                    >
+                      <img
+                        src="/asset/massiva-rundvirke.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="4"
+                    >
+                      <img
+                        src="/asset/flytande-sits.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="5"
+                    >
+                      <img
+                        src="/asset/panno.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="6"
+                    >
+                      <img
+                        src="/asset/doska3.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="7"
+                    >
+                      <img
+                        src="/asset/värmeväxlare.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="8"
+                    >
+                      <img
+                        src="/asset/värmeberedare.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="9"
+                    >
+                      <img
+                        src="/asset/dusch.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="10"
+                    >
+                      <img
+                        src="/asset/premium-viking-var-2.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+
+                    <div
+                      class="embla__slide flex-[0_0_100%]"
+                      data-product-index="11"
+                    >
+                      <img
+                        src="/asset/certificate.webp"
+                        class="w-full h-80 md:h-[26rem] object-contain rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Arrows -->
+                <button
+                  class="arrow-left absolute top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[-135deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <button
+                  class="arrow-right absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10"
+                >
+                  <span
+                    class="block w-4 h-4 border-t-[4px] border-r-[4px] border-[#191919CC] rotate-[45deg] rounded-sm"
+                  ></span>
+                </button>
+
+                <!-- Thumbnail Carousel -->
+                <div class="embla thumbEmbla w-full mt-4">
+                  <div class="embla__viewport overflow-hidden px-2 py-2">
+                    <div class="embla__container flex">
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/grom-30-serpentine.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/chimney-serpentine.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/facing-serpentine.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/massiva-rundvirke.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/flytande-sits.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/panno.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/doska3.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/värmeväxlare.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/värmeberedare.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/dusch.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/premium-viking-var-2.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+
+                      <div class="embla__slide flex-[0_0_auto]">
+                        <img
+                          src="/asset/certificate.webp"
+                          class="h-20 w-28 object-contain rounded-lg border-4 border-transparent"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package name -->
+              <div class="w-full flex items-center justify-center">
+                <h2 class="uppercase text-2xl text-[#191919CC]">
+                  Premium Viking variant 2
+                </h2>
+              </div>
+
+              <!-- Product info -->
+              <div
+                class="w-full flex items-baseline justify-around gap-2 pt-4 px-4"
+              >
+                <p class="text-xl product-name"></p>
+                <p
+                  class="text-xl font-semibold text-[#5A7543] product-price"
+                ></p>
+              </div>
+              <p class="text-lg product-description pl-8"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Buttons -->
+        <div class="col-span-full flex justify-center pt-12 gap-12">
           <a
             href="/contact.html"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center w-40 h-10 w-56 sm:h-15 lg:w-80 lg:h-15 bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-700 hover:shadow-xl transition text-center"
+            class="w-60 lg:w-82 h-12 flex items-center justify-center text-white bg-[#5A7543] hover:bg-[#414C38] rounded-full hover:shadow-xl transition-colors duration-200"
           >
-            Подать заявку
+            Skicka
+          </a>
+          <a
+            href="/oven.html"
+            class="w-60 lg:w-82 h-12 flex items-center justify-center text-[#191919] border border-[#5A7543] hover:bg-[#47474799] rounded-full hover:shadow-xl transition-colors duration-200"
+          >
+            Наши печи
           </a>
         </div>
       </div>
     </div>
+
+    <!-- ===========================
+                INDIVIDUAL PROJECT
+      =========================== -->
+
+    <section class="mx-auto px-4 py-24 md:px-8 bg-[#F3EAE1]">
+      <div class="max-w-6xl w-full mx-auto flex flex-col">
+        <h2 class="text-2xl text-center w-full">
+          Skräddarsydda lösningar för din Levande bastu
+        </h2>
+      </div>
+
+      <!-- Main content -->
+      <div
+        class="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-6 py-16"
+      >
+        <div class="w-80 rounded-lg overflow-hidden">
+          <img
+            src="/asset/project2.webp"
+            alt="project2"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <div class="max-w-md pr-4">
+          <p class="text-base text-center md:text-start mb-4">
+            Команда Levande Vikings Bastu разрабатывает уникальные решения для
+            каждой парной:
+          </p>
+          <ul class="list-disc pl-6 mb-4">
+            <li>Создаём подробные эскизы дизайна с учётом ваших пожеланий.</li>
+            <li>Выполняем точные расчёты материалов и стоимости.</li>
+            <li>Подбираем оптимальные варианты отделки и печей.</li>
+            <li>
+              Проектируем парные так, чтобы они были удобными, долговечными и
+              стильными.
+            </li>
+          </ul>
+          <p class="text-base text-center md:text-start font-bold">
+            С нами вы получите не просто баню, а личное пространство для отдыха
+            и силы.
+          </p>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="w-full flex justify-center">
+        <a
+          href="/contact.html"
+          class="w-60 lg:w-82 h-12 flex items-center justify-center text-white bg-[#5A7543] hover:bg-[#414C38] rounded-full hover:shadow-xl transition-colors duration-200"
+        >
+          Skicka
+        </a>
+      </div>
+    </section>
+
+    <!-- ===========================
+     OUR PROJECT GALLERY
+    =========================== -->
+    <section class="w-full flex flex-col py-24 bg-[#E9D4BE]">
+      <h2 class="text-2xl text-center w-full text-[#191919CC pb-12">
+        Наши работы
+      </h2>
+
+      <!--  Carousel -->
+      <div class="embla embla-projects gallery mx-auto relative">
+        <div class="embla__viewport overflow-hidden">
+          <div class="embla__container flex gap-4">
+            <div
+              class="embla__slide flex-[0_0_80%] sm:flex-[0_0_45%] lg:flex-[0_0_25%]"
+            >
+              <img
+                src="/asset/10.webp"
+                class="w-full h-64 object-cover cursor-pointer"
+              />
+            </div>
+
+            <div
+              class="embla__slide flex-[0_0_80%] sm:flex-[0_0_45%] lg:flex-[0_0_25%]"
+            >
+              <img
+                src="/asset/11.webp"
+                class="w-full h-64 object-cover cursor-pointer"
+              />
+            </div>
+
+            <div
+              class="embla__slide flex-[0_0_80%] sm:flex-[0_0_45%] lg:flex-[0_0_25%]"
+            >
+              <img
+                src="/asset/14.webp"
+                class="w-full h-64 object-cover cursor-pointer"
+              />
+            </div>
+
+            <div
+              class="embla__slide flex-[0_0_80%] sm:flex-[0_0_45%] lg:flex-[0_0_25%]"
+            >
+              <img
+                src="/asset/15.webp"
+                class="w-full h-64 object-cover cursor-pointer"
+              />
+            </div>
+
+            <div
+              class="embla__slide flex-[0_0_80%] sm:flex-[0_0_45%] lg:flex-[0_0_25%]"
+            >
+              <img
+                src="/asset/16.webp"
+                class="w-full h-64 object-cover cursor-pointer"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <button
+          class="embla__prev absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/60 backdrop-blur-sm shadow-md hover:bg-white/80 transition pointer-events-auto"
+        >
+          <span class="text-2xl text-[#5A7543]">‹</span>
+        </button>
+
+        <button
+          class="embla__next absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white/60 backdrop-blur-sm shadow-md hover:bg-white/80 transition pointer-events-auto"
+        >
+          <span class="text-2xl text-[#5A7543]">›</span>
+        </button>
+
+        <!-- Dots -->
+        <div class="embla__dots flex justify-center gap-2 mt-6"></div>
+      </div>
+    </section>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -1537,7 +1699,7 @@
         </svg>
       </button>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8.0.0/embla-carousel.umd.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/bygg-din-bastu.js"></script>
   </body>

@@ -1,58 +1,131 @@
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('section[data-products]').forEach(section => {
-    const products = JSON.parse(section.dataset.products);
+document.addEventListener("DOMContentLoaded", () => {
+    // -----------------------------
+  // CAROUSELS
+  // -----------------------------
 
-    // product data
-    const nameEl  = section.querySelector('.product-name');
-    const priceEl = section.querySelector('.product-price');
-    const descEl  = section.querySelector('.product-description');
+  
+  // Packages
+  const sections = document.querySelectorAll("section[data-products]");
 
-    function updateProductInfoByIndex(productIndex) {
-      const p = products[productIndex];
-      if (!p) return;
-      nameEl.textContent  = p.name || '';
-      priceEl.textContent = p.price || '';
-      descEl.innerHTML = Array.isArray(p.description)
-        ? `<ul class="list-none pl-5">${p.description.map(i => `<li>${i}</li>`).join('')}</ul>`
-        : (p.description || '');
+  sections.forEach((section) => {
+    // Main
+    const mainEmbla = EmblaCarousel(
+      section.querySelector(".mainEmbla .embla__viewport"),
+      {
+        align: "start",
+        containScroll: "trimSnaps",
+        dragFree: false,
+        loop: false,
+      }
+    );
+
+    // Thumbs
+    const thumbEmbla = EmblaCarousel(
+      section.querySelector(".thumbEmbla .embla__viewport"),
+      {
+        containScroll: "trimSnaps",
+        dragFree: true,
+        align: "start",
+      }
+    );
+
+    const thumbSlides = section.querySelectorAll(
+      ".thumbEmbla .embla__slide img"
+    );
+
+    function updateActiveThumb(index) {
+      thumbSlides.forEach((img, i) => {
+        img.style.borderColor = i === index ? "#5A7543" : "transparent";
+        img.style.transform = "scale(0.8)";
+      });
     }
 
-    const main = new Splide(section.querySelector('.main-carousel'), {
-      type      : 'fade',
-      rewind    : true,
-      pagination: false,
-      arrows    : true,
-      drag      : true,
+    function updateProductInfo(index) {
+      const products = JSON.parse(section.dataset.products);
+      const p = products[index];
+      section.querySelector(".product-name").textContent = p.name;
+      section.querySelector(".product-price").textContent = p.price;
+      section.querySelector(".product-description").innerHTML = Array.isArray(
+        p.description
+      )
+        ? p.description.map((i) => `<p>${i}</p>`).join("")
+        : p.description;
+    }
+
+    mainEmbla.on("select", () => {
+      const index = mainEmbla.selectedScrollSnap();
+      updateActiveThumb(index);
+      thumbEmbla.scrollTo(index);
+      updateProductInfo(index);
     });
 
-    const thumbs = new Splide(section.querySelector('.thumb-carousel'), {
-      fixedWidth  : 100,
-      fixedHeight : 90,
-      gap         : 10,
-      rewind      : true,
-      pagination  : false,
-      isNavigation: true,
-      focus       : 'center',
-      arrows      : false,
-      breakpoints : {
-        640: { fixedWidth: 66, fixedHeight: 40 },
-      },
+    thumbSlides.forEach((img, index) => {
+      img.addEventListener("click", () => mainEmbla.scrollTo(index));
     });
 
-    main.sync(thumbs);
-    main.mount();
-    thumbs.mount();
+    // Arrows
+    const left = section.querySelector(".arrow-left");
+    const right = section.querySelector(".arrow-right");
+    if (left) left.onclick = () => mainEmbla.scrollPrev();
+    if (right) right.onclick = () => mainEmbla.scrollNext();
 
-    // Initialise with first slide's product index
-    const firstSlide = section.querySelector('.main-carousel .splide__slide');
-    updateProductInfoByIndex(parseInt(firstSlide.dataset.productIndex, 10));
+    // Init
+    updateProductInfo(0);
+    updateActiveThumb(0);
+  });
 
-    // Update on slide change
-    main.on('move', function (newIndex) {
-      const slide = main.Components.Slides.getAt(newIndex).slide;
-      const productIndex = parseInt(slide.dataset.productIndex, 10);
-      updateProductInfoByIndex(productIndex);
+  // Bottom gallery
+  const emblaNode = document.querySelector(".embla-projects");
+  if (!emblaNode) return;
+
+  const viewportNode = emblaNode.querySelector(".embla__viewport");
+  const dotsNode = emblaNode.querySelector(".embla__dots");
+  const prevBtn = emblaNode.querySelector(".embla__prev");
+  const nextBtn = emblaNode.querySelector(".embla__next");
+
+  const embla = EmblaCarousel(viewportNode, {
+    loop: false,
+    align: "start",
+    dragFree: true,
+  });
+
+  const slideCount = embla.slideNodes().length;
+  const dots = [];
+
+  function createDots() {
+    dotsNode.innerHTML = "";
+    dots.length = 0;
+
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className =
+        "w-2 h-2 rounded-full bg-gray-300 transition-colors duration-200";
+      dot.addEventListener("click", () => embla.scrollTo(i));
+      dotsNode.appendChild(dot);
+      dots.push(dot);
+    }
+  }
+
+  function updateDots() {
+    const selected = embla.selectedScrollSnap();
+    dots.forEach((dot, i) => {
+      dot.className =
+        "w-2 h-2 rounded-full transition-colors duration-200 " +
+        (i === selected ? "bg-[#5A7543]" : "bg-gray-300");
     });
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", () => embla.scrollPrev());
+  if (nextBtn) nextBtn.addEventListener("click", () => embla.scrollNext());
+
+  createDots();
+  updateDots();
+
+  embla.on("select", updateDots);
+  embla.on("reInit", () => {
+    createDots();
+    updateDots();
   });
 });
 
