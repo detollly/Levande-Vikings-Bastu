@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              "3xl": "1700px",
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
@@ -272,15 +284,15 @@
 
       <!-- Text layer -->
       <div
-        class="max-w-3xl absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-24 px-8 pt-32 parallax-slow"
+        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 3xl:items-center justify-center gap-16 md:pl-24 px-8 pt-32 parallax-slow"
       >
         <h1
-          class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
+          class="max-w-3xl text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
         >
           Готовые решения для вашей парной от Levande Vikings Bastu
         </h1>
         <p
-          class="text-[#E8E8E8] text-base md:text-2xl font-extralight drop-shadow-lg text-center md:text-start"
+          class="max-w-3xl text-[#E8E8E8] text-base md:text-2xl font-extralight drop-shadow-lg text-center md:text-start"
         >
           Мы предлагаем готовые комплекты «печь+отделка парной», чтобы вы могли
           быстро и без лишних забот получить настоящую Levande баню. Вам

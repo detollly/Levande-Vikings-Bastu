@@ -20,6 +20,18 @@
     <link rel="stylesheet" href="/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              "3xl": "1700px",
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
@@ -69,16 +81,40 @@
           </div>
 
           <!-- ====== Desktop Nav Menu ====== -->
-          <div class="hidden md:block text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-  <div class="ml-10 flex items-center flex-wrap gap-2">
-    <a href="/" class="menu-item text-base hover:text-blue-400 px-3">Hem</a>
-    <a href="/bygg-din-bastu.html" class="menu-item text-base hover:text-blue-400 px-3">Bygg din bastu</a>
-    <a href="/reviews.html" class="menu-item text-base hover:text-blue-400 px-3">Omdömen</a>
-    <a href="/utbildning.html" class="menu-item text-base hover:text-blue-400 px-3">Utbildning</a>
-    <a href="/about.html" class="menu-item text-base hover:text-blue-400 px-3">Om oss</a>
-    <a href="/contact.html" class="menu-item text-base hover:text-blue-400 px-3">Kontakt</a>
-  </div>
-</div>
+          <div
+            class="hidden md:block text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
+          >
+            <div class="ml-10 flex items-center flex-wrap gap-2">
+              <a href="/" class="menu-item text-base hover:text-blue-400 px-3"
+                >Hem</a
+              >
+              <a
+                href="/bygg-din-bastu.html"
+                class="menu-item text-base hover:text-blue-400 px-3"
+                >Bygg din bastu</a
+              >
+              <a
+                href="/reviews.html"
+                class="menu-item text-base hover:text-blue-400 px-3"
+                >Omdömen</a
+              >
+              <a
+                href="/utbildning.html"
+                class="menu-item text-base hover:text-blue-400 px-3"
+                >Utbildning</a
+              >
+              <a
+                href="/about.html"
+                class="menu-item text-base hover:text-blue-400 px-3"
+                >Om oss</a
+              >
+              <a
+                href="/contact.html"
+                class="menu-item text-base hover:text-blue-400 px-3"
+                >Kontakt</a
+              >
+            </div>
+          </div>
 
           <!-- Phone & Mobile menu buttons -->
           <div class="flex items-center gap-3 md:hidden">
@@ -267,7 +303,7 @@
 
       <!-- Text layer -->
       <div
-        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-32 px-8 pt-32 parallax-slow"
+        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 3xl:items-center justify-center gap-16 md:pl-32 px-8 pt-32 parallax-slow"
       >
         <h1
           class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
@@ -310,21 +346,25 @@
      OPENING SECTION
     =========================== -->
     <section class="py-16 md:py-24 px-4 bg-[#F3EAE1]">
-      <div class="max-w-4xl 2xl:mx-auto">
+      <div class="3xl:mx-auto">
         <div
-          class="flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-24 px-6 gap-6"
+          class="flex flex-col items-center md:items-start 3xl:items-center justify-center md:pl-24 px-6 gap-6"
         >
           <h1
-            class="text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 2xl:text-center"
+            class="max-w-4xl text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 3xl:text-center leading-relaxed"
           >
             Upptäck
-            <span class="text-[#5A7543]">basturitualen hos Levande Vikings Bastu</span>
+            <span class="text-[#5A7543]"
+              >basturitualen hos Levande Vikings Bastu</span
+            >
             — en upplevelse för kropp och själ.
           </h1>
           <p
-            class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
+            class="max-w-4xl text-base md:text-2xl font-light text-center md:text-start 3xl:text-center"
           >
-            I en värld där allt går snabbt lär bastun oss att sakta ner. Att känna igen. Att bara vara. För bastuångan är mer än bara värme — det är ett uråldrigt språk av omsorg.&nbsp;&nbsp;&nbsp;
+            I en värld där allt går snabbt lär bastun oss att sakta ner. Att
+            känna igen. Att bara vara. För bastuångan är mer än bara värme — det
+            är ett uråldrigt språk av omsorg.&nbsp;&nbsp;&nbsp;
 
             <a
               href="bastu.html"
@@ -356,8 +396,9 @@
      CONTENT TEASERS
     =========================== -->
     <section class="py-20 md:py-32 px-4 bg-[#E5D3C0]">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-
+      <div
+        class="w-full mx-auto md:px-24 grid grid-cols-1 md:grid-cols-3 gap-4"
+      >
         <!-- ====== Card Ovens ====== -->
         <a
           href="oven.html"
@@ -394,7 +435,9 @@
             </span>
 
             <!-- Image -->
-            <div class="aspect-square w-32 md:w-40 shrink-0 overflow-hidden rounded-full">
+            <div
+              class="aspect-square w-32 md:w-40 shrink-0 overflow-hidden rounded-full"
+            >
               <img
                 src="/asset/oven2.webp"
                 alt="Ovens"
@@ -442,7 +485,9 @@
             </span>
 
             <!-- Image -->
-            <div class="aspect-square w-32 md:w-40 shrink-0 overflow-hidden rounded-full">
+            <div
+              class="aspect-square w-32 md:w-40 shrink-0 overflow-hidden rounded-full"
+            >
               <img
                 src="/asset/11.webp"
                 alt="Ovens"
@@ -489,7 +534,9 @@
             </span>
 
             <!-- Image -->
-            <div class="aspect-square w-32 md:w-40 shrink-0 overflow-hidden rounded-full">
+            <div
+              class="aspect-square w-32 md:w-40 shrink-0 overflow-hidden rounded-full"
+            >
               <img
                 src="/asset/10.webp"
                 alt="Ovens"
@@ -505,33 +552,41 @@
      OUR MISSION - Unplanned section
     =========================== -->
     <section class="py-16 md:py-24 px-4 bg-[#F3EAE1]">
-      <div class="max-w-6xl 2xl:mx-auto flex flex-col gap-6">
+      <div class="3xl:mx-auto flex flex-col gap-6">
         <!-- Text container -->
         <div
-          class="max-w-5xl flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-24 px-6 gap-6"
+          class="flex flex-col items-center md:items-start 3xl:items-center justify-center md:pl-24 px-6 gap-6"
         >
           <h1
-            class="text-2xl md:text-5xl font-normal text-center md:text-start 2xl:text-center"
+            class="max-w-4xl text-2xl md:text-5xl font-normal text-center md:text-start 3xl:text-center"
           >
             Vi strävar efter att vara en ledande kraft i Skandinavien
-            <span class="text-[#5A7543]">genom att återuppliva förfädernas traditioner</span>
+            <span class="text-[#5A7543]"
+              >genom att återuppliva förfädernas traditioner</span
+            >
             med modern kvalitet.
           </h1>
           <p
-            class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
+            class="max-w-4xl text-base md:text-2xl font-light text-center md:text-start 3xl:text-center"
           >
-            Levande Vikings Bastu är en levande tradition där värme, hälsa och uråldrig visdom möts. Vi skapar rum där kropp, sinne och själ får renas. Vårt mål är att återväcka den nordiska bastukulturen och återge den dess sanna betydelse — en plats för styrka, rening och gemenskap.
+            Levande Vikings Bastu är en levande tradition där värme, hälsa och
+            uråldrig visdom möts. Vi skapar rum där kropp, sinne och själ får
+            renas. Vårt mål är att återväcka den nordiska bastukulturen och
+            återge den dess sanna betydelse — en plats för styrka, rening och
+            gemenskap.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Parallax Image -->
-    <section class="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden">
-      <img 
-          src="/asset/premium-viking-var-1.webp" 
-          alt="Parallax Background"
-          class="parallax-image absolute inset-0 w-full h-full object-cover object-top"
+    <section
+      class="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden"
+    >
+      <img
+        src="/asset/premium-viking-var-1.webp"
+        alt="Parallax Background"
+        class="parallax-image absolute inset-0 w-full h-full object-cover object-top"
       />
     </section>
 
@@ -541,171 +596,175 @@
     <section class="py-20 md:py-24 px-4 bg-[#F3EAE1]">
       <div class="flex flex-col">
         <!-- Education Text container -->
-        <div class="max-w-5xl 2xl:mx-auto mb-16">
+        <div class="3xl:mx-auto mb-16">
           <div
-            class="flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-24 px-6 gap-6"
+            class="flex flex-col items-center md:items-start 3xl:items-center justify-center md:pl-24 px-6 gap-6"
           >
             <h1
-              class="text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 2xl:text-center"
+              class="max-w-4xl text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 3xl:text-center"
             >
               Vi utbildar i hälsosam bastukultur.
             </h1>
             <p
-              class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
+              class="max-w-4xl text-base md:text-2xl font-light text-center md:text-start 3xl:text-center"
             >
-              Upptäck den skandinaviska bastutraditionen — från rätt uppvärmning till den fina konsten att balansera värme och ånga — under ledning av våra erfarna bastumästare.
+              Upptäck den skandinaviska bastutraditionen — från rätt uppvärmning
+              till den fina konsten att balansera värme och ånga — under ledning
+              av våra erfarna bastumästare.
             </p>
           </div>
         </div>
 
         <!-- Education containers -->
-        <div
-          class="max-w-6xl mx-auto mb-16 md:mb-20 grid grid-cols-1 md:grid-cols-3 gap-4"
-        >
-          <!-- ====== Card Individual classes ====== -->
-          <a
-            href="https://www.youtube.com/watch?v=cjyXmH5PrbM&"
-            class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-6 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+        <div class="w-full mb-16 md:mb-20 flex justify-center">
+          <div
+            class="w-full mx-auto px-0 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-4"
           >
-            <h2 class="text-2xl">Индивидуальные уроки</h2>
+            <!-- ====== Card Individual classes ====== -->
+            <a
+              href="https://www.youtube.com/watch?v=cjyXmH5PrbM&"
+              class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-6 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+            >
+              <h2 class="text-2xl">Индивидуальные уроки</h2>
 
-            <p class="text-base">
-              Персональные разборы и рекомендации под ваш проект бани
-            </p>
+              <p class="text-base">
+                Персональные разборы и рекомендации под ваш проект бани
+              </p>
 
-            <!-- CTA -->
-            <div class="mt-auto flex items-end justify-between">
-              <span
-                class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
-              >
-                <span class="underline">Läs mer</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6 ml-1"
+              <!-- CTA -->
+              <div class="mt-auto flex items-end justify-between">
+                <span
+                  class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  <span class="underline">Läs mer</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </span>
+
+                <!-- Image -->
+                <div class="w-40 h-40 overflow-hidden rounded-full">
+                  <img
+                    src="/asset/whisk.webp"
+                    alt="Ovens"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                </svg>
-              </span>
-
-              <!-- Image -->
-              <div class="w-40 h-40 overflow-hidden rounded-full">
-                <img
-                  src="/asset/whisk.webp"
-                  alt="Ovens"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
 
-          <!-- ====== Card Live & Online Classes ====== -->
-          <a
-            href="https://www.youtube.com/shorts/QJJKlDq3nF0"
-            class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
-          >
-            <h2 class="text-2xl">Живые и онлайн мастер-классы</h2>
+            <!-- ====== Card Live & Online Classes ====== -->
+            <a
+              href="https://www.youtube.com/shorts/QJJKlDq3nF0"
+              class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+            >
+              <h2 class="text-2xl">Живые и онлайн мастер-классы</h2>
 
-            <p class="text-base">
-              Практические занятия, где вы увидите процесс строительства
-              скандинавской бани вживую
-            </p>
+              <p class="text-base">
+                Практические занятия, где вы увидите процесс строительства
+                скандинавской бани вживую
+              </p>
 
-            <!-- CTA -->
-            <div class="mt-auto flex items-end justify-between">
-              <span
-                class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
-              >
-                <span class="underline">Läs mer</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6 ml-1"
+              <!-- CTA -->
+              <div class="mt-auto flex items-end justify-between">
+                <span
+                  class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  <span class="underline">Läs mer</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </span>
+
+                <!-- Image -->
+                <div class="w-40 h-40 overflow-hidden rounded-full">
+                  <img
+                    src="/asset/tutor.webp"
+                    alt="Ovens"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                </svg>
-              </span>
-
-              <!-- Image -->
-              <div class="w-40 h-40 overflow-hidden rounded-full">
-                <img
-                  src="/asset/tutor.webp"
-                  alt="Ovens"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
 
-          <!-- ====== Card Video Classes ====== -->
-          <a
-            href="https://www.youtube.com/watch?v=Se5X8kY_OLs&"
-            class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
-          >
-            <h2 class="text-2xl">Видеоуроки</h2>
+            <!-- ====== Card Video Classes ====== -->
+            <a
+              href="https://www.youtube.com/watch?v=Se5X8kY_OLs&"
+              class="group flex flex-col bg-[#E9D4BE] p-8 rounded-xl text-[#191919] gap-8 hover:translate-x-1 transition-transform duration-300 shadow-xl"
+            >
+              <h2 class="text-2xl">Видеоуроки</h2>
 
-            <p class="text-base">
-              Короткие и понятные видео о техниках и этапах строительства бань
-            </p>
+              <p class="text-base">
+                Короткие и понятные видео о техниках и этапах строительства бань
+              </p>
 
-            <!-- CTA -->
-            <div class="mt-auto flex items-end justify-between">
-              <span
-                class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
-              >
-                <span class="underline">Läs mer</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6 ml-1"
+              <!-- CTA -->
+              <div class="mt-auto flex items-end justify-between">
+                <span
+                  class="inline-flex items-center text-[#5A7543] hover:translate-x-1 duration-300 whitespace-nowrap"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                  />
-                </svg>
-              </span>
+                  <span class="underline">Läs mer</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                    />
+                  </svg>
+                </span>
 
-              <!-- Image -->
-              <div class="w-40 h-40 overflow-hidden rounded-full">
-                <img
-                  src="/asset/shield.webp"
-                  alt="Ovens"
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <!-- Image -->
+                <div class="w-40 h-40 overflow-hidden rounded-full">
+                  <img
+                    src="/asset/shield.webp"
+                    alt="Ovens"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <!-- Education Text container #2-->
         <div
-          class="max-w-5xl 2xl:mx-auto flex flex-col items-center md:items-start 2xl:items-center justify-center md:pl-24 px-6 gap-6"
+          class="3xl:mx-auto flex flex-col items-center md:items-start 3xl:items-center justify-center md:pl-24 px-6 gap-6"
         >
           <h1
-            class="text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 2xl:text-center"
+            class="max-w-5xl text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 3xl:text-center"
           >
             Din bastu blir din egen plats för
-            <span class="text-[#5A7543]">styrka och hälsa</span>.
-            Välkommen till en värld där arvet från våra förfäder lever.
+            <span class="text-[#5A7543]">styrka och hälsa</span>. Välkommen till
+            en värld där arvet från våra förfäder lever.
           </h1>
         </div>
       </div>
@@ -731,7 +790,8 @@
               />
             </div>
             <p class="mt-4 text-base text-start">
-              Samla vänner, dela värme och skapa oförglömliga stunder med Levande Vikings Bastu.
+              Samla vänner, dela värme och skapa oförglömliga stunder med
+              Levande Vikings Bastu.
             </p>
           </div>
 
@@ -747,7 +807,8 @@
               />
             </div>
             <p class="mt-4 text-base text-start">
-              Upptäck hälsotraditioner med Levande Vikings Bastu — basturitualer är enkla och effektiva.
+              Upptäck hälsotraditioner med Levande Vikings Bastu — basturitualer
+              är enkla och effektiva.
             </p>
           </div>
 
@@ -763,7 +824,8 @@
               />
             </div>
             <p class="mt-4 text-base text-start">
-              Bastuupplevelsen hos Levande Vikings Bastu — en naturlig samlingspunkt för nära och hjärtliga möten.
+              Bastuupplevelsen hos Levande Vikings Bastu — en naturlig
+              samlingspunkt för nära och hjärtliga möten.
             </p>
           </div>
         </div>

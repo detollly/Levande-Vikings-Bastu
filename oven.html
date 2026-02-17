@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="/css/main.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              "3xl": "1700px",
+            },
+          },
+        },
+      };
+    </script>
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
@@ -272,15 +284,15 @@
 
       <!-- Text layer -->
       <div
-        class="max-w-3xl absolute inset-0 z-20 flex flex-col items-center md:items-start 2xl:items-center justify-center gap-16 md:pl-24 px-8 pt-32 parallax-slow"
+        class="absolute inset-0 z-20 flex flex-col items-center md:items-start 3xl:items-center justify-center gap-16 md:pl-24 px-8 pt-32 parallax-slow"
       >
         <h1
-          class="text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
+          class="max-w-3xl text-[#E8E8E8] text-3xl md:text-6xl font-normal drop-shadow-lg text-start"
         >
           Выбор печи для скандинавской бани
         </h1>
         <p
-          class="text-[#E8E8E8] text-base md:text-2xl font-extralight drop-shadow-lg text-center md:text-start"
+          class="max-w-3xl text-[#E8E8E8] text-base md:text-2xl font-extralight drop-shadow-lg text-center md:text-start"
         >
           Сердце бани — это печь, адаптированная для работы в суровых условиях.
           От неё зависит пар, тепло и комфорт.
@@ -313,7 +325,7 @@
      INTRO
     =========================== -->
     <section
-      class="max-w-7xl mx-auto flex items-center justify-center px-4 md:px-8 py-16 md:py-24 bg-[#F3EAE1] text-2xl md:text-5xl"
+      class="max-w-7xl mx-auto flex items-center justify-center py-16 md:py-24 bg-[#F3EAE1] text-2xl md:text-5xl"
     >
       <h1 class="text-[#191919CC] text-center md:text-justify">
         Настоящая баня — это энергия огня, дыхание дерева и живой пар.
@@ -328,199 +340,201 @@
     <section
       class="w-full mx-auto flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-24 bg-[#E9D4BE]"
     >
-      <!-- Heading -->
-      <div
-        class="w-full mx-auto flex flex-col items-center justify-center space-y-8 mb-16"
-      >
-        <h2 class="text-[#474747] text-center text-3xl md:text-4xl">
-          Печь — это сердце бани
-        </h2>
-
-        <p
-          class="max-w-4xl text-[#191919CC] text-base md:text-2xl text-center md:text-justify"
+      <div class="max-w-7xl">
+        <!-- Heading -->
+        <div
+          class="w-full mx-auto flex flex-col items-center justify-center space-y-8 mb-16"
         >
-          Печи для бани от нашего производителя – это революция в мире банных
-          печей. Только на печи от нашего производителя официально
-          предоставляется гарантия 40 лет, которой нет ни у кого в мире на свою
-          продукцию.
-        </p>
-      </div>
+          <h2 class="text-[#474747] text-center text-3xl md:text-4xl">
+            Печь — это сердце бани
+          </h2>
 
-      <!-- Benefits grid -->
-      <div class="w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Item 1 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/fire.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
-            </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Высокая<br />теплоотдача
-            </h2>
-          </div>
-          <p class="text-[#191919] text-base">
-            Печи быстро прогревают парилку и долго держат тепло, создавая мягкий
-            и насыщенный пар.
+          <p
+            class="max-w-4xl text-[#191919CC] text-base md:text-2xl text-center md:text-justify"
+          >
+            Печи для бани от нашего производителя – это революция в мире банных
+            печей. Только на печи от нашего производителя официально
+            предоставляется гарантия 40 лет, которой нет ни у кого в мире на
+            свою продукцию.
           </p>
         </div>
 
-        <!-- Item 2 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/center-pick.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+        <!-- Benefits grid -->
+        <div class="w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Item 1 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/fire.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Высокая<br />теплоотдача
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Прочная<br />конструкция
-            </h2>
+            <p class="text-[#191919] text-base">
+              Печи быстро прогревают парилку и долго держат тепло, создавая
+              мягкий и насыщенный пар.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            Используется жаропрочная сталь толщиной до 13 мм, выдерживающая
-            экстремальные температуры и длительные циклы нагрева.
-          </p>
-        </div>
 
-        <!-- Item 3 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/interface.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+          <!-- Item 2 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/center-pick.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Прочная<br />конструкция
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Разнообразие<br />моделей
-            </h2>
+            <p class="text-[#191919] text-base">
+              Используется жаропрочная сталь толщиной до 13 мм, выдерживающая
+              экстремальные температуры и длительные циклы нагрева.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            В ассортименте есть печи для небольших частных бань от 10 м³ и для
-            просторных коммерческих парных до 80 м³ и выше.
-          </p>
-        </div>
 
-        <!-- Item 4 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/turbine.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+          <!-- Item 3 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/interface.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Разнообразие<br />моделей
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Продуманная<br />циркуляция воздуха
-            </h2>
+            <p class="text-[#191919] text-base">
+              В ассортименте есть печи для небольших частных бань от 10 м³ и для
+              просторных коммерческих парных до 80 м³ и выше.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            Современные конвекционные каналы обеспечивают равномерный прогрев
-            помещения.
-          </p>
-        </div>
 
-        <!-- Item 5 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/bubbles.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+          <!-- Item 4 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/turbine.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Продуманная<br />циркуляция воздуха
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Удобная работа<br />с каменкой
-            </h2>
+            <p class="text-[#191919] text-base">
+              Современные конвекционные каналы обеспечивают равномерный прогрев
+              помещения.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            Открытые и закрытые каменки позволяют получить как легкий, сухой
-            пар, так и классический «тяжелый» банный пар.
-          </p>
-        </div>
 
-        <!-- Item 6 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/sendglass.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+          <!-- Item 5 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/bubbles.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Удобная работа<br />с каменкой
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Тесты<br />долговечности
-            </h2>
+            <p class="text-[#191919] text-base">
+              Открытые и закрытые каменки позволяют получить как легкий, сухой
+              пар, так и классический «тяжелый» банный пар.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            Моделирование десятков лет эксплуатации в условиях высокой влажности
-            и температуры.
-          </p>
-        </div>
 
-        <!-- Item 7 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/thermometer.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+          <!-- Item 6 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/sendglass.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Тесты<br />долговечности
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Тесты высокотемпературных нагрузок
-            </h2>
+            <p class="text-[#191919] text-base">
+              Моделирование десятков лет эксплуатации в условиях высокой
+              влажности и температуры.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            Печи выдерживают экстремальный жар и резкие перепады температур.
-          </p>
-        </div>
 
-        <!-- Item 8 -->
-        <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div
-              class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
-            >
-              <img
-                src="/asset/shield-icon.webp"
-                alt=""
-                class="w-8 h-8 brightness-0 invert"
-              />
+          <!-- Item 7 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/thermometer.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Тесты высокотемпературных нагрузок
+              </h2>
             </div>
-            <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
-              Эксклюзивная<br />гарантия
-            </h2>
+            <p class="text-[#191919] text-base">
+              Печи выдерживают экстремальный жар и резкие перепады температур.
+            </p>
           </div>
-          <p class="text-[#191919] text-base">
-            Только печи нашего производства сопровождаются официальной гарантией
-            — 40 лет безупречной службы.
-          </p>
+
+          <!-- Item 8 -->
+          <div class="flex flex-col px-6 py-8 bg-[#F3EAE1] rounded-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-[#5A7543] rounded-md flex items-center justify-center"
+              >
+                <img
+                  src="/asset/shield-icon.webp"
+                  alt=""
+                  class="w-8 h-8 brightness-0 invert"
+                />
+              </div>
+              <h2 class="text-[#474747] text-xl lg:text-2xl leading-tight">
+                Эксклюзивная<br />гарантия
+              </h2>
+            </div>
+            <p class="text-[#191919] text-base">
+              Только печи нашего производства сопровождаются официальной
+              гарантией — 40 лет безупречной службы.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -528,94 +542,103 @@
     <!-- ===========================
      OVEN DESIGN
     =========================== -->
-    <section
-      class="w-full mx-auto flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-24 bg-[#F3EAE1] gap-4"
-      >
-      <!-- Oven design 1 -->
-      <div class="w-full flex flex-col md:flex-row gap-4">
-        <!-- Description -->
-        <div
-          class="flex-[1] flex-col bg-[#8C4A00B2] rounded-md text-white text-center md:text-start px-8 py-8"
-        >
-          <h2 class="text-2xl pb-8">
-            Выбор варианта печки зависит от ваших предпочтений
-          </h2>
-          <ul class="text-base list-disc pl-5 font-serif-pro space-y-4">
-            <li>Быстрый прогрев → <strong>печь в сетке</strong></li>
-            <li>
-              Долгое, медленное парение → <strong>печь в облицовке</strong>
-            </li>
-            <li>Динамика и быстрый старт → <strong>печь в сетке</strong></li>
-            <li>
-              Долговечность и мягкий пар →
-              <strong>облицовка из талькохлорита</strong>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Images -->
-        <div
-          class="flex-[2] flex-col bg-[#E9D4BE] rounded-md px-8 py-12 space-y-8 justify-center"
-        >
-          <h2 class="text-2xl text-center">Печь в сетке с камнями</h2>
-          <div class="flex flex-col md:flex-row justify-around gap-8">
-            <img
-            src="/asset/oven5.webp"
-            alt="oven5"
-            class="w-64 h-64 object-cover rounded-lg"
-          />
-
-          <img
-            src="/asset/oven6.webp"
-            alt="oven5"
-            class="w-[17rem] w-[17rem] object-cover rounded-lg"
-          />
-          </div>
-        </div>
-      </div>
-
-      <!-- Oven design 2 -->
-      <div class="w-full flex flex-col md:flex-row gap-4">
-
-        <!-- Images -->
-        <div
-          class="flex-[2] flex-col bg-[#E9D4BE] rounded-md px-8 py-12 space-y-8 justify-center"
+    <section class="w-full mx-auto px-4 py-16 md:py-24 bg-[#F3EAE1]">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <!-- Oven design 1 -->
+        <div class="w-full flex flex-col md:flex-row gap-4">
+          <!-- Description -->
+          <div
+            class="flex flex-col flex-[1] bg-[#8C4A00B2] rounded-md text-white px-8 py-8"
           >
-          <h2 class="text-2xl text-center">Печь в облицовке</h2>
-          <div class="flex flex-col md:flex-row justify-around gap-8">
-            <img
-            src="/asset/grom30.webp"
-            alt="oven5"
-            class="w-64 h-64 object-cover"
-          />
+            <h2 class="text-2xl pb-8 text-center md:text-start">
+              Выбор варианта печки зависит от ваших предпочтений
+            </h2>
+            <ul
+              class="text-base list-disc pl-5 font-serif-pro space-y-4 text-justify md:text-start"
+            >
+              <li>Быстрый прогрев → <strong>печь в сетке</strong></li>
+              <li>
+                Долгое, медленное парение → <strong>печь в облицовке</strong>
+              </li>
+              <li>Динамика и быстрый старт → <strong>печь в сетке</strong></li>
+              <li>
+                Долговечность и мягкий пар →
+                <strong>облицовка из талькохлорита</strong>
+              </li>
+            </ul>
+          </div>
 
-          <img
-            src="/asset/oven8.webp"
-            alt="oven5"
-            class="w-96 h-auto object-contain"
-          />
+          <!-- Images -->
+          <div
+            class="flex flex-col flex-[2] bg-[#E9D4BE] rounded-md px-8 py-12 space-y-8 justify-center"
+          >
+            <h2 class="text-2xl text-center">Печь в сетке с камнями</h2>
+            <div
+              class="flex flex-col md:flex-row justify-around items-center gap-8"
+            >
+              <img
+                src="/asset/oven5.webp"
+                class="w-64 h-64 object-cover rounded-lg"
+              />
+              <img
+                src="/asset/oven6.webp"
+                class="w-[17rem] h-[17rem] object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
 
-        <!-- Description -->
-        <div
-          class="flex-[1] flex-col bg-[#5A7543] rounded-md text-white text-center md:text-start px-8 py-8"
+        <!-- Oven design 2 -->
+        <div class="w-full flex flex-col md:flex-row gap-4">
+          <!-- Images -->
+          <div
+            class="flex flex-col flex-[2] bg-[#E9D4BE] rounded-md px-8 py-12 space-y-8 justify-center"
           >
-          <h2 class="text-2xl pb-8">
-            Отличие Levande Vikings Bastu от сауны
-          </h2>
-          <ul class="text-base list-disc pl-5 font-serif-pro space-y-2">
-            <li><strong>Комфортная температура и большое количество пара. </strong></li>
-            <li>
-              Сухой воздух сауны жжет кожу, а дети и женщины, не могут находиться в ней дольше 5 минут. Баня Levande Vikings Bastu дарит <strong>мягкий прогрев</strong>, расслабляющее тепло и комфортную влажность для посетителей любого возраста.
-            </li>
-            <li><strong>Идеальные камни:</strong> нефрит, жадеит, порфирит, талькохлорит — впитывают много тепла и не трескаются при поливе водой.</li>
-          </ul>
-        </div>
-      </div>
+            <h2 class="text-2xl text-center">Печь в облицовке</h2>
+            <div
+              class="flex flex-col md:flex-row justify-around items-center gap-8"
+            >
+              <img
+                src="/asset/grom30.webp"
+                class="w-64 h-64 object-cover rounded-lg"
+              />
+              <img
+                src="/asset/oven8.webp"
+                class="w-96 h-auto object-contain rounded-lg"
+              />
+            </div>
+          </div>
 
-      <!-- Buttons -->
-        <div class="col-span-full flex justify-center pt-12 gap-12">
+          <!-- Description -->
+          <div
+            class="flex flex-col flex-[1] bg-[#5A7543] rounded-md text-white px-8 py-8"
+          >
+            <h2 class="text-2xl pb-8 text-center md:text-start">
+              Отличие Levande Vikings Bastu от сауны
+            </h2>
+            <ul
+              class="text-base list-disc pl-5 font-serif-pro space-y-2 text-justify md:text-start"
+            >
+              <li>
+                <strong
+                  >Комфортная температура и большое количество пара.</strong
+                >
+              </li>
+              <li>
+                Сухой воздух сауны жжет кожу… Баня Levande Vikings Bastu дарит
+                <strong>мягкий прогрев</strong>, расслабляющее тепло и
+                комфортную влажность.
+              </li>
+              <li>
+                <strong>Идеальные камни:</strong> нефрит, жадеит, порфирит,
+                талькохлорит.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-center pt-12 gap-12">
           <a
             href="/contact.html"
             class="w-60 lg:w-82 h-12 flex items-center justify-center text-white bg-[#5A7543] hover:bg-[#414C38] rounded-full hover:shadow-xl transition-colors duration-200"
@@ -629,7 +652,113 @@
             Комплекты печей
           </a>
         </div>
+      </div>
+    </section>
 
+    <!-- ===========================
+     STONES
+=========================== -->
+    <section class="w-full mx-auto px-4 py-16 md:py-24 bg-[#F3EAE1]">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <!-- Stone 1 -->
+        <div
+          class="w-full flex flex-col md:flex-row items-center md:items-start gap-8"
+        >
+          <div
+            class="w-56 h-48 flex justify-center bg-[#414C38] rounded-md p-4"
+          >
+            <img src="/asset/tjälsten.webp" class="w-48 object-cover" />
+          </div>
+
+          <div
+            class="max-w-xl flex flex-col space-y-4 text-[#191919] text-start md:text-start"
+          >
+            <p class="text-2xl">Tjälsten</p>
+            <p class="text-base">
+              Природный минерал, не выделяет токсинов при нагреве, нагревается
+              медленно, но держит тепло очень долго. Отдаёт мягкий, равномерный
+              жар, создавая обволакивающий пар. Выдерживает тысячи циклов
+              нагрева и охлаждения. <strong>При нагреве</strong> выделяет
+              отрицательные ионы, очищает воздух и облегчает дыхание.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stone 2 -->
+        <div
+          class="w-full flex flex-col md:flex-row-reverse items-center md:items-start gap-8"
+        >
+          <div
+            class="w-56 h-48 flex justify-center bg-[#E9D4BE] rounded-md p-4"
+          >
+            <img src="/asset/jadesten2.webp" class="w-48 object-cover" />
+          </div>
+
+          <div
+            class="max-w-xl flex flex-col space-y-4 text-[#191919] text-start md:text-start"
+          >
+            <p class="text-2xl">Jadesten</p>
+            <p class="text-base">
+              Самый твёрдый камень для бани, выдерживает резкие перепады
+              температур без трещин. В древнем Китае и Японии считался камнем
+              здоровья и долголетия. <strong>При нагреве</strong> выделяет
+              магний, кальций, железо, улучшая работу почек, суставов и нервной
+              системы. В эзотерике — камень гармонии, снимает стресс и дарит
+              глубокое расслабление.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+     VIDEO
+    =========================== -->
+    <section
+      class="w-full mx-auto flex items-center justify-center px-4 py-16 md:py-24 bg-[#E9D4BE]"
+    >
+      <div class="max-w-5xl flex flex-col space-y-8">
+        <!-- Video teaser -->
+        <a
+          href="https://youtube.com/shorts/FTtYgPMAvu8?si=DgLV5Ozy18Df61Vj"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-[#5A7543] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group max-w-xl mx-auto"
+        >
+          <!-- Preview image -->
+          <div class="relative w-full overflow-hidden">
+            <img
+              src="https://i.ytimg.com/vi/FTtYgPMAvu8/maxresdefault.jpg"
+              alt="Video av ångrum"
+              class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+
+            <!-- Play button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110"
+              >
+                <img src="/asset/play.webp" alt="play button" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom bar -->
+          <div class="bg-[#5A7543] text-white text-start px-4 py-4">
+            <p class="text-base">Video av ångrum</p>
+          </div>
+        </a>
+
+        <!-- YouTube Channel button -->
+         <div class="flex justify-center py-8">
+          <a
+            href="https://www.youtube.com/@LEVVIKBASTU"
+            class="w-80 lg:w-[28rem] h-12 flex items-center justify-center text-white bg-[#FF0000] hover:bg-[#d10000] rounded-full hover:shadow-xl transition-colors duration-200"
+          >
+            Больше видео на YouTube канале
+          </a>
+         </div>
+      </div>
     </section>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
