@@ -396,20 +396,20 @@
     <!-- ===========================
      INTRO
     =========================== -->
-    <div class="relative min-h-[60vh]">
+    <section class="relative min-h-[60vh]">
       <!-- Background -->
       <div
         class="absolute inset-0 bg-[url('/asset/premium-viking-var-1.webp')] bg-center bg-cover z-10"
       ></div>
 
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-[#414C38]/70 z-20"></div>
+      <div class="absolute inset-0 bg-[#414C38]/90 z-20"></div>
 
       <!-- Content -->
       <div
-        class="relative z-30 px-4 py-16 flex flex-col items-center gap-12 max-w-7xl mx-auto"
+        class="relative z-30 px-4 py-16 flex flex-col gap-12 max-w-7xl mx-auto"
       >
-        <h2 class="text-white text-2xl uppercase text-center md:text-start">
+        <h2 class="text-white text-xl uppercase text-center md:text-start">
           Про обучение
         </h2>
 
@@ -418,8 +418,10 @@
           <div
             class="w-full md:w-[38rem] bg-[#F3EAE1] rounded-md px-8 py-8 space-y-6 text-[#191919]"
           >
-            <h2 class="text-2xl text-center md:text-start">Искусство проводника пара</h2>
-            <p class="text-base leading-relaxed">
+            <h2 class="text-2xl text-center md:text-start">
+              Искусство проводника пара
+            </h2>
+            <p class="text-base">
               Проводник пара не просто машет веником — он чувствует человека:
               дыхание, ритм, потребность в тепле или прохладе. Это искусство
               соприкосновения — тонкое, заботливое, глубокое. Веник, пар,
@@ -435,15 +437,17 @@
           <div
             class="w-full md:w-[38rem] bg-[#F3EAE1] rounded-md px-8 py-8 space-y-6 text-[#191919]"
           >
-            <h2 class="text-2xl text-center md:text-start">Зачем учиться парить правильно</h2>
-            <p class="text-base leading-relaxed">
+            <h2 class="text-2xl text-center md:text-start">
+              Зачем учиться парить правильно
+            </h2>
+            <p class="text-base">
               Правильное парение — это не «погорячее», а осознанная работа с
               теплом и влагой. Когда вы понимаете физику пара и технику веника,
               тело прогревается глубоко, сосуды работают мягко, мышцы отпускают
               спазм, а сердце не перегружается.
             </p>
 
-            <ul class="list-disc pl-6 space-y-2 text-base leading-relaxed">
+            <ul class="list-disc pl-6 space-y-2 text-base">
               <li>
                 Цель прогрева: поднять температуру тела, раскрыть поры,
                 подготовить сосудистую систему и мышцы к работе веником.
@@ -457,132 +461,356 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- ===========================
-       VIDEO
-    =========================== -->
+     WATER, MEAL AND WHISK
+=========================== -->
+    <section class="w-full mx-auto px-4 py-16 md:py-24 bg-[#F3EAE1]">
+      <div class="max-w-7xl mx-auto space-y-20">
+        <!-- Water -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8"
+        >
+          <img
+            src="/asset/water.webp"
+            class="w-full max-w-[23rem] aspect-[4/3] object-cover rounded-md"
+          />
+          <div class="max-w-sm flex flex-col space-y-4 text-[#191919]">
+            <h2 class="text-2xl text-center md:text-start">
+              Вода и восстановление
+            </h2>
+            <p class="text-base">
+              Вода — основа восстановления: необходимо восполнить от 1,5–2,5
+              литра за весь период парения, чтобы нормализовать водный баланс
+              организма, восстановить объём крови и потери электролитов,
+              запустить регидратацию тканей.
+            </p>
+          </div>
+        </div>
 
-    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Meal -->
+        <div class="flex flex-col md:flex-row items-center justify-end gap-8">
+          <img
+            src="/asset/meal.webp"
+            class="w-full max-w-[23rem] aspect-[4/3] object-cover rounded-md"
+          />
+          <div class="max-w-sm flex flex-col space-y-4 text-[#191919]">
+            <h2 class="text-2xl text-center md:text-start">
+              Питание после парения
+            </h2>
+            <ul class="list-disc pl-6 space-y-2 text-base">
+              <li>
+                Лёгкий белково-углеводный перекус через 30–60 минут: йогурт,
+                немного фруктов, орехи
+              </li>
+              <li>Избегать тяжёлой еды сразу после парения.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Whisk -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-start md:pl-24 gap-8"
+        >
+          <img
+            src="/asset/whisk3.webp"
+            class="w-full max-w-[23rem] aspect-[4/3] object-cover rounded-md"
+          />
+          <div class="max-w-xl flex flex-col space-y-4 text-[#191919]">
+            <h2 class="text-2xl text-center md:text-start">
+              Веник: выбор и техника
+            </h2>
+            <p class="text-base">
+              Подбор по породам, ароматам и сочетаниям (берёза, дуб, эвкалипт и
+              др.), подготовка и замачивание, техника касаний: обдув, накат,
+              компресс, растяжка тепла. Никогда не работать веником по суставам
+              и хрящам — только по мышцам и мягким тканям.
+              <br /><br />
+              Следите за влажностью веника: слишком мокрый — риск ожога паром,
+              слишком сухой — царапины. Мы научим правильно выбирать и, главное,
+              готовить веник для бани — веник играет ключевую роль в процессе
+              парения.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+       PARALLAX IMAGE
+    =========================== -->
+    <section
+      class="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden"
+    >
+      <img
+        src="/asset/7.webp"
+        alt="Parallax Background"
+        class="parallax-image absolute inset-0 w-full h-full object-cover object-top"
+      />
+    </section>
+
+    <!-- ===========================
+          SALT
+=========================== -->
+    <section class="w-full mx-auto px-4 py-16 md:py-24 bg-[#F3EAE1]">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center bg-[#E5D3C0] px-4 py-8 md:py-16 gap-4 rounded-lg"
+      >
+        <!-- Left text container -->
+        <div class="max-w-sm flex flex-col px-4 space-y-6 text-[#191919]">
+          <h2 class="text-2xl text-center md:text-start">
+            Зачем использовать соль
+          </h2>
+          <ul class="list-disc pl-6 space-y-2 text-base">
+            <li>
+              Очищение кожи: натуральный скраб, удаление ороговевших клеток.
+            </li>
+            <li>
+              Дезинфекция: уменьшение бактерий и грибков, снижение риска
+              воспалений.
+            </li>
+            <li>Снятие отёков: вытягивает лишнюю жидкость из тканей.</li>
+            <li>
+              Улучшение кровообращения: активизация капилляров и обмена веществ.
+            </li>
+            <li>
+              Расслабление мышц и суставов: особенно эффективно при солевых
+              компрессах.
+            </li>
+          </ul>
+          <p class="text-base"></p>
+        </div>
+
+        <!-- Image -->
+        <img
+          src="/asset/salt.webp"
+          alt="salt"
+          class="w-full max-w-[18rem] aspect-[5/6] rounded-lg"
+        />
+
+        <!-- Right text container -->
+        <div class="max-w-md flex flex-col px-4 space-y-6 text-[#191919]">
+          <h2 class="text-2xl text-center md:text-start">
+            Правила использования соли
+          </h2>
+          <ul class="list-disc pl-6 space-y-2 text-base">
+            <li>
+              Только натуральная морская или каменная соль, без ароматизаторов и
+              красителей.
+            </li>
+            <li>
+              Не наносить соль на лицо или повреждённую кожу (царапины,
+              раздражения).
+            </li>
+            <li>
+              При гипертонии и сердечно‑сосудистых проблемах избегать
+              чрезмерного «соляного пара».
+            </li>
+            <li>
+              После процедур обязательно смыть соль с кожи, чтобы избежать
+              раздражения.
+            </li>
+          </ul>
+          <p class="text-base">
+            Эффект: снижение воспаления и боли в мышцах и суставах при грамотном
+            применении.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+     OIL
+=========================== -->
+    <section class="w-full mx-auto px-4 py-16 md:py-24 bg-[#F3EAE1]">
+      <div class="max-w-7xl mx-auto py-16 space-y-20">
+        <!-- Whisk -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-start md:pl-24 gap-8"
+        >
+          <img
+            src="/asset/oil.webp"
+            class="w-full max-w-[23rem] aspect-[4/3] object-cover rounded-md"
+          />
+          <div class="max-w-xl flex flex-col space-y-4 text-[#191919]">
+            <h2 class="text-2xl text-center md:text-start">
+              Ароматы и эфирные масла
+            </h2>
+            <p class="text-base">
+              Ароматы и эфирные масла в бане работают как целебная терапия:
+              усиливают действие пара, влияют на дыхание, нервную систему,
+              настроение, мышечный тонус и даже иммунитет.
+              <br /><br />
+              Очищение дыхательных путей: помощь при простуде, кашле, насморке.
+              Расслабление или тонус — в зависимости от выбранного масла.
+              Улучшение настроения: снижение стресса и тревожности. Очищение
+              воздуха: антибактериальный и противовирусный эффект делает пар
+              «живым».
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="w-full flex justify-center">
+        <a
+          href="/contact.html"
+          class="w-80 md:w-96 h-12 flex items-center justify-center text-white bg-[#5A7543] hover:bg-[#414C38] rounded-full hover:shadow-xl transition-colors duration-200"
+        >
+          Записаться на консультацию
+        </a>
+      </div>
+    </section>
+
+    <!-- ===========================
+     VIDEO
+    =========================== -->
+    <section
+      class="w-full mx-auto flex flex-col items-center justify-center px-4 py-16 md:py-24 bg-[#E9D4BE]"
+    >
+      <!-- Content -->
+      <div class="max-w-7xl">
+        <h2 class="text-2xl text-center md:text-start text-[#191919CC] mb-6">Наши видео о парении в бане</h2>
+
+        <!-- Video grid -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 mb-8 gap-4">
+        
+        <!-- Video 1 -->
         <a
           href="https://youtu.be/O7jMUJ8fxgw?si=ZEPiiuzXLj--6IvM"
           target="_blank"
-          class="bg-cyan-500 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden group block"
+          rel="noopener noreferrer"
+          class="block bg-[#5A7543] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group max-w-xl mx-auto"
         >
-          <div class="overflow-hidden">
+          <!-- Preview image -->
+          <div class="relative w-full overflow-hidden">
             <img
               src="https://img.youtube.com/vi/O7jMUJ8fxgw/maxresdefault.jpg"
               alt="Ångprocess 'Doft'"
-              class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
             />
+
+            <!-- Play button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110"
+              >
+                <img src="/asset/play.webp" alt="play button" />
+              </div>
+            </div>
           </div>
 
-          <div class="p-6 flex items-center space-x-4">
-            <div
-              class="bg-red-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                />
-              </svg>
-            </div>
-            <div class="text-left">
-              <h4 class="font-bold text-lg mb-1">Ångprocess "Doft"</h4>
-            </div>
+          <!-- Bottom bar -->
+          <div class="bg-[#5A7543] text-white text-start px-4 py-4">
+            <p class="text-base">Ångprocess "Doft"</p>
           </div>
         </a>
 
+        <!-- Video 2 -->
         <a
           href="https://youtube.com/shorts/QJJKlDq3nF0"
           target="_blank"
-          class="bg-cyan-500 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden group block"
+          rel="noopener noreferrer"
+          class="block bg-[#5A7543] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group max-w-xl mx-auto"
         >
-          <div class="overflow-hidden">
+          <!-- Preview image -->
+          <div class="relative w-full overflow-hidden">
             <img
               src="https://img.youtube.com/vi/QJJKlDq3nF0/maxresdefault.jpg"
               alt="Med musik bara bästa"
-              class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
             />
+
+            <!-- Play button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110"
+              >
+                <img src="/asset/play.webp" alt="play button" />
+              </div>
+            </div>
           </div>
 
-          <div class="p-6 flex items-center space-x-4">
-            <div
-              class="bg-red-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                />
-              </svg>
-            </div>
-            <div class="text-left">
-              <h4 class="font-bold text-lg mb-1">Med musik bara bastu</h4>
-            </div>
+          <!-- Bottom bar -->
+          <div class="bg-[#5A7543] text-white text-start px-4 py-4">
+            <p class="text-base">Med musik bara bastu</p>
           </div>
         </a>
 
+        <!-- Video 3 -->
         <a
           href="https://youtu.be/Se5X8kY_OLs?si=6_BbWdq6NGgAqnhm"
           target="_blank"
-          class="bg-cyan-500 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden group block"
+          rel="noopener noreferrer"
+          class="block bg-[#5A7543] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group max-w-xl mx-auto"
         >
-          <div class="overflow-hidden">
+          <!-- Preview image -->
+          <div class="relative w-full overflow-hidden">
             <img
               src="https://img.youtube.com/vi/Se5X8kY_OLs/maxresdefault.jpg"
               alt="Förbereda rätt er kvast i bastu"
-              class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
             />
+
+            <!-- Play button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110"
+              >
+                <img src="/asset/play.webp" alt="play button" />
+              </div>
+            </div>
           </div>
 
-          <div class="p-6 flex items-center space-x-4">
-            <div
-              class="bg-red-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                />
-              </svg>
-            </div>
-            <div class="text-left">
-              <h4 class="font-bold text-lg mb-1">
-                Förbereda rätt er kvast i bastu
-              </h4>
-            </div>
+          <!-- Bottom bar -->
+          <div class="bg-[#5A7543] text-white text-start px-4 py-4">
+            <p class="text-base">Förbereda rätt er kvast i bastu</p>
           </div>
         </a>
 
+        <!-- Video 4 -->
         <a
           href="https://youtube.com/shorts/FTtYgPMAvu8?si=DgLV5Ozy18Df61Vj"
           target="_blank"
-          class="bg-cyan-500 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-red-500 overflow-hidden group block"
+          rel="noopener noreferrer"
+          class="block bg-[#5A7543] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group max-w-xl mx-auto"
         >
-          <div class="overflow-hidden">
+          <!-- Preview image -->
+          <div class="relative w-full overflow-hidden">
             <img
               src="https://img.youtube.com/vi/FTtYgPMAvu8/maxresdefault.jpg"
               alt="Видео паровой комнаты"
-              class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
             />
+
+            <!-- Play button -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div
+                class="w-24 h-24 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110"
+              >
+                <img src="/asset/play.webp" alt="play button" />
+              </div>
+            </div>
           </div>
 
-          <div class="p-6 flex items-center space-x-4">
-            <div
-              class="bg-red-600 text-white p-3 rounded-lg group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                />
-              </svg>
-            </div>
-            <div class="text-left">
-              <h4 class="font-bold text-lg mb-1">Bastu presentation</h4>
-            </div>
+          <!-- Bottom bar -->
+          <div class="bg-[#5A7543] text-white text-start px-4 py-4">
+            <p class="text-base">Bastu presentation</p>
           </div>
         </a>
+
       </div>
+      </div>
+      <!-- YouTube Channel button -->
+        <div class="flex justify-center py-8">
+          <a
+            href="https://www.youtube.com/@LEVVIKBASTU"
+            class="w-80 lg:w-[28rem] h-12 flex items-center justify-center text-white bg-[#FF0000] hover:bg-[#d10000] rounded-full hover:shadow-xl transition-colors duration-200"
+          >
+            Больше видео на YouTube канале
+          </a>
+        </div>
     </section>
 
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -612,7 +840,7 @@
               <h1 class="text-3xl md:text-4xl leading-tight">
                 Levande<br />Vikings Bastu
               </h1>
-              <p class="text-white text-start text-sm leading-relaxed">
+              <p class="text-white text-start text-sm">
                 Ångprocess i Levande Vikings Bastu är en uråldrig ritual för att
                 rena kropp, sinne och själ.
               </p>
@@ -694,7 +922,7 @@
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <p class="text-sm text-white leading-relaxed">
+                <p class="text-sm text-white">
                   Huddinge<br />Stockholm, Sverige
                 </p>
               </div>
