@@ -142,7 +142,7 @@ function closeModal() {
 
 if (gallery && modal && modalImg && closeBtn) {
   gallery.addEventListener('click', e => {
-    if (e.target.tagName === 'IMG') {
+    if (e.currentTarget.classList.contains('gallery')) {
       modalImg.src = e.target.src;
       modal.classList.remove('hidden');
       closeBtn.focus();
