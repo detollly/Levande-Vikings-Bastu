@@ -93,8 +93,8 @@ function renderReviews(reviews = []) {
       }
 
       return `
-        <div class="bg-gradient-to-r from-white via-gray-50 to-gray-100 rounded-xl shadow-md p-6">
-          <p class="font-semibold text-slate-800 mb-1">${r.name}</p>
+        <div class="bg-gradient-to-r from-white via-gray-50 to-gray-100 rounded-lg shadow-md p-6">
+          <p class="text-slate-800 mb-1">${r.name}</p>
           <p class="text-sm text-gray-500 mb-3">${dateStr}</p>
           <div class="flex items-center mb-6">
             <div class="flex text-yellow-500 text-2xl">
@@ -153,7 +153,7 @@ async function handleSubmit(e) {
       created_at: serverTimestamp(), // Use server timestamp
     });
 
-    showStatus("Thank you for your review!", "green");
+    showStatus("", "green");
     reviewForm.reset();
     resetStars();
     loadReviews();
