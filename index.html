@@ -397,7 +397,7 @@
     =========================== -->
     <section class="py-16 md:py-24 px-4 bg-[#E5D3C0]">
       <div
-        class="w-full mx-auto md:px-24 grid grid-cols-1 md:grid-cols-3 gap-4"
+        class="w-full 3xl:max-w-7xl mx-auto md:px-24 grid grid-cols-1 md:grid-cols-3 gap-4"
       >
         <!-- ====== Card Ovens ====== -->
         <a
@@ -618,7 +618,7 @@
         <!-- Education cards -->
         <div class="w-full mb-16 md:mb-20 flex justify-center">
           <div
-            class="w-full mx-auto px-0 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-4"
+            class="w-full 3xl:max-w-7xl mx-auto px-0 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-4"
           >
             <!--  Card Individual classes -->
             <a
@@ -840,11 +840,11 @@
       style="background-image: url(/asset/15.webp)"
     >
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/20 z-20"></div>
+      <div class="absolute inset-0 bg-black/20 z-20 pointer-events-none"></div>
 
       <div class="max-w-4xl mx-auto flex flex-col z-30">
         <!-- Heading -->
-        <div class="max-w-lg text-center text-[#E8E8E8]">
+        <div class="max-w-lg text-center text-white">
           <h1 class="text-2xl md:text-5xl font-normal mb-6">
             Остались вопросы?
           </h1>
@@ -878,12 +878,12 @@
               id="name"
               name="name"
               required
-              class="peer w-full h-12 px-4 pt-4 rounded-full bg-white border border-gray-300 text-sm md:text-lg focus:ring-2 focus:ring-[#5A7543] focus:outline-none"
+              class="peer w-full h-12 px-4 pt-4 rounded-full bg-[#F3EAE1] text-sm md:text-lg"
             />
 
             <label
               for="name"
-              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 text-sm md:text-base transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-300 peer-valid:top-2 peer-valid:text-xs"
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm md:text-base transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-400 peer-valid:top-2 peer-valid:text-xs"
             >
               Namn
             </label>
@@ -893,15 +893,15 @@
           <div class="relative w-full">
             <input
               type="text"
-              id="name"
-              name="name"
+              id="email"
+              name="email"
               required
-              class="peer w-full h-12 px-4 pt-4 rounded-full bg-white border border-gray-300 text-sm md:text-lg focus:ring-2 focus:ring-[#5A7543] focus:outline-none"
+              class="peer w-full h-12 px-4 pt-4 rounded-full bg-[#F3EAE1] text-sm md:text-lg"
             />
 
             <label
-              for="name"
-              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 text-sm md:text-base transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-300 peer-valid:top-2 peer-valid:text-xs"
+              for="email"
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm md:text-base transition-all peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-400 peer-valid:top-2 peer-valid:text-xs"
             >
               Email
             </label>
@@ -913,12 +913,12 @@
               id="message"
               rows="4"
               required
-              class="peer mt-1 block w-full h-24 px-4 pt-6 pb-2 rounded-md text-sm md:text-lg focus:border-cyan-500 focus:ring-2 focus:ring-2 focus:ring-[#5A7543] focus:outline-none resize-none"
+              class="peer mt-1 block w-full h-24 px-4 pt-6 pb-2 rounded-md text-sm md:text-lg bg-[#F3EAE1] resize"
             ></textarea>
 
             <label
               for="message"
-              class="absolute left-4 top-2 text-gray-300 text-sm md:text-base transition-all pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-300 peer-valid:top-2 peer-valid:text-xs"
+              class="absolute left-4 top-2 text-gray-400 text-sm md:text-base transition-all pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-400 peer-valid:top-2 peer-valid:text-xs"
             >
               Meddelande
             </label>
