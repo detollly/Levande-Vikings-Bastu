@@ -1,0 +1,23 @@
+{
+  "name": "levande-vikings-bastu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/detollly/Levande-Vikings-Bastu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/detollly/Levande-Vikings-Bastu/issues"
+  },
+  "homepage": "https://github.com/detollly/Levande-Vikings-Bastu#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
