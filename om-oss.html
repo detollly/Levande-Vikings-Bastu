@@ -12,7 +12,6 @@
     />
 
     <link rel="stylesheet" href="/css/styles.css" />
-    
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
@@ -37,7 +36,7 @@
       />
     </div>
 
-    <!-- ===========================
+<!-- ===========================
      HEADER
     =========================== -->
 
@@ -75,7 +74,7 @@
                 >Bygg din bastu</a
               >
               <a
-                href="/reviews.html"
+                href="/omdomen.html"
                 class="menu-item text-base hover:text-blue-400 px-3"
                 >Omdömen</a
               >
@@ -85,12 +84,12 @@
                 >Utbildning</a
               >
               <a
-                href="/about.html"
+                href="/om-oss.html"
                 class="menu-item text-base hover:text-blue-400 px-3"
                 >Om oss</a
               >
               <a
-                href="/contact.html"
+                href="/kontakt.html"
                 class="menu-item text-base hover:text-blue-400 px-3"
                 >Kontakt</a
               >
@@ -233,7 +232,7 @@
             >Bygg din bastu</a
           >
           <a
-            href="/reviews.html"
+            href="/omdomen.html"
             class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
             >Omdömen</a
           >
@@ -243,12 +242,12 @@
             >Utbildning</a
           >
           <a
-            href="/about.html"
+            href="/om-oss.html"
             class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
             >Om oss</a
           >
           <a
-            href="/contact.html"
+            href="/kontakt.html"
             class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-400"
             >Kontakt</a
           >
@@ -260,160 +259,336 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     <!-- ===========================
-     MAIN CONTENT
-=========================== -->
-    <div class="relative min-h-[90vh] overflow-hidden pt-40 md:pt-0">
-      <!-- Background -->
+     HERO SECTION
+    =========================== -->
+
+    <div id="hero" class="relative min-h-screen overflow-hidden">
+      <!-- Background image -->
       <div
-        class="absolute inset-0 bg-[url('/asset/11.webp')] bg-center bg-no-repeat bg-cover z-10"
+        class="absolute inset-0 bg-[url('/asset/flytande-sits.webp')] bg-center bg-no-repeat bg-cover z-10"
       ></div>
 
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/30 z-20 pointer-events-none"></div>
+      <!-- Overlay 1 -->
+      <div class="absolute inset-0 bg-[#8C4A00]/30 z-20"></div>
 
-      <!-- Content Layer -->
+      <!-- Overlay 2 -->
+      <div class="absolute inset-0 bg-zinc-900/50 z-30"></div>
+
+      <!-- Text layer Desktop -->
       <div
-        class="relative z-30 flex flex-col w-full min-h-[90vh] items-center justify-center px-4"
+        class="absolute inset-0 z-40 hidden md:flex items-center justify-center md:justify-start 3xl:justify-center  gap-16 pl-32 3xl:pl-0 px-8 parallax-slow"
       >
         <div
-          class="w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-12 mb-8"
+          class="w-[30rem] h-96 flex flex-col items-start justify-center gap-2"
         >
-          <!-- Form -->
-          <div class="max-w-md w-full text-white">
-            <div class="text-center mb-6">
-              <h1 class="text-2xl md:text-3xl mb-2">Связаться с нами</h1>
-              <p class="text-base">
-                Мы всегда на связи. Подскажем, разъясним и поможем выбрать
-                лучшее решение
-              </p>
-            </div>
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-[#E9D4BE] opacity-40 rounded-md"
+            ></div>
 
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/xzzjbwoz"
-              method="POST"
-              class="w-full p-6 space-y-6 rounded-xl"
-            >
-              <div class="relative w-full">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="peer w-full h-12 px-4 pt-4 text-black rounded-full bg-[#F3EAE1]"
-                />
-                <label
-                  for="name"
-                  class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-all peer-focus:top-2 peer-focus:text-xs peer-valid:top-2 peer-valid:text-xs"
-                >
-                  Namn
-                </label>
-              </div>
-
-              <div class="relative w-full">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="peer w-full h-12 px-4 pt-4 text-black rounded-full bg-[#F3EAE1]"
-                />
-                <label
-                  for="email"
-                  class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm transition-all peer-focus:top-2 peer-focus:text-xs peer-valid:top-2 peer-valid:text-xs"
-                >
-                  Email
-                </label>
-              </div>
-
-              <div class="relative w-full">
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="4"
-                  required
-                  class="peer w-full h-24 px-4 pt-6 pb-2 text-black rounded-md bg-[#F3EAE1] resize"
-                ></textarea>
-                <label
-                  for="message"
-                  class="absolute left-4 top-2 text-gray-400 text-sm transition-all peer-focus:text-xs peer-valid:text-xs"
-                >
-                  Meddelande
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full h-12 bg-[#5A7543] hover:bg-[#414C38] text-white rounded-full transition"
-              >
-                Skicka
-              </button>
-            </form>
+            <img
+              src="/asset/history1.webp"
+              alt="history1"
+              class="object-cover rounded-md w-full h-full"
+            />
           </div>
 
-          <!-- Map -->
-          <div class="w-full md:w-1/2 md:h-[450px] rounded-lg overflow-hidden">
-            <iframe
-              width="100%"
-              height="100%"
-              style="border: 0"
-              loading="lazy"
-              allowfullscreen
-              src="https://maps.google.com/maps?q=59.19153277444042,17.997104697836257&z=15&output=embed"
-            >
-            </iframe>
-          </div>
+          <p class="text-white text-xs italic">
+            Nordisk bastu. Ur Olaus Magnus' Historia de gentibus
+            septentrionalibus, ("Historia om de nordiska folken") från 1555
+          </p>
         </div>
 
-        <!-- Social Media -->
-        <div class="w-full flex flex-col py-8 px-4 gap-8 items-center justify-center">
-            <h1 class="text-white text-center text-xl md:text-2xl">
-                Мы в соцсетях
-            </h1>
-            <div class="flex gap-4">
-                <!-- Facebook -->
-  <a href="https://facebook.com/"
-     target="_blank"
-     class="w-16 h-8 md:w-32 md:h-12 bg-[#1877F2] rounded-lg flex items-center justify-center">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-         alt="Facebook"
-         class="w-5 h-5 md:w-8 md:h-8 invert" />
-  </a>
+        <!-- Description -->
+        <div class="max-w-xl flex flex-col gap-4 text-[#E8E8E8] text-start">
+          <h1 class="text-4xl font-normal drop-shadow-lg">
+            Svenska bastutraditioner
+          </h1>
 
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/levande.vikings.bastu/"
-     target="_blank"
-     class="w-16 h-8 md:w-32 md:h-12 bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] rounded-lg flex items-center justify-center">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-         alt="Instagram"
-         class="w-5 h-5 md:w-8 md:h-8 invert" />
-  </a>
+          <p
+            class="text-xl font-light drop-shadow-lg text-center md:text-start"
+          >
+            <strong>Levande Vikings Bastu</strong> bär vidare en levande nordisk tradition där värmen förenas med hälsa och förfädernas visdom. Vi skapar en plats där kropp, sinne och själ finner balans och rening. Vår vision är att återväcka bastuns ursprungliga betydelse i Sverige – en helig plats för styrka, återhämtning och samhörighet.
+          </p>
+        </div>
+      </div>
 
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/@LEVVIKBASTU"
-     target="_blank"
-     class="w-16 h-8 md:w-32 md:h-12 bg-[#FF0000] rounded-lg flex items-center justify-center">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
-         alt="YouTube"
-         class="w-5 h-5 md:w-8 md:h-8 invert" />
-  </a>
+      <!-- Text layer Mobile -->
+      <div
+        class="absolute inset-0 z-40 md:hidden flex flex-col items-center justify-center px-8 pt-16 parallax-slow gap-6"
+      >
+        <h1
+          class="text-3xl font-normal drop-shadow-lg text-[#E8E8E8] text-center"
+        >
+          Svenska bastutraditioner
+        </h1>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/+46739782962"
-     target="_blank"
-     class="w-16 h-8 md:w-32 md:h-12 bg-[#25D366] rounded-lg flex items-center justify-center">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
-         alt="WhatsApp"
-         class="w-5 h-5 md:w-8 md:h-8 invert" />
-  </a>
+        <div class="w-full flex flex-col items-start justify-center gap-2">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-[#E9D4BE] opacity-40 rounded-md"
+            ></div>
 
-            </div>
+            <img
+              src="/asset/history1.webp"
+              alt="history1"
+              class="object-cover rounded-md w-full h-full"
+            />
+          </div>
+          <p class="text-white text-xs italic">
+            Nordisk bastu. Ur Olaus Magnus' Historia de gentibus
+            septentrionalibus, ("Historia om de nordiska folken") från 1555
+          </p>
+        </div>
+
+        <!-- Description -->
+        <div class="flex flex-col items-center gap-4 text-[#E8E8E8]">
+          <p class="text-base font-light drop-shadow-lg text-justify">
+            <strong>Levande Vikings Bastu</strong> bär vidare en levande nordisk tradition där värmen förenas med hälsa och förfädernas visdom. Vi skapar en plats där kropp, sinne och själ finner balans och rening. Vår vision är att återväcka bastuns ursprungliga betydelse i Sverige – en helig plats för styrka, återhämtning och samhörighet.
+          </p>
         </div>
       </div>
     </div>
 
+    <!-- ===========================
+     OPENING SECTION
+    =========================== -->
+    <section class="py-8 md:py-16 px-2 bg-[#E5D3C0]">
+      <div class="3xl:mx-auto">
+        <div
+          class="flex flex-col items-center md:items-start 3xl:items-center md:pl-60 justify-center  px-6 gap-6"
+        >
+          <h1
+            class="max-w-4xl text-2xl md:text-5xl font-normal mb-6 text-center md:text-start 3xl:text-center"
+          >
+            Vi bygger inte enbart bastu –
+            <span class="text-[#5A7543]">vi skapar levande miljöer där hälsa väcks till</span> liv och ny energi får ta form.
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+     HISTORY
+=========================== -->
+    <section class="mx-auto py-8 md:py-16 px-4 bg-[#F3EAE1]">
+      <div class="max-w-7xl mx-auto flex flex-col">
+        <h2 class="text-xl text-start text-[#191919CC] uppercase pb-4 md:pb-0">Historia </h2>
+
+        <!-- History containers -->
+        <div class="w-full flex flex-col gap-4">
+          
+          <!-- History container 1 -->
+          <div
+            class="w-full flex flex-col-reverse md:flex-row-reverse items-center justify-center gap-8 py-2"
+          >
+            <!-- Image + caption -->
+            <div
+              class="w-full md:w-[32rem] md:h-72 flex flex-col items-start justify-center gap-2"
+            >
+              <img
+                  src="/asset/history2.webp"
+                  alt="history2"
+                  class="object-cover rounded-md w-full h-full"
+                />
+
+              <p class="text-[#191919] text-xs italic">
+                En badstuga, efter illustration i Acerbis «Travels» (tr. 1802).
+              </p>
+            </div>
+
+            <!-- Description  -->
+            <div class="max-w-lg flex flex-col gap-4 text-[#000000] text-start">
+              <h1 class="text-start text-2xl">Bastun i tradition och kultur</h1>
+
+              <p class="text-base text-start">
+                Bastun är mer än värme och ånga – den är en plats där kropp, energi och själ förnyas i samklang.
+                <br><br>
+                Förr var bastun ett heligt rum. Där helades kroppen, där föddes nytt liv och där utfördes ritualer för rening och återfödelse. Vi återupplivar denna nordiska arv och låter traditionen leva vidare i en modern form.
+              </p>
+            </div>
+          </div>
+         
+          <!-- Container 2 -->
+          <div
+            class="w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 py-2"
+          >
+            <!-- Image + caption -->
+            <div
+              class="w-full md:w-[32rem] md:h-72 flex flex-col items-start justify-center gap-2"
+            >
+              <img
+                  src="/asset/history3.webp"
+                  alt="history3"
+                  class="object-cover rounded-md w-full h-full"
+                />
+
+              <p class="text-[#191919] text-xs italic">
+                Svensk bastu. Ur Lorenzo Magalottis reseanteckningar från Sverige (1674, manuskript i Florens).
+              </p>
+            </div>
+
+            <!-- Description  -->
+            <div class="max-w-lg flex flex-col gap-4 text-[#000000] text-start">
+              <h1 class="text-start text-2xl">Varför är den svenska bastutraditionen nästan bortglömd?</h1>
+
+              <p class="text-base text-start">
+                År 1725 förbjöds bastubad i Sverige, pådrivet av läkare och moralister som menade att de spred sjukdomar och slösade med ved.
+                <br>
+                På landsbygden och i de nordliga regionerna levde traditionen kvar, men dess djupa kulturella rötter bleknade med tiden.
+                <br>
+                I Lappland och Finland är bastun fortfarande en levande del av kulturen – och vårt uppdrag är att väcka denna nordiska tradition till liv igen i Sverige.
+              </p>
+            </div>
+          </div>
+
+          <!-- Container 3 -->
+          <div
+            class="w-full flex flex-col-reverse md:flex-row-reverse items-center justify-center gap-8 py-2"
+          >
+            <!-- Image -->
+            <div
+              class="w-full md:w-[32rem] md:h-72 flex flex-col items-start justify-center gap-2"
+            >
+              <img
+                  src="/asset/11.webp"
+                  alt="image11"
+                  class="object-cover rounded-md w-full h-full"
+                />
+            </div>
+
+            <!-- Description  -->
+            <div class="max-w-lg flex flex-col gap-4 text-[#000000] text-start">
+              <h1 class="text-start text-2xl">Detta erbjuder vi:</h1>
+
+              <ul class="list-disc pl-6 space-y-2 text-base">
+                <li>Kompletta bastulösningar – från idé och design till färdig, exklusiv bastu.</li>
+                <li>Genomtänkt inredning – naturliga material som trä och sten, skapade med känsla för detaljer.</li>
+                <li>Fördjupad kunskap – vi lär ut konsten att bada bastu, traditionella ritualer och samspelet med naturens kraft.</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+     INTERMEDIATE SECTION
+    =========================== -->
+    <section class="py-8 md:py-16 px-2 bg-[#E5D3C0]">
+      <div class="3xl:mx-auto">
+        <div
+          class="flex flex-col items-center md:items-start 3xl:items-center justify-center md:pl-60 px-6 gap-6"
+        >
+          <h1
+            class="max-w-4xl text-2xl md:text-5xl font-normal text-center md:text-start 3xl:text-center"
+          >
+            Hos oss får du mer än en bastu 
+            <span class="text-[#5A7543]">– du blir en del av en levande filosofi.</span>
+            Varje projekt utformar vi med samma omsorg och ansvar som om det vore
+            <span class="text-[#5A7543]"
+              >för oss själva och våra familjer.</span
+            >
+          </h1>
+        </div>
+      </div>
+    </section>
+
+     <!-- ===========================
+     OUR AIM
+=========================== -->
+    <section class="mx-auto py-8 md:py-16 px-4 bg-[#F3EAE1]">
+      <div class="max-w-7xl mx-auto flex flex-col">
+         
+          <div
+            class="w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 py-2"
+          >
+            <!-- Image -->
+            <div
+              class="w-full md:w-[32rem] md:h-72 flex flex-col items-start justify-center gap-2"
+            >
+              <img
+                  src="/asset/13.webp"
+                  alt="history3"
+                  class="object-cover rounded-md w-full h-full"
+                />
+            </div>
+
+            <!-- Description  -->
+            <div class="max-w-lg flex flex-col gap-4 text-[#000000] text-start">
+              <h1 class="text-start text-2xl">Vi vill att din bastu ska bli:</h1>
+               <ul class="list-disc pl-6 space-y-2 text-base">
+                <li>En helig plats för kroppens rening.</li>
+                <li>En fristad för lugn och inre balans.</li>
+                <li>En källa till kraft, återhämtning och livskraft.</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </section>
+
+<!-- ===========================
+      CITATION
+=========================== -->
+<section class="mx-auto py-4 mb-8 md:mb-16">
+  <div class="max-w-[66rem] mx-auto flex flex-col mb-12">
+
+    <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-2 px-4  py-8 bg-[#E9D4BE] rounded-md">
+
+      <!-- Image -->
+      <div class="w-full md:w-[32rem] md:h-80 flex flex-col items-start justify-center">
+        <img
+          src="/asset/capture.webp"
+          alt="history3"
+          class="object-cover rounded-md w-full h-full"
+        />
+      </div>
+
+      <!-- Description -->
+      <div class="max-w-md flex flex-col gap-4 text-[#000000] text-start">
+
+        <!-- Citation start icon -->
+        <img src="/asset/citing_start.webp" alt="citing start" class="w-10">
+
+        <p class="text-base">
+          Vår ambition är att vara en ledande kraft i Skandinavien – där uråldriga traditioner möter nutida kvalitet och hantverk.
+          <br><br>
+
+          När du väljer Levande Vikings Bastu väljer du mer än en bastu. För oss är det en hederssak och en glädje att skapa platsen där energi återvänder och där familjer finner gemenskap och styrka.
+          <br><br>
+          Din bastu blir en fristad – en plats för lugn, kraft och hälsa. Välkommen till en värld där förfädernas traditioner fortfarande lever och andas.
+        </p>
+
+        <div class="relative w-full">
+
+          <span class="italic block">
+            Med vänligen hälsningar<br>
+            Viktor Gricius
+          </span>
+
+          <!-- Citation end icon absolute -->
+          <img
+            src="/asset/citing_end.webp"
+            alt="citing end"
+            class="w-10 absolute right-4 bottom-10"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+            <!-- Button -->
+      <div class="w-full flex justify-center">
+        <a
+          href="/kontakt.html"
+          class="w-80 md:w-96 h-12 flex items-center justify-center text-white bg-[#5A7543] hover:bg-[#414C38] rounded-full hover:shadow-xl transition-colors duration-200"
+        >
+          Kontakta oss
+        </a>
+      </div>
+</section>
+
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
     <!-- ===========================
      FOOTER
@@ -466,7 +641,7 @@
               </li>
               <li>
                 <a
-                  href="/reviews.html"
+                  href="/omdomen.html"
                   class="text-white text-sm hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block"
                   >Omdömen</a
                 >
@@ -480,14 +655,14 @@
               </li>
               <li>
                 <a
-                  href="/about.html"
+                  href="/om-oss.html"
                   class="text-white text-sm hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block"
                   >Om oss</a
                 >
               </li>
               <li>
                 <a
-                  href="/contact.html"
+                  href="/kontakt.html"
                   class="text-white text-sm hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block"
                   >Kontakt</a
                 >
@@ -658,5 +833,6 @@
       </button>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="/js/bygg-din-bastu.js"></script>
   </body>
 </html>
