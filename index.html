@@ -17,7 +17,6 @@
     />
 
     <link rel="stylesheet" href="/css/styles.css" />
-
   </head>
 
   <body class="min-h-screen overflow-x-hidden bg-[#F3EAE1]">
@@ -270,9 +269,9 @@
 
     <div id="hero" class="relative min-h-screen overflow-hidden">
       <!-- Video background -->
-      <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0">
         <video
-          class="w-full h-full !object-cover"
+          class="w-full h-full object-cover"
           autoplay
           muted
           loop
@@ -283,9 +282,13 @@
         </video>
       </div>
 
-      <div
-        class="absolute inset-0 bg-[url('/asset/banya_banner.webp')] bg-center bg-no-repeat bg-cover opacity-50 z-10"
-      ></div>
+      <div class="absolute inset-0 z-10 opacity-50">
+        <img
+          src="/asset/13.webp"
+          class="w-full h-full object-cover"
+          alt="banya banner"
+        />
+      </div>
 
       <!-- Text layer -->
       <div
@@ -491,7 +494,9 @@
           <h2 class="text-2xl md:px-2">Bygg din bastu</h2>
 
           <p class="text-base md:px-2">
-            Vi erbjuder färdiga paket med ugnen och bastuinredning, så att du snabbt och utan bekymmer kan få en äkta Levande-bastu. Du väljer det alternativ som passar dig — vi tar hand om resten.
+            Vi erbjuder färdiga paket med ugnen och bastuinredning, så att du
+            snabbt och utan bekymmer kan få en äkta Levande-bastu. Du väljer det
+            alternativ som passar dig — vi tar hand om resten.
           </p>
 
           <!-- CTA -->
@@ -591,9 +596,12 @@
             <p
               class="max-w-4xl text-base md:text-2xl font-light text-center md:text-start 3xl:text-center"
             >
-              Upptäck den skandinaviska bastutraditionen — från rätt uppvärmning
-              till den fina konsten att balansera värme och ånga — under ledning
-              av våra erfarna bastumästare.
+              Upptäck den skandinaviska bastutraditionen —
+              <span class="text-[#5A7543]"
+                >från rätt uppvärmning till den fina konsten att balansera värme
+                och ånga</span
+              >
+              — under ledning av våra erfarna bastumästare.
             </p>
           </div>
         </div>
@@ -611,7 +619,8 @@
               <h2 class="text-2xl">Individuella lektioner</h2>
 
               <p class="text-base">
-                Personliga genomgångar och rekommendationer anpassade efter ditt bastuprojekt.
+                Personliga genomgångar och rekommendationer anpassade efter ditt
+                bastuprojekt.
               </p>
 
               <!-- CTA -->
@@ -655,7 +664,9 @@
               <h2 class="text-2xl">Live och online masterclasses</h2>
 
               <p class="text-base">
-                Praktiska tillfällen där du upplever hur den traditionella basturitualen genomförs och lär dig tekniken bakom medveten och hälsosam ångbadning.
+                Praktiska tillfällen där du upplever hur den traditionella
+                basturitualen genomförs och lär dig tekniken bakom medveten och
+                hälsosam ångbadning.
               </p>
 
               <!-- CTA -->
@@ -699,7 +710,8 @@
               <h2 class="text-2xl">Videolektioner</h2>
 
               <p class="text-base">
-                Här kan du ta del av hur du förbereder dig själv och all nödvändig utrustning inför bastubesöket.
+                Här kan du ta del av hur du förbereder dig själv och all
+                nödvändig utrustning inför bastubesöket.
               </p>
 
               <!-- CTA -->
@@ -834,7 +846,8 @@
           <p
             class="max-w-3xl text-base md:text-2xl font-light text-center md:text-start 2xl:text-center"
           >
-            Vi är alltid här för dig. Vi ger råd, klargör och hjälper dig hitta den perfekta lösningen.
+            Vi är alltid här för dig. Vi ger råd, klargör och hjälper dig hitta
+            den perfekta lösningen.
           </p>
         </div>
 
